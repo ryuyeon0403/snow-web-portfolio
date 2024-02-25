@@ -1,6 +1,6 @@
 import { Box, Stack, Typography } from "@mui/material";
 import React from "react";
-import ReachOut from "../_assets/icon/reachOut.svg";
+import ReachOut from "../_assets/icon/reachout.svg";
 import Image from "next/image";
 
 function Footer() {
