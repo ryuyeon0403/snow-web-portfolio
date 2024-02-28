@@ -3,7 +3,7 @@ import Footer from "@/app/_components/Footer";
 import Header from "@/app/_components/Header";
 import ProjectFilter from "@/app/_components/project/ProjectFilter";
 import { ThemeProvider, createTheme, useMediaQuery } from "@mui/material";
-import React from "react";
+import React, { Suspense } from "react";
 import { RecoilRoot } from "recoil";
 
 const theme = createTheme({
@@ -17,15 +17,17 @@ export default function Project() {
   return (
     <ThemeProvider theme={theme}>
       <RecoilRoot>
-        {isMobile ? (
-          <>mobile</>
-        ) : (
-          <>
-            <Header page={1} />
-            <ProjectFilter />
-            <Footer />
-          </>
-        )}
+        <Suspense>
+          {isMobile ? (
+            <>mobile</>
+          ) : (
+            <>
+              <Header page={1} />
+              <ProjectFilter />
+              <Footer />
+            </>
+          )}
+        </Suspense>
       </RecoilRoot>
     </ThemeProvider>
   );

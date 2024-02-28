@@ -7,6 +7,7 @@ import "./globals.css";
 import Provide from "./_components/Provide";
 import Footer from "./_components/Footer";
 import { idxState } from "./_utils/recoil/global";
+import { Suspense } from "react";
 
 const theme = createTheme({
   typography: {
@@ -19,16 +20,18 @@ export default function Home() {
   return (
     <ThemeProvider theme={theme}>
       <RecoilRoot>
-        {isMobile ? (
-          <>mobile</>
-        ) : (
-          <>
-            <Header page={0} />
-            <Main />
-            <Provide />
-            <Footer />
-          </>
-        )}
+        <Suspense>
+          {isMobile ? (
+            <>mobile</>
+          ) : (
+            <>
+              <Header page={0} />
+              <Main />
+              <Provide />
+              <Footer />
+            </>
+          )}
+        </Suspense>
       </RecoilRoot>
     </ThemeProvider>
   );
