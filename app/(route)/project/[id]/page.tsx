@@ -27,7 +27,7 @@ const theme = createTheme({
     fontFamily: ["Pretendard"].join(","),
   },
 });
-function page({ params: { id } }: Props) {
+function ProjectDetail({ params: { id } }: Props) {
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
   const idCheck = (id: string) => {
@@ -56,4 +56,4 @@ function page({ params: { id } }: Props) {
   );
 }
 
-export default page;
+export default ProjectDetail;
