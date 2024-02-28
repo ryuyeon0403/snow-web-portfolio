@@ -2,7 +2,7 @@
 
 import { Stack, SxProps, Theme, Typography } from "@mui/material";
 import React, { useEffect, useState } from "react";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import SVGLogo from "../_assets/icon/logo.svg";
 import { useRouter, useSearchParams } from "next/navigation";
 import { idxState } from "../_utils/recoil/global";

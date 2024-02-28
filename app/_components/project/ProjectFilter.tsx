@@ -1,13 +1,15 @@
 import { Box, Divider, Grid, Stack, Typography } from "@mui/material";
 import React, { useState } from "react";
 import Project from "../../_assets/icon/project.svg";
-import Image, { StaticImageData } from "next/image";
+import Image, { StaticImageData } from "next/legacy/image";
 import MainLayout from "../layout/MainLayout";
 import { cardSectionDataList, imageList } from "../main/Main";
+import { useRouter } from "next/navigation";
 
 function ProjectFilter() {
   const [prjIdx, setPrjIdx] = useState(0);
   const [filterTxt, setFilterTxt] = useState("");
+  const router = useRouter();
 
   return (
     <Stack
@@ -77,7 +79,16 @@ function ProjectFilter() {
               }
             })
             .map((item, index) => (
-              <Grid item xs={6} key={`cardItem-${index}`} alignItems={"center"}>
+              <Grid
+                item
+                xs={6}
+                key={`cardItem-${index}`}
+                alignItems={"center"}
+                sx={{ cursor: "pointer" }}
+                onClick={() => {
+                  router.push(`/project/${item.id}`);
+                }}
+              >
                 <Stack spacing={2}>
                   <Box
                     sx={{
@@ -103,7 +114,7 @@ function ProjectFilter() {
                         src={imageList[item.id]}
                         width={item.width}
                         height={item.height}
-                        quality={85}
+                        quality={100}
                         layout="fixed"
                         alt="image"
                       />

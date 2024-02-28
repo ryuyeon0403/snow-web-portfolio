@@ -5,6 +5,7 @@ import ProjectFilter from "@/app/_components/project/ProjectFilter";
 import { ThemeProvider, createTheme, useMediaQuery } from "@mui/material";
 import React, { Suspense } from "react";
 import { RecoilRoot } from "recoil";
+import "../../globals.css";
 
 const theme = createTheme({
   typography: {

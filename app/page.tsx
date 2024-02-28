@@ -6,7 +6,6 @@ import Main from "./_components/main/Main";
 import "./globals.css";
 import Provide from "./_components/Provide";
 import Footer from "./_components/Footer";
-import { idxState } from "./_utils/recoil/global";
 import { Suspense } from "react";
 
 const theme = createTheme({

@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import Provides from "../_assets/icon/provides.svg";
 import { Box, Grid, Stack, Typography } from "@mui/material";
 import MainLayout from "./layout/MainLayout";

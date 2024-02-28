@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import Image, { StaticImageData } from "next/image";
+import Image, { StaticImageData } from "next/legacy/image";
 import SVGLanding from "../../_assets/icon/landing.svg";
 import Project from "../../_assets/icon/project.svg";
 import About from "../../_assets/icon/about.svg";
@@ -13,6 +13,7 @@ import bg4 from "../../_assets/img/bg4.png";
 import bg5 from "../../_assets/img/bg5.png";
 import bg6 from "../../_assets/img/bg6.png";
 import profile from "../../_assets/img/profile.png";
+import { useRouter } from "next/navigation";
 
 interface CardType {
   id: number;
@@ -113,6 +114,7 @@ export const cardSectionDataList: CardType[] = [
 ];
 export const imageList: Array<StaticImageData> = [bg1, bg2, bg3, bg4, bg5, bg6];
 function Main() {
+  const router = useRouter();
   return (
     <Stack
       direction={"column"}
@@ -151,7 +153,16 @@ function Main() {
         </Stack>
         <Grid container spacing={4}>
           {cardSectionDataList.map((item, index) => (
-            <Grid item xs={6} key={`cardItem-${index}`} alignItems={"center"}>
+            <Grid
+              item
+              xs={6}
+              key={`cardItem-${index}`}
+              alignItems={"center"}
+              sx={{ cursor: "pointer" }}
+              onClick={() => {
+                router.push(`/project/${item.id}`);
+              }}
+            >
               <Stack spacing={2}>
                 <Box
                   sx={{
@@ -176,7 +187,7 @@ function Main() {
                       src={imageList[index]}
                       width={item.width}
                       height={item.height}
-                      quality={85}
+                      quality={100}
                       layout="fixed"
                       alt="image"
                     />
@@ -248,7 +259,7 @@ function Main() {
             src={profile}
             width={362}
             height={422}
-            quality={85}
+            quality={100}
             layout="fixed"
             alt="profile"
           />
