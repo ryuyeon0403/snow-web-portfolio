@@ -5,6 +5,7 @@ import SVGLogo from "../_assets/icon/logo.svg";
 import { useRouter } from "next/navigation";
 import { idxState } from "../_utils/recoil/global";
 import { useRecoilState } from "recoil";
+import MainLayout from "./layout/MainLayout";
 
 const fontStyle: SxProps<Theme> = {
   p: "10px",
@@ -32,32 +33,43 @@ const Header = ({ page }: { page: number }) => {
 
   return (
     <Stack
-      direction={"row"}
+      direction={"column"}
+      justifyContent={"center"}
       alignItems={"center"}
-      spacing={"100px"}
-      px={"120px"}
+      width={"100%"}
+      sx={{
+        position: "fixed",
+        zIndex: 900,
+        pt: "55px",
+        backgroundColor: "rgba(233,233,233,0.9)",
+        backdropFilter: "blur(2.5px)",
+      }}
     >
-      <Image src={SVGLogo} alt="logo" />
-      <Stack direction={"row"} spacing={4}>
-        <Typography
-          sx={{ ...fontStyle, ...(idx == 0 && { color: "#000" }) }}
-          onClick={() => handleClick(0)}
-        >
-          HOME
-        </Typography>
-        <Typography
-          sx={{ ...fontStyle, ...(idx == 1 && { color: "#000" }) }}
-          onClick={() => handleClick(1)}
-        >
-          PROJECT
-        </Typography>
-        <Typography
-          sx={{ ...fontStyle, ...(idx == 2 && { color: "#000" }) }}
-          onClick={() => handleClick(2)}
-        >
-          ABOUT
-        </Typography>
-      </Stack>
+      <MainLayout sx={{ px: "120px" }}>
+        <Stack direction={"row"} alignItems={"center"} spacing={"100px"}>
+          <Image src={SVGLogo} alt="logo" />
+          <Stack direction={"row"} spacing={4}>
+            <Typography
+              sx={{ ...fontStyle, ...(idx == 0 && { color: "#000" }) }}
+              onClick={() => handleClick(0)}
+            >
+              HOME
+            </Typography>
+            <Typography
+              sx={{ ...fontStyle, ...(idx == 1 && { color: "#000" }) }}
+              onClick={() => handleClick(1)}
+            >
+              PROJECT
+            </Typography>
+            <Typography
+              sx={{ ...fontStyle, ...(idx == 2 && { color: "#000" }) }}
+              onClick={() => handleClick(2)}
+            >
+              ABOUT
+            </Typography>
+          </Stack>
+        </Stack>
+      </MainLayout>
     </Stack>
   );
 };
