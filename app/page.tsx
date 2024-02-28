@@ -1,11 +1,12 @@
 "use client";
 import { ThemeProvider, createTheme, useMediaQuery } from "@mui/material";
-import { RecoilRoot } from "recoil";
+import { RecoilRoot, useRecoilState } from "recoil";
 import Header from "./_components/Header";
 import Main from "./_components/main/Main";
 import "./globals.css";
 import Provide from "./_components/Provide";
 import Footer from "./_components/Footer";
+import { idxState } from "./_utils/recoil/global";
 
 const theme = createTheme({
   typography: {

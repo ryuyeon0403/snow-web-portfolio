@@ -1,9 +1,10 @@
 "use client";
-import "@/app/globals.css";
+import Footer from "@/app/_components/Footer";
 import Header from "@/app/_components/Header";
-import { Stack, ThemeProvider, createTheme } from "@mui/material";
+import ProjectFilter from "@/app/_components/project/ProjectFilter";
+import { ThemeProvider, createTheme, useMediaQuery } from "@mui/material";
+import React from "react";
 import { RecoilRoot } from "recoil";
-import Main from "@/app/_components/main/Main";
 
 const theme = createTheme({
   typography: {
@@ -11,19 +12,21 @@ const theme = createTheme({
   },
 });
 
-const page = () => {
+export default function Project() {
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
   return (
     <ThemeProvider theme={theme}>
       <RecoilRoot>
-        <Stack alignItems={"center"}>
-          <Stack maxWidth={"1920px"} sx={{ pt: "70px" }}>
+        {isMobile ? (
+          <>mobile</>
+        ) : (
+          <>
             <Header page={1} />
-            <Main />
-          </Stack>
-        </Stack>
+            <ProjectFilter />
+            <Footer />
+          </>
+        )}
       </RecoilRoot>
     </ThemeProvider>
   );
-};
-
-export default page;
+}

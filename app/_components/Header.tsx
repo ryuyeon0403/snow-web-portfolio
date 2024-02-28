@@ -1,11 +1,16 @@
+"use client";
+
 import { Stack, SxProps, Theme, Typography } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import SVGLogo from "../_assets/icon/logo.svg";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { idxState } from "../_utils/recoil/global";
 import { useRecoilState } from "recoil";
 import MainLayout from "./layout/MainLayout";
+import gsap from "gsap";
+import scrollToPlugin from "gsap/dist/ScrollToPlugin";
+import scrollTrigger from "gsap/dist/ScrollTrigger";
 
 const fontStyle: SxProps<Theme> = {
   p: "10px",
@@ -18,17 +23,41 @@ const fontStyle: SxProps<Theme> = {
 const Header = ({ page }: { page: number }) => {
   const router = useRouter();
   const [idx, setIdx] = useRecoilState(idxState);
+  gsap.registerPlugin(scrollToPlugin, scrollTrigger);
+
+  const searchParams = useSearchParams();
+  const about = searchParams.get("about");
 
   const handleClick = (idx: number) => {
     setIdx(idx);
 
-    const routerUrl = idx == 0 ? "/" : idx == 1 ? "/project" : "about";
-
-    router.push(routerUrl);
+    if (idx == 0) {
+      router.push("/");
+      gsap.to(window, {
+        duration: 0.5,
+        scrollTo: { y: 0, offsetY: 150 },
+      });
+    } else if (idx == 1) {
+      router.push("/project");
+    } else if (idx == 2) {
+      router.push("/?about=true");
+      gsap.to(window, {
+        duration: 0.5,
+        scrollTo: { y: "#About", offsetY: 150 },
+      });
+    }
   };
 
   useEffect(() => {
-    setIdx(page);
+    if (about) {
+      setIdx(2);
+      gsap.to(window, {
+        duration: 0.5,
+        scrollTo: { y: "#About", offsetY: 150 },
+      });
+    } else {
+      setIdx((prev) => page);
+    }
   }, [page]);
 
   return (

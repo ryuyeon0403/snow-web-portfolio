@@ -12,8 +12,10 @@ import bg3 from "../../_assets/img/bg3.png";
 import bg4 from "../../_assets/img/bg4.png";
 import bg5 from "../../_assets/img/bg5.png";
 import bg6 from "../../_assets/img/bg6.png";
+import profile from "../../_assets/img/profile.png";
 
 interface CardType {
+  id: number;
   title: string;
   desc: string;
   imageUrl: string;
@@ -47,8 +49,9 @@ export const myCareerList: History[] = [
   },
 ];
 
-const cardSectionDataList: CardType[] = [
+export const cardSectionDataList: CardType[] = [
   {
+    id: 0,
     title: "kakao : 브랜디드 콘텐츠 실무 프로젝트",
     desc: "카카오 기업 재직기간동안 진행한 카카오톡 브랜드 콘텐츠 프로젝트 입니다.",
     imageUrl: "imageUrl1",
@@ -58,6 +61,7 @@ const cardSectionDataList: CardType[] = [
     height: 434,
   },
   {
+    id: 1,
     title: "NEW SNACK APP PROJECT",
     desc: "뉴미디어 시대, 젠지세대를 위해 새롭게 태어난 뉴스 앱 프로젝트 입니다.",
     imageUrl: "imageUrl1",
@@ -67,6 +71,7 @@ const cardSectionDataList: CardType[] = [
     height: 461,
   },
   {
+    id: 2,
     title: "NAVER + MABERSHIP REBRANDING",
     desc: "퍼블리싱으로 홈페이지를 구현한 네이버 맴버십 브랜딩 프로젝트 입니다.",
     imageUrl: "imageUrl1",
@@ -76,6 +81,7 @@ const cardSectionDataList: CardType[] = [
     height: 331.042,
   },
   {
+    id: 3,
     title: "대학내일 ES : NHR 실무 프로젝트",
     desc: "NHR기업 재직기간동안 진행한 UX·UI 프로젝트 입니다.",
     imageUrl: "imageUrl1",
@@ -85,6 +91,7 @@ const cardSectionDataList: CardType[] = [
     height: 307.137,
   },
   {
+    id: 4,
     title: "MERCEDES BENZ REDESIGN",
     desc: "메르세데스 벤츠 코리아 리브랜딩 프로젝트 입니다.",
     imageUrl: "imageUrl1",
@@ -94,6 +101,7 @@ const cardSectionDataList: CardType[] = [
     height: 462,
   },
   {
+    id: 5,
     title: "ELECPLAN",
     desc: "전기차의 수요 급증에 맞추어 설계한 전기차 예약 앱 프로젝트입니다.",
     imageUrl: "imageUrl1",
@@ -103,9 +111,8 @@ const cardSectionDataList: CardType[] = [
     height: 462,
   },
 ];
-
+export const imageList: Array<StaticImageData> = [bg1, bg2, bg3, bg4, bg5, bg6];
 function Main() {
-  const imageList: Array<StaticImageData> = [bg1, bg2, bg3, bg4, bg5, bg6];
   return (
     <Stack
       direction={"column"}
@@ -236,15 +243,15 @@ function Main() {
           alignItems={"flex-start"}
           pb={"92px"}
         >
-          <Image src={About} alt="about" />
-          <Box
-            sx={{
-              boxShadow: "0px 0px 10px 0px rgba(210, 210, 210, 0.20);",
-              height: "422px",
-              width: "362px",
-              backgroundColor: "grey",
-            }}
-          ></Box>
+          <Image src={About} alt="about" id="About" />
+          <Image
+            src={profile}
+            width={362}
+            height={422}
+            quality={85}
+            layout="fixed"
+            alt="profile"
+          />
         </Stack>
       </MainLayout>
     </Stack>
