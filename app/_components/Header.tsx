@@ -4,7 +4,7 @@ import { Stack, SxProps, Theme, Typography } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import Image from "next/legacy/image";
 import SVGLogo from "../_assets/icon/logo.svg";
-import { useRouter, useSearchParams } from "next/navigation";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { idxState } from "../_utils/recoil/global";
 import { useRecoilState } from "recoil";
 import MainLayout from "./layout/MainLayout";
@@ -20,17 +20,15 @@ const fontStyle: SxProps<Theme> = {
   color: "#9F9F9F",
 };
 
-const Header = ({ page }: { page: number }) => {
+const Header = () => {
   const router = useRouter();
-  const [idx, setIdx] = useRecoilState(idxState);
   gsap.registerPlugin(scrollToPlugin, scrollTrigger);
 
   const searchParams = useSearchParams();
   const about = searchParams.get("about");
+  const path = usePathname();
 
   const handleClick = (idx: number) => {
-    setIdx(idx);
-
     if (idx == 0) {
       router.push("/");
       gsap.to(window, {
@@ -50,15 +48,12 @@ const Header = ({ page }: { page: number }) => {
 
   useEffect(() => {
     if (about) {
-      setIdx(2);
       gsap.to(window, {
         duration: 0.5,
         scrollTo: { y: "#About", offsetY: 150 },
       });
-    } else {
-      setIdx((prev) => page);
     }
-  }, [page]);
+  }, []);
 
   return (
     <Stack
@@ -79,19 +74,25 @@ const Header = ({ page }: { page: number }) => {
           <Image src={SVGLogo} alt="logo" />
           <Stack direction={"row"} spacing={4}>
             <Typography
-              sx={{ ...fontStyle, ...(idx == 0 && { color: "#000" }) }}
+              sx={{
+                ...fontStyle,
+                ...(path == "/" && !about && { color: "#000" }),
+              }}
               onClick={() => handleClick(0)}
             >
               HOME
             </Typography>
             <Typography
-              sx={{ ...fontStyle, ...(idx == 1 && { color: "#000" }) }}
+              sx={{
+                ...fontStyle,
+                ...(path == "/project" && { color: "#000" }),
+              }}
               onClick={() => handleClick(1)}
             >
               PROJECT
             </Typography>
             <Typography
-              sx={{ ...fontStyle, ...(idx == 2 && { color: "#000" }) }}
+              sx={{ ...fontStyle, ...(about && { color: "#000" }) }}
               onClick={() => handleClick(2)}
             >
               ABOUT

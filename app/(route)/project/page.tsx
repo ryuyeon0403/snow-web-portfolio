@@ -23,7 +23,7 @@ export default function Project() {
             <>mobile</>
           ) : (
             <>
-              <Header page={1} />
+              <Header />
               <ProjectFilter />
               <Footer />
             </>

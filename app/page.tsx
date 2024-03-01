@@ -24,7 +24,7 @@ export default function Home() {
             <>mobile</>
           ) : (
             <>
-              <Header page={0} />
+              <Header />
               <Main />
               <Provide />
               <Footer />
