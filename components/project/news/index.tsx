@@ -334,7 +334,7 @@ function News() {
       >
         <Stack direction="row" spacing={"20px"} width={"100%"}>
           <Box className={styels.leftBox} position={"relative"}>
-            <Box alignSelf={"left"} width={"480px"}>
+            <Box alignSelf={"left"} maxWidth={"480px"} width={"100%"}>
               <Box className={styels.leftBoxTitle}>
                 <Typography className={styels.body4}>Problem</Typography>
               </Box>
@@ -352,7 +352,7 @@ function News() {
             ))}
           </Box>
           <Box className={styels.rightBox}>
-            <Box alignSelf={"left"} width={"480px"}>
+            <Box alignSelf={"left"} maxWidth={"480px"} width={"100%"}>
               <Box className={styels.rightBoxTitle}>
                 <Typography className={styels.body4}>Solution</Typography>
               </Box>

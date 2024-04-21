@@ -22,20 +22,23 @@ export default function Main() {
       width={"100%"}
       position={"relative"}
     >
-      <Image
-        src={title}
-        alt="title"
-        placeholder="blur"
-        width={520}
-        height={60}
-        className={styles.title}
-      />
-      <Image
-        src={backgroundImage}
-        alt="background"
-        placeholder="blur"
-        layout="intrinsic"
-      />
+      <Box className={styles.title}>
+        <Image
+          src={title}
+          alt="title"
+          placeholder="blur"
+          width={520}
+          height={60}
+        />
+      </Box>
+      <Box maxWidth={"1920px"}>
+        <Image
+          src={backgroundImage}
+          alt="background"
+          placeholder="blur"
+          layout="intrinsic"
+        />
+      </Box>
       <MainLayout sx={{ px: "0px" }}>
         <Stack
           direction={"row"}

@@ -29,7 +29,7 @@ const MainLayout = ({
       {content}
       <Stack
         direction={"column"}
-        maxWidth={"1680px"}
+        maxWidth={"1600px"}
         width={"100%"}
         // justifyContent="space-between"
         sx={{ ...contentSx }}

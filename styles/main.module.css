@@ -1,7 +1,10 @@
 .title {
   position: absolute;
   top: 140px;
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 1640px;
+  width: 100%;
 }
 
 .subDesc {
