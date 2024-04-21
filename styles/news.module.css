@@ -256,3 +256,83 @@
 .rightBox > *:last-child {
   margin-bottom: 0;
 }
+
+.obj1 {
+  width: 126px;
+  height: 137px;
+  transform: rotate(-7.645deg);
+  flex-shrink: 0;
+  animation: float 2s ease-in-out infinite; /* 2초 간격으로 무한 반복 */
+  position: absolute;
+  top: 20%;
+  left: 23%;
+  transform: translate(-23%, -20%);
+}
+
+.obj2 {
+  width: 179px;
+  height: 168px;
+  transform: rotate(-10.274deg);
+  flex-shrink: 0;
+  animation: float 2s ease-in-out infinite; /* 2초 간격으로 무한 반복 */
+  position: absolute;
+  top: 50%;
+  left: 15%;
+  transform: translate(-15%, -50%);
+}
+
+.obj3 {
+  width: 84px;
+  height: 112px;
+  flex-shrink: 0;
+  animation: float 2s ease-in-out infinite; /* 2초 간격으로 무한 반복 */
+  position: absolute;
+  top: 78%;
+  left: 28%;
+  transform: translate(-28%, -78%);
+}
+
+.obj4 {
+  width: 112px;
+  height: 115px;
+  flex-shrink: 0;
+  animation: float 2s ease-in-out infinite; /* 2초 간격으로 무한 반복 */
+  position: absolute;
+  top: 25%;
+  left: 71%;
+  transform: translate(-71%, -25%);
+}
+
+.obj5 {
+  width: 203px;
+  height: 184px;
+  flex-shrink: 0;
+  animation: float 2s ease-in-out infinite; /* 2초 간격으로 무한 반복 */
+  position: absolute;
+  top: 45%;
+  left: 75%;
+  transform: translate(-75%, -45%);
+}
+
+.obj6 {
+  width: 46px;
+  height: 53px;
+  flex-shrink: 0;
+  animation: float 2s ease-in-out infinite; /* 2초 간격으로 무한 반복 */
+  position: absolute;
+  top: 82%;
+  left: 72%;
+  transform: translate(-72%, -82%);
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0); /* 시작 위치 */
+  }
+  50% {
+    transform: translateY(-15px); /* 가운데 위치 */
+  }
+  100% {
+    transform: translateY(0); /* 다시 시작 위치 */
+  }
+}

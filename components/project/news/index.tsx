@@ -4,7 +4,7 @@ import backgroundImage from "../../../assets/image/news/background.png";
 import newSnackBg from "../../../assets/image/news/newSnackBg.png";
 import newPlayBg from "../../../assets/image/news/newPlayBg.png";
 import styels from "../../../styles/news.module.css";
-import { NumberImages } from "./data";
+import { NumberImages, ObjImages } from "./data";
 import newsIcon from "../../../assets/image/news/newsIcon.png";
 import number2Content from "../../../assets/image/news/number2Content.png";
 import number4Content from "../../../assets/image/news/number4Content.png";
@@ -325,6 +325,61 @@ function News() {
           alt="newSnackBg"
           placeholder="blur"
           layout="intrinsic"
+        />
+      </Box>
+      <Box
+        className={styels.whiteBox}
+        pt={"20px"}
+        sx={{ background: "none !important" }}
+        position={"relative"}
+      >
+        <Image
+          src={newPlayBg}
+          alt="newPlayBg"
+          placeholder="blur"
+          layout="intrinsic"
+        />
+        <Image
+          src={ObjImages[0]}
+          alt="obj1"
+          placeholder="blur"
+          layout="intrinsic"
+          className={styels.obj1}
+        />
+        <Image
+          src={ObjImages[1]}
+          alt="obj2"
+          placeholder="blur"
+          layout="fixed"
+          className={styels.obj2}
+        />
+        <Image
+          src={ObjImages[2]}
+          alt="obj3"
+          placeholder="blur"
+          layout="fixed"
+          className={styels.obj3}
+        />
+        <Image
+          src={ObjImages[3]}
+          alt="obj4"
+          placeholder="blur"
+          layout="fixed"
+          className={styels.obj4}
+        />
+        <Image
+          src={ObjImages[4]}
+          alt="obj5"
+          placeholder="blur"
+          layout="fixed"
+          className={styels.obj5}
+        />
+        <Image
+          src={ObjImages[5]}
+          alt="obj6"
+          placeholder="blur"
+          layout="fixed"
+          className={styels.obj6}
         />
       </Box>
       <Box
