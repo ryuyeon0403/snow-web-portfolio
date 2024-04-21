@@ -59,7 +59,7 @@ export default function Main() {
               alignItems={"center"}
               sx={{ cursor: "pointer" }}
               onClick={() => {
-                router.push(`/project/${item.id}`);
+                router.push(`/project/${item.path}`);
               }}
             >
               <Image

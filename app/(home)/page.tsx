@@ -19,9 +19,7 @@ export default function Home() {
           <>mobile</>
         ) : (
           <>
-            {/* <Header /> */}
             <Main />
-            {/* <Provide /> */}
             <Footer />
           </>
         )}

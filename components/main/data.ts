@@ -9,9 +9,9 @@ interface CardType {
   id: number;
   title: string;
   desc: string;
-  imageUrl: string;
   chipList: string[];
   color: string;
+  path: string;
 }
 
 interface History {
@@ -51,47 +51,46 @@ export const cardSectionDataList: CardType[] = [
     id: 0,
     title: "NEW SNACK APP PROJECT",
     desc: "뉴미디어 시대, 젠지세대를 위해 새롭게 태어난 뉴스 앱 프로젝트 입니다.",
-    imageUrl: "imageUrl1",
     chipList: ["APP", "VIDEO", "3D"],
     color: "#1B80FF",
+    path: "news",
   },
   {
     id: 1,
     title: "kakao : 브랜디드 콘텐츠 실무 프로젝트",
     desc: "카카오 기업 재직기간동안 진행한 카카오톡 브랜드 콘텐츠 프로젝트 입니다.",
-    imageUrl: "imageUrl1",
     chipList: ["실무 프로젝트", "카카오", "카카오톡"],
     color: "#FAE100",
+    path: "kakao",
   },
   {
     id: 2,
     title: "NAVER + MABERSHIP REBRANDING",
     desc: "퍼블리싱으로 홈페이지를 구현한 네이버 맴버십 브랜딩 프로젝트 입니다.",
-    imageUrl: "imageUrl1",
     chipList: ["WEB", "CSS/HTML", "PUBLISHING", "그래픽"],
     color: "#6EB6B8",
+    path: "naver",
   },
   {
     id: 3,
     title: "대학내일 ES : NHR 실무 프로젝트",
     desc: "NHR기업 재직기간동안 진행한 UX·UI 프로젝트 입니다.",
-    imageUrl: "imageUrl1",
     chipList: ["실무 프로젝트", "NHR", "커리어톡"],
     color: "#ECF4F7",
+    path: "nhr",
   },
   {
     id: 4,
     title: "MERCEDES BENZ REDESIGN",
     desc: "메르세데스 벤츠 코리아 리브랜딩 프로젝트 입니다.",
-    imageUrl: "imageUrl1",
     chipList: ["WEB", "리디자인", "편집디자인"],
     color: "#e9e9e9",
+    path: "benz",
   },
   // {
   //   id: 5,
   //   title: "ELECPLAN",
   //   desc: "전기차의 수요 급증에 맞추어 설계한 전기차 예약 앱 프로젝트입니다.",
-  //   imageUrl: "imageUrl1",
   //   chipList: ["APP", "그래픽", "일러스트"],
   //   color: "#e9e9e9",
   // },
