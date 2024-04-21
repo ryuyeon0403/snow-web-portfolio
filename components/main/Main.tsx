@@ -1,119 +1,18 @@
 "use client";
-import React from "react";
-import Image, { StaticImageData } from "next/image";
-import SVGLanding from "../../assets/icon/landing.svg";
-import Project from "../../assets/icon/project.svg";
-import About from "../../assets/icon/about.svg";
 import { Box, Divider, Grid, Stack, Typography } from "@mui/material";
+import Image from "next/image";
+import About from "../../assets/icon/about.svg";
+import Project from "../../assets/icon/project.svg";
 import MainLayout from "../layout/MainLayout";
-import bg1 from "../../assets/image/bg1.png";
-import bg2 from "../../assets/image/bg2.png";
-import bg3 from "../../assets/image/bg3.png";
-import bg4 from "../../assets/image/bg4.png";
-import bg5 from "../../assets/image/bg5.png";
-import bg6 from "../../assets/image/bg6.png";
-import profile from "../../assets/image/profile.png";
+
 import { useRouter } from "next/navigation";
+import backgroundImage from "../../assets/image/main/background.png";
+import title from "../../assets/image/main/title.png";
+import profile from "../../assets/image/main/profile.png";
+import styles from "../../styles/main.module.css";
+import { cardSectionDataList, imageList, myCareerList } from "./data";
 
-interface CardType {
-  id: number;
-  title: string;
-  desc: string;
-  imageUrl: string;
-  chipList: string[];
-  color: string;
-  width: number;
-  height: number;
-}
-
-interface History {
-  title: string;
-  desc: string;
-}
-
-export const myCareerList: History[] = [
-  {
-    title: "학력",
-    desc: "연세대학교 시각디자인과 / 디지털예술학과 졸업\n연세대학교 신촌캠퍼스 디지털예술학과 연계전공\n연세대학교 미래캠퍼스 시각디자인과 편입\n예일여자고등학교",
-  },
-  {
-    title: "경력",
-    desc: "카카오  ㅣ  2023.12 - 현재\n동아일보   ㅣ   2023.6 - 2023.11\n대학내일 ES : NHR  ㅣ  2022.7-2023.5\n(주)나로나오   ㅣ   2021.8 - 2021.10",
-  },
-  {
-    title: "어학 l 자격증",
-    desc: "Opic IH  l  2023.2\nGTQ 자격증 1급 ㅣ 2023.11\nACA 국제 포토샵 자격증 1급 ㅣ 2021.9\n운전면허증 2종 보통",
-  },
-  {
-    title: "수상",
-    desc: "GTQ 자격증 1급 ㅣ 2023.11\nACA 국제 포토샵 자격증 1급 ㅣ 2021.9\n운전면허증 2종 보통",
-  },
-];
-
-export const cardSectionDataList: CardType[] = [
-  {
-    id: 0,
-    title: "kakao : 브랜디드 콘텐츠 실무 프로젝트",
-    desc: "카카오 기업 재직기간동안 진행한 카카오톡 브랜드 콘텐츠 프로젝트 입니다.",
-    imageUrl: "imageUrl1",
-    chipList: ["실무 프로젝트", "카카오", "카카오톡"],
-    color: "#FAE100",
-    width: 354,
-    height: 434,
-  },
-  {
-    id: 1,
-    title: "NEW SNACK APP PROJECT",
-    desc: "뉴미디어 시대, 젠지세대를 위해 새롭게 태어난 뉴스 앱 프로젝트 입니다.",
-    imageUrl: "imageUrl1",
-    chipList: ["APP", "VIDEO", "3D"],
-    color: "#1B80FF",
-    width: 497,
-    height: 461,
-  },
-  {
-    id: 2,
-    title: "NAVER + MABERSHIP REBRANDING",
-    desc: "퍼블리싱으로 홈페이지를 구현한 네이버 맴버십 브랜딩 프로젝트 입니다.",
-    imageUrl: "imageUrl1",
-    chipList: ["WEB", "CSS/HTML", "PUBLISHING", "그래픽"],
-    color: "#6EB6B8",
-    width: 428.423,
-    height: 331.042,
-  },
-  {
-    id: 3,
-    title: "대학내일 ES : NHR 실무 프로젝트",
-    desc: "NHR기업 재직기간동안 진행한 UX·UI 프로젝트 입니다.",
-    imageUrl: "imageUrl1",
-    chipList: ["실무 프로젝트", "NHR", "커리어톡"],
-    color: "#ECF4F7",
-    width: 576.136,
-    height: 307.137,
-  },
-  {
-    id: 4,
-    title: "MERCEDES BENZ REDESIGN",
-    desc: "메르세데스 벤츠 코리아 리브랜딩 프로젝트 입니다.",
-    imageUrl: "imageUrl1",
-    chipList: ["WEB", "리디자인", "편집디자인"],
-    color: "#e9e9e9",
-    width: 822,
-    height: 462,
-  },
-  {
-    id: 5,
-    title: "ELECPLAN",
-    desc: "전기차의 수요 급증에 맞추어 설계한 전기차 예약 앱 프로젝트입니다.",
-    imageUrl: "imageUrl1",
-    chipList: ["APP", "그래픽", "일러스트"],
-    color: "#e9e9e9",
-    width: 822,
-    height: 462,
-  },
-];
-export const imageList: Array<StaticImageData> = [bg1, bg2, bg3, bg4, bg5, bg6];
-function Main() {
+export default function Main() {
   const router = useRouter();
   return (
     <Stack
@@ -122,36 +21,36 @@ function Main() {
       alignItems={"center"}
       width={"100%"}
       position={"relative"}
-      sx={{ pt: "689px" }}
     >
+      <Image
+        src={title}
+        alt="title"
+        placeholder="blur"
+        width={520}
+        height={60}
+        className={styles.title}
+      />
+      <Image
+        src={backgroundImage}
+        alt="background"
+        placeholder="blur"
+        layout="intrinsic"
+      />
       <MainLayout sx={{ px: "0px" }}>
-        <Image src={SVGLanding} alt="landing" />
-        <Divider
-          sx={{
-            width: "100%",
-            border: "1px solid #CECECE",
-            mt: "100px",
-            mb: "118px",
-          }}
-        />
-        <Stack direction={"row"} justifyContent={"space-between"} pb="84px">
+        <Stack
+          direction={"row"}
+          justifyContent={"space-between"}
+          pt={"100px"}
+          pb={"110px"}
+        >
           <Image src={Project} alt="landing" />
-          <Typography
-            sx={{
-              whiteSpace: "pre-wrap",
-              textTransform: "uppercase",
-              color: "#B6B6B6",
-              fontSize: "16px",
-              fontWeight: 500,
-              lineHeight: "24px",
-            }}
-          >
+          <Typography className={styles.subDesc}>
             An itemized list of practical and personal{"\n"}projects. Mainly
             apps and web projects.{"\n"}
             Other works include video, publishing, etc
           </Typography>
         </Stack>
-        <Grid container spacing={4}>
+        <Grid container spacing={"20px"}>
           {cardSectionDataList.map((item, index) => (
             <Grid
               item
@@ -163,57 +62,21 @@ function Main() {
                 router.push(`/project/${item.id}`);
               }}
             >
-              <Stack spacing={2}>
-                <Box
-                  sx={{
-                    width: "100%",
-                    minHeight: "460px",
-                    maxHeight: "462px",
-                    backgroundColor: item.color,
-                    borderRadius: "20px",
-                    position: "relative",
-                    overflow: "hidden",
-                  }}
-                >
-                  <Box
-                    sx={{
-                      position: "absolute",
-                      top: index == 0 ? "54%" : "51%",
-                      left: index == 2 ? "45%" : index == 3 ? "55%" : "50%",
-                      transform: "translate(-50%, -50%)", // 추가: 가운데 정렬
-                    }}
-                  >
-                    <Image
-                      src={imageList[index]}
-                      width={item.width}
-                      height={item.height}
-                      quality={100}
-                      layout="fixed"
-                      alt="image"
-                    />
-                  </Box>
-                </Box>
-                <Stack alignItems={"left"}>
-                  <Typography
-                    sx={{
-                      fontSize: "24px",
-                      fontWeight: 700,
-                      lineHeight: "45px",
-                    }}
-                  >
+              <Image
+                src={imageList[item.id]}
+                placeholder="blur"
+                layout="responsive"
+                alt={item.title}
+              />
+              <Stack spacing={0} pt={"20px"} pb={"50px"}>
+                <Stack alignItems={"left"} spacing={0.5}>
+                  <Typography className={styles.projectTitle}>
                     {item.title}
                   </Typography>
-                  <Typography
-                    sx={{
-                      fontSize: "18px",
-                      fontWeight: 300,
-                      lineHeight: "30px",
-                      pb: "3px",
-                    }}
-                  >
+                  <Typography className={styles.projectDesc}>
                     {item.desc}
                   </Typography>
-                  <Stack direction={"row"} spacing={"12px"}>
+                  <Stack direction={"row"} spacing={"12px"} pt={1}>
                     {item.chipList.map((chip, index) => (
                       <Box
                         key={`chip-${index}`}
@@ -243,30 +106,41 @@ function Main() {
         <Divider
           sx={{
             width: "100%",
-            border: "1px solid #CECECE",
-            mt: "118px",
-            mb: "122px",
+            mb: "59px",
           }}
+          className={styles.divider}
         />
         <Stack
           direction={"row"}
           justifyContent={"space-between"}
           alignItems={"flex-start"}
-          pb={"92px"}
+          pb={"120px"}
         >
-          <Image src={About} alt="about" id="About" />
-          <Image
-            src={profile}
-            width={362}
-            height={422}
-            quality={100}
-            layout="fixed"
-            alt="profile"
-          />
+          <Stack spacing={"221px"}>
+            <Image src={About} alt="about" id="About" />
+            <Stack direction={"row"} spacing={2}>
+              {myCareerList.map((item, index) => (
+                <Stack spacing={"6px"} key={item.title} maxWidth={"340px"}>
+                  <Typography className={styles.careerTitle}>
+                    {item.title}
+                  </Typography>
+                  <Typography className={styles.careerDesc}>
+                    {item.desc}
+                  </Typography>
+                </Stack>
+              ))}
+            </Stack>
+          </Stack>
+          <Box className={styles.profile}>
+            <Image
+              src={profile}
+              alt="profile"
+              placeholder="blur"
+              layout="intrinsic"
+            />
+          </Box>
         </Stack>
       </MainLayout>
     </Stack>
   );
 }
-
-export default Main;

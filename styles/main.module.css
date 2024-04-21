@@ -1,0 +1,80 @@
+.title {
+  position: absolute;
+  top: 140px;
+  left: 0;
+}
+
+.subDesc {
+  color: var(--all-gray-3, #b6b6b6);
+
+  /* Detail 2 */
+  font-family: Pretendard;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 22.4px */
+  letter-spacing: -0.48px;
+  white-space: pre-wrap;
+}
+
+.projectTitle {
+  color: var(--all-black, #000);
+
+  /* Body 1 */
+  font-family: Pretendard;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 145%; /* 40.6px */
+  letter-spacing: -0.84px;
+}
+
+.projectDesc {
+  color: var(--all-gray-2, #6a6a6a);
+
+  /* Detail 2 */
+  font-family: Pretendard;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 22.4px */
+  letter-spacing: -0.48px;
+}
+
+.divider {
+  stroke-width: 1px;
+  stroke: var(--all-gray-3, #b6b6b6);
+}
+
+.profile {
+  width: 376px;
+  height: 438px;
+  flex-shrink: 0;
+  border-radius: 16px;
+  /* background: lightgray 0px -30.196px / 100% 107.402% no-repeat; */
+
+  box-shadow: 0px 0px 10px 0px rgba(210, 210, 210, 0.2);
+}
+
+.careerTitle {
+  color: var(--all-black, #000);
+
+  /* Body 1 */
+  font-family: Pretendard;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 145%; /* 40.6px */
+  letter-spacing: -0.84px;
+}
+
+.careerDesc {
+  color: var(--all-gray-2, #6a6a6a);
+  font-family: Pretendard;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 160%; /* 28.8px */
+  letter-spacing: -0.54px;
+  white-space: pre-wrap;
+}

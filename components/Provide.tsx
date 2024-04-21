@@ -3,7 +3,7 @@ import Image from "next/legacy/image";
 import Provides from "../assets/icon/provides.svg";
 import { Box, Grid, Stack, Typography } from "@mui/material";
 import MainLayout from "./layout/MainLayout";
-import { myCareerList } from "./main/Main";
+import { myCareerList } from "./main/data";
 
 function Provide() {
   return (
@@ -14,7 +14,6 @@ function Provide() {
       width={"100%"}
       position={"relative"}
     >
-      <Image src={Provides} alt="provides" />
       <MainLayout sx={{ px: "0px" }}>
         <Grid container pt={"75px"} pb="43px">
           {myCareerList.map((item, index) => (
