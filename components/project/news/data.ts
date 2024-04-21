@@ -10,6 +10,12 @@ import obj4 from "../../../assets/image/news/obj4.png";
 import obj5 from "../../../assets/image/news/obj5.png";
 import obj6 from "../../../assets/image/news/obj6.png";
 
+import number3Content1 from "../../../assets/image/news/number3Content1.png";
+import number3Content2 from "../../../assets/image/news/number3Content2.png";
+import number3Content3 from "../../../assets/image/news/number3Content3.png";
+import number3Content4 from "../../../assets/image/news/number3Content4.png";
+import number3Content5 from "../../../assets/image/news/number3Content5.png";
+
 import { StaticImageData } from "next/image";
 
 interface Detail {
@@ -45,4 +51,12 @@ export const ObjImages: Array<StaticImageData> = [
   obj4,
   obj5,
   obj6,
+];
+
+export const number3Images: Array<StaticImageData> = [
+  number3Content1,
+  number3Content2,
+  number3Content3,
+  number3Content4,
+  number3Content5,
 ];

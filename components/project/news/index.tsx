@@ -1,13 +1,19 @@
-import { Box, Grid, Stack, Typography } from "@mui/material";
+"use client";
+
+import { Box, Stack, Typography } from "@mui/material";
 import Image from "next/image";
 import backgroundImage from "../../../assets/image/news/background.png";
-import newSnackBg from "../../../assets/image/news/newSnackBg.png";
 import newPlayBg from "../../../assets/image/news/newPlayBg.png";
-import styels from "../../../styles/news.module.css";
-import { NumberImages, ObjImages } from "./data";
+import newSnackBg from "../../../assets/image/news/newSnackBg.png";
 import newsIcon from "../../../assets/image/news/newsIcon.png";
 import number2Content from "../../../assets/image/news/number2Content.png";
+import number2Design from "../../../assets/image/news/number2Design.png";
+import number2Group from "../../../assets/image/news/number2Group.png";
+import number2Text from "../../../assets/image/news/number2Text.png";
 import number4Content from "../../../assets/image/news/number4Content.png";
+import styels from "../../../styles/news.module.css";
+import NewsYoutube from "./NewsYoutube";
+import { NumberImages, ObjImages, number3Images } from "./data";
 
 function News() {
   return (
@@ -104,7 +110,7 @@ function News() {
           </Stack>
         </Stack>
       </Box>
-      {/* 01content */}
+      {/* 01 content */}
       <Box className={styels.whiteBox}>
         <Stack
           direction={"row"}
@@ -453,7 +459,88 @@ function News() {
           </Stack>
         </Stack>
       </Box>
-
+      {/* 02 Content */}
+      <Box
+        className={styels.whiteBox}
+        sx={{ background: "#171920 !important", mb: "20px" }}
+      >
+        <Stack
+          direction={"row"}
+          maxWidth={"1360px"}
+          width={"100%"}
+          pt={"80px"}
+          spacing={5}
+          pb={"160px"}
+        >
+          <Typography className={styels.body4}>Design system</Typography>
+          <Typography
+            className={styels.detail1}
+            sx={{ color: "#B6B6B6 !important", whiteSpace: "pre-wrap" }}
+          >
+            NotoSans 서체로부터 가독성을 더해 만들어진 Pretendard 서체 시스템을
+            사용함으로써{"\n"}리딩에 적합한 높은 판독성의 환경을 고안했으며,
+            즐거운 뉴스 컨셉에 맞는 컬러를 채택했습니다.
+          </Typography>
+        </Stack>
+        <Stack direction={"row"} spacing={5} pb={10}>
+          <Box maxWidth={"1020px"}>
+            <Image
+              src={number2Design}
+              alt="number2Design"
+              layout="intrinsic"
+              placeholder="blur"
+            />
+          </Box>
+          <Box maxWidth={"300px"}>
+            <Image
+              src={number2Text}
+              alt="number2Text"
+              layout="intrinsic"
+              placeholder="blur"
+            />
+          </Box>
+        </Stack>
+      </Box>
+      {/* 02 second Content */}
+      <Box
+        className={styels.whiteBox}
+        sx={{ background: "#171920 !important", mb: "20px" }}
+      >
+        <Stack
+          direction={"row"}
+          maxWidth={"1360px"}
+          width={"100%"}
+          pt={"80px"}
+          spacing={"64px"}
+          pb={"150px"}
+        >
+          <Typography className={styels.body4}>Asset Library</Typography>
+          <Typography
+            className={styels.detail1}
+            sx={{ color: "#B6B6B6 !important", whiteSpace: "pre-wrap" }}
+          >
+            주 사용 대상이 선호하는 플랫폼 조사와 사용자 그룹과 비슷한
+            인터뷰이들의 인터뷰 조사 결과를 통해 사용자들에게{"\n"}더욱 심미적
+            가시성을 높이고 호감도 측면에서 효과적으로 어필할 수 있는 3D 그래픽
+            요소를 고안했습니다.
+          </Typography>
+        </Stack>
+        <Box maxWidth={"1440px"} pb={11}>
+          <Image
+            src={number2Group}
+            alt="number2Group"
+            layout="intrinsic"
+            placeholder="blur"
+          />
+        </Box>
+      </Box>
+      {/* 02 Content Youtube */}
+      <Box
+        className={styels.whiteBox}
+        sx={{ background: "#171920 !important" }}
+      >
+        <NewsYoutube />
+      </Box>
       {/* 03 */}
       <Box className={styels.titleContent}>
         <Stack direction={"row"} spacing={5} alignItems={"center"}>
@@ -478,745 +565,67 @@ function News() {
           </Stack>
         </Stack>
       </Box>
+      {/* 03 Content */}
+      <Stack spacing={"20px"}>
+        {[0, 1, 2, 3, 4].map((item) => (
+          <Box className={styels.whiteBox} key={`itemContent-${item}`}>
+            <Image
+              src={number3Images[item]}
+              alt={`itemContent-${item}`}
+              placeholder="blur"
+              layout="intrinsic"
+            />
+          </Box>
+        ))}
+      </Stack>
+      {/* FOOTER */}
+      <Box className={styels.titleContent}>
+        <Typography className={styels.heading3} pb={5}>
+          Project infomation
+        </Typography>
+        <Stack direction="row" justifyContent={"space-between"} spacing={5}>
+          <Stack spacing={"20px"}>
+            <Typography
+              className={styels.caption}
+              sx={{ color: "#1B80FF !important" }}
+            >
+              Overview
+            </Typography>
+            <Typography className={styels.detail3} whiteSpace={"pre-wrap"}>
+              뉴스낵은 아래 세가지로 분류되는 기존 서비스의 장점만을 합쳐 2030
+              디지털 네이티브 세대의 정보 발굴처 정착을 돕는 새로운 뉴스
+              서비스입니다.{"\n"}첫째, 사용자가 원하는 컨텐츠보다는 카테고리로만
+              단순 분류 된 기존의 쉬운 뉴스 서비스. 둘째, 공신력이 있고 실질적
+              정보를 전달하지만 리딩이 어려운{"\n"}서비스. 셋째, 빠른 정보
+              전달과 소통 기능이 강점이지만 정보의 신뢰도가 낮은 SNS 서비스. 본
+              프로젝트는 쉬운 이해가 가능하면서도, 개인에게 맞는{"\n"}균형잡힌
+              정보를 제공하며, 소통 기능이 결합된 서비스 입니다.
+            </Typography>
+          </Stack>
+          <Stack spacing={"20px"}>
+            <Typography
+              className={styels.caption}
+              sx={{ color: "#1B80FF !important" }}
+            >
+              Period
+            </Typography>
+            <Typography className={styels.detail3}>
+              2022.12.17 - 2023.03.15
+            </Typography>
+            <Typography
+              className={styels.caption}
+              sx={{ color: "#1B80FF !important" }}
+            >
+              Role
+            </Typography>
+            <Typography className={styels.detail3} whiteSpace={"pre-wrap"}>
+              개인 프로젝트(기여도 100%){"\n"}
+              서비스 기획, 유저 인터뷰, 유저 테스트, UI 디자인
+            </Typography>
+          </Stack>
+        </Stack>
+      </Box>
     </Stack>
-    // <ProjectLayout>
-    //   <Stack direction="row" width={"100%"}>
-    //     <Stack
-    //       sx={{ width: "747px", backgroundColor: "#FFFFFF", height: "1080px" }}
-    //       px={"120px"}
-    //       justifyContent={"center"}
-    //     >
-    //       <Typography
-    //         sx={{
-    //           color: "#797979",
-    //           fontSize: "16px",
-    //           fontWeight: 500,
-    //           lineHeight: "24px",
-    //           letterSpacing: "-0.48px",
-    //           pb: 1,
-    //         }}
-    //       >
-    //         UX/UI Design personal project
-    //       </Typography>
-    //       <Typography
-    //         sx={{
-    //           color: "#1E1E1E",
-    //           fontSize: "40px",
-    //           fontWeight: 800,
-    //           lineHeight: "60px",
-    //           pb: 0.5,
-    //         }}
-    //       >
-    //         NEW SNACK APP
-    //       </Typography>
-    //       <Typography
-    //         sx={{
-    //           color: "#000",
-    //           fontSize: "20px",
-    //           fontWeight: 700,
-    //           lineHeight: "30px",
-    //           letterSpacing: "-0.6px",
-    //           pb: "60px",
-    //         }}
-    //       >
-    //         쉬운 뉴스 리딩을 위한{" "}
-    //         <span style={{ color: "#1B80FF" }}>새로운 뉴스 지식 플랫폼</span>
-    //       </Typography>
-    //       <Stack spacing={"30px"} pb={"94px"}>
-    //         {DetailList.map((item) => (
-    //           <Stack spacing={"5px"} key={`item-${item.title}`}>
-    //             <Typography
-    //               sx={{
-    //                 color: "#1B80FF",
-    //                 fontSize: "15px",
-    //                 fontWeight: 700,
-    //                 lineHeight: "22.5px",
-    //                 letterSpacing: "-0.45px",
-    //               }}
-    //             >
-    //               {item.title}
-    //             </Typography>
-    //             <Typography
-    //               whiteSpace={"pre-wrap"}
-    //               sx={{
-    //                 color: "#656565",
-    //                 fontSize: "15px",
-    //                 fontWeight: 500,
-    //                 lineHeight: "22.5px",
-    //                 letterSpacing: "-0.45px",
-    //               }}
-    //             >
-    //               {item.content}
-    //             </Typography>
-    //           </Stack>
-    //         ))}
-    //       </Stack>
-    //       <Box
-    //         sx={{
-    //           backgroundColor: "#005FED",
-    //           borderRadius: "8px",
-    //           width: "309px",
-    //           height: "60px",
-    //           boxShadow: "0px 2px 0px 0px #005FED",
-    //         }}
-    //         display={"flex"}
-    //         alignItems={"center"}
-    //         // justifyContent={"center"}
-    //       >
-    //         <Typography
-    //           sx={{
-    //             color: "#FFF",
-    //             fontSize: "18px",
-    //             fontWeight: 700,
-    //             pl: "33px",
-    //           }}
-    //         >
-    //           영상으로 최종 서비스 확인하기
-    //         </Typography>
-    //       </Box>
-    //     </Stack>
-    //     <Stack
-    //       sx={{
-    //         background: "#1B80FF",
-    //         width: "1185px",
-    //         height: "1080px",
-    //         overflow: "hidden",
-    //       }}
-    //       position={"relative"}
-    //     >
-    //       <Box
-    //         sx={{
-    //           position: "absolute",
-    //           top: "58.5%",
-    //           left: "50%",
-    //           transform: "translate(-50%, -50%)", // 추가: 가운데 정렬
-    //         }}
-    //       >
-    //         <Image src={NewsImgList[0]} layout="intrinsic" alt="image" />
-    //       </Box>
-    //     </Stack>
-    //   </Stack>
-    //   <Stack sx={{ backgroundColor: "#000" }}>
-    //     {/* 제목 */}
-    //     <Stack
-    //       direction={"row"}
-    //       justifyContent={"space-between"}
-    //       pl="114px"
-    //       pr={"120px"}
-    //       pt="213px"
-    //       pb="211px"
-    //       alignItems={"center"}
-    //       spacing={5}
-    //     >
-    //       <Stack direction={"row"} alignItems={"center"} spacing={8}>
-    //         <Typography
-    //           sx={{ color: "#FFF", fontSize: "95.879px", fontWeight: 700 }}
-    //         >
-    //           01
-    //         </Typography>
-    //         <Stack spacing={1}>
-    //           <Typography
-    //             sx={{ color: "#FFF", fontSize: "38px", fontWeight: 700 }}
-    //           >
-    //             News is not interesting.
-    //           </Typography>
-    //           <Typography
-    //             sx={{
-    //               color: "#FFF",
-    //               fontSize: "18px",
-    //               fontWeight: 500,
-    //               lineHeight: "34px",
-    //             }}
-    //           >
-    //             핵심 문제점은, 뉴스는 ‘재미없다’는 인식
-    //           </Typography>
-    //         </Stack>
-    //       </Stack>
-    //       <Typography
-    //         sx={{
-    //           color: "#FFF",
-    //           fontSize: "18px",
-    //           fontWeight: 400,
-    //           lineHeight: "34px",
-    //           whiteSpace: "pre-wrap",
-    //         }}
-    //       >
-    //         기존 뉴스 플랫폼에 대한 문제점을 정성적, 정량적으로 조사한 후, 이에
-    //         대한 문제점을 해결할 수 있는{"\n"}솔루션을 도출하여 이를 기존의
-    //         뉴스와 상반되는 비주얼 컨셉으로 풀어냈습니다.
-    //       </Typography>
-    //     </Stack>
-    //     <Stack
-    //       position={"relative"}
-    //       height="991px"
-    //       borderRadius={2}
-    //       sx={{
-    //         backgroundColor: "#20242F",
-    //         m: 2,
-    //         overflow: "hidden",
-    //       }}
-    //     >
-    //       <Box
-    //         sx={{
-    //           position: "absolute",
-    //           background:
-    //             "linear-gradient(180deg, #1B80FF 0%, rgba(27, 128, 255, 0.66) 40.12%, rgba(27, 128, 255, 0.00) 71.99%);",
-    //           top: 0,
-    //           maxWidth: "1980px",
-    //           width: "100%",
-    //           height: "645px",
-    //           zIndex: 1,
-    //           left: 0,
-    //         }}
-    //       ></Box>
-    //       <Box
-    //         sx={{
-    //           width: "116px",
-    //           height: "36px",
-    //           border: "1px solid #65FEB3",
-    //           borderRadius: "4px",
-    //           position: "absolute",
-    //           top: 179,
-    //           left: 940,
-    //           zIndex: 1,
-    //         }}
-    //         display={"flex"}
-    //         alignItems={"center"}
-    //         justifyContent={"center"}
-    //       >
-    //         <Typography
-    //           sx={{
-    //             color: "#65FEB3",
-    //             fontSize: "14px",
-    //             fontWeight: 600,
-    //             lineHeight: "36px",
-    //             letterSpacing: "-0.7px",
-    //           }}
-    //         >
-    //           PROJECT GOAL
-    //         </Typography>
-    //       </Box>
-    //       <Box
-    //         sx={{
-    //           position: "absolute",
-    //           top: 224,
-    //           left: 940,
-    //           zIndex: 1,
-    //         }}
-    //         display={"flex"}
-    //         alignItems={"center"}
-    //         justifyContent={"center"}
-    //       >
-    //         <Typography
-    //           sx={{
-    //             color: "#FFF",
-    //             fontSize: "22px",
-    //             fontWeight: 600,
-    //             lineHeight: "31.9px",
-    //             whiteSpace: "pre-wrap",
-    //           }}
-    //         >
-    //           SNS 뉴스 형태에 익숙한{"\n"}MZ세대의 특징을 중심으로{"\n"}
-    //           {"'"}동기부여 높은 리딩{"'"}을{"\n"}실천할 수 있는 형태로 제안.
-    //         </Typography>
-    //       </Box>
-    //       <Box
-    //         sx={{
-    //           position: "absolute",
-    //           top: "600px",
-    //           left: "50%",
-    //           transform: "translate(-50%, -50%)", // 추가: 가운데 정렬
-    //           zIndex: 1,
-    //         }}
-    //         display={"flex"}
-    //         alignItems={"center"}
-    //         justifyContent={"center"}
-    //       >
-    //         <Stack>
-    //           <Typography
-    //             sx={{
-    //               color: "#FFF",
-    //               fontSize: "242.828px",
-    //               fontWeight: 800,
-    //               lineHeight: "364.243px",
-    //               whiteSpace: "nowrap",
-    //             }}
-    //           >
-    //             NEW + SNACK
-    //           </Typography>
-    //           <Stack direction={"row"} spacing={"700px"}>
-    //             <Typography
-    //               sx={{
-    //                 color: "#FFF",
-    //                 fontSize: "28px",
-    //                 fontWeight: 700,
-    //                 lineHeight: "40px",
-    //                 pl: 2,
-    //               }}
-    //             >
-    //               새로운, 빠른
-    //             </Typography>
-    //             <Typography
-    //               sx={{
-    //                 color: "#FFF",
-    //                 fontSize: "28px",
-    //                 fontWeight: 700,
-    //                 lineHeight: "40px",
-    //               }}
-    //             >
-    //               맛있는, 즐거운
-    //             </Typography>
-    //           </Stack>
-    //         </Stack>
-    //       </Box>
-    //       <Box
-    //         sx={{
-    //           width: "100%",
-    //           borderRadius: 2,
-    //         }}
-    //       >
-    //         <Image
-    //           src={NewsImgList[1]}
-    //           alt="background"
-    //           placeholder="blur"
-    //           layout="intrinsic"
-    //         />
-    //       </Box>
-    //     </Stack>
-    //     <Stack
-    //       alignItems={"center"}
-    //       maxWidth={"1880px"}
-    //       px={"20px"}
-    //       spacing={"20px"}
-    //     >
-    //       <Stack direction={"row"} spacing={"20px"} width={"100%"}>
-    //         <Box
-    //           sx={{
-    //             backgroundColor: "#171920",
-    //             width: "100%",
-    //             height: "1080px",
-    //             borderRadius: 2,
-    //           }}
-    //           display={"flex"}
-    //           justifyContent={"center"}
-    //           alignItems={"center"}
-    //         ></Box>
-    //         <Box
-    //           sx={{
-    //             backgroundColor: "#263B74",
-    //             width: "100%",
-    //             height: "1080px",
-    //             borderRadius: 2,
-    //           }}
-    //           display={"flex"}
-    //           justifyContent={"center"}
-    //           alignItems={"center"}
-    //         ></Box>
-    //       </Stack>
-    //       <Stack position={"relative"} height="1079px" maxWidth={"1880px"}>
-    //         <Box
-    //           sx={{
-    //             width: "100%",
-    //           }}
-    //         >
-    //           <Image
-    //             src={NewsImgList[2]}
-    //             alt="background"
-    //             placeholder="blur"
-    //             layout="intrinsic"
-    //           />
-    //         </Box>
-    //       </Stack>
-    //     </Stack>
-    //     {/* 제목 */}
-    //     <Stack
-    //       direction={"row"}
-    //       justifyContent={"space-between"}
-    //       pl="114px"
-    //       pr={"120px"}
-    //       pt="213px"
-    //       pb="211px"
-    //       alignItems={"center"}
-    //       spacing={5}
-    //     >
-    //       <Stack direction={"row"} alignItems={"center"} spacing={8}>
-    //         <Typography
-    //           sx={{ color: "#FFF", fontSize: "95.879px", fontWeight: 700 }}
-    //         >
-    //           02
-    //         </Typography>
-    //         <Stack spacing={1}>
-    //           <Typography
-    //             sx={{ color: "#FFF", fontSize: "38px", fontWeight: 700 }}
-    //           >
-    //             Visual solution
-    //           </Typography>
-    //           <Typography
-    //             sx={{
-    //               color: "#FFF",
-    //               fontSize: "18px",
-    //               fontWeight: 500,
-    //               lineHeight: "34px",
-    //             }}
-    //           >
-    //             문제점 해결을 위한 비주얼 솔루션
-    //           </Typography>
-    //         </Stack>
-    //       </Stack>
-    //       <Typography
-    //         sx={{
-    //           color: "#FFF",
-    //           fontSize: "18px",
-    //           fontWeight: 400,
-    //           lineHeight: "34px",
-    //           whiteSpace: "pre-wrap",
-    //         }}
-    //       >
-    //         기존 뉴스 플랫폼에 대한 문제점을 정성적, 정량적으로 조사한 후, 이에
-    //         대한 문제점을 해결할 수 있는{" \n"}솔루션을 도출하여 이를 기존의
-    //         뉴스와 상반되는 비주얼 컨셉으로 풀어냈습니다.
-    //       </Typography>
-    //     </Stack>
-    //     <Stack
-    //       alignItems={"center"}
-    //       maxWidth={"1880px"}
-    //       px={"20px"}
-    //       spacing={"20px"}
-    //     >
-    //       <Box
-    //         sx={{
-    //           backgroundColor: "#222224",
-    //           width: "100%",
-    //           height: "1080px",
-    //           borderRadius: 2,
-    //         }}
-    //         display={"flex"}
-    //         justifyContent={"center"}
-    //         alignItems={"center"}
-    //       ></Box>
-    //       <Box
-    //         sx={{
-    //           backgroundColor: "#222224",
-    //           width: "100%",
-    //           height: "1979px",
-    //           borderRadius: 2,
-    //         }}
-    //         display={"flex"}
-    //         justifyContent={"center"}
-    //         alignItems={"center"}
-    //       ></Box>
-    //       <Stack
-    //         direction={"row"}
-    //         spacing={"20px"}
-    //         sx={{ width: "100%", height: "1080px" }}
-    //       >
-    //         <Box
-    //           sx={{
-    //             backgroundColor: "#F4F8FF",
-    //             width: "100%",
-    //             height: "1080px",
-    //             borderRadius: 2,
-    //           }}
-    //           display={"flex"}
-    //           justifyContent={"center"}
-    //           alignItems={"center"}
-    //         >
-    //           test
-    //         </Box>
-    //         <Stack spacing={"20px"} width={"100%"} maxWidth="638px">
-    //           <Box
-    //             sx={{
-    //               backgroundColor: "#E9F3FF",
-    //               maxWidth: "638px",
-    //               width: "100%",
-    //               height: "1080px",
-    //               borderRadius: 2,
-    //             }}
-    //             display={"flex"}
-    //             justifyContent={"center"}
-    //             alignItems={"center"}
-    //           >
-    //             test
-    //           </Box>
-    //           <Box
-    //             sx={{
-    //               backgroundColor: "#1B80FF",
-    //               maxWidth: "638px",
-    //               width: "100%",
-    //               height: "1080px",
-    //               borderRadius: 2,
-    //             }}
-    //             display={"flex"}
-    //             justifyContent={"center"}
-    //             alignItems={"center"}
-    //           >
-    //             test3
-    //           </Box>
-    //         </Stack>
-    //       </Stack>
-    //       <Stack position={"relative"} height="1079px" maxWidth={"1880px"}>
-    //         <Box
-    //           sx={{
-    //             position: "absolute",
-    //             width: "100%",
-    //             maxWidth: "1880px",
-    //             height: "100%",
-    //             backgroundColor: "rgba(0, 0, 0, 0.51);",
-    //             zIndex: 1,
-    //           }}
-    //         ></Box>
-    //         <Box
-    //           sx={{
-    //             position: "absolute",
-    //             top: 100,
-    //             left: 100,
-    //             zIndex: 2,
-    //           }}
-    //         >
-    //           <Stack spacing={"10px"}>
-    //             <Typography
-    //               sx={{
-    //                 color: "#FFF",
-    //                 fontSize: "38px",
-    //                 fontWeight: 700,
-    //                 whiteSpace: "pre-wrap",
-    //               }}
-    //             >
-    //               MZ세대를 타겟팅한{"\n"}홍보 영상을 제작했습니다.
-    //             </Typography>
-    //             <Typography
-    //               sx={{
-    //                 color: "#FFF",
-    //                 fontSize: "24px",
-    //                 fontWeight: 500,
-    //                 lineHeight: "34px",
-    //               }}
-    //             >
-    //               썸네일 클릭 시 영상으로 이동합니다.
-    //             </Typography>
-    //           </Stack>
-    //         </Box>
-    //         <Box
-    //           sx={{
-    //             width: "100%",
-    //           }}
-    //         >
-    //           <Image
-    //             src={NewsImgList[3]}
-    //             alt="background"
-    //             placeholder="blur"
-    //             layout="intrinsic"
-    //           />
-    //         </Box>
-    //       </Stack>
-    //     </Stack>
-    //     {/* 제목 */}
-    //     <Stack
-    //       direction={"row"}
-    //       justifyContent={"space-between"}
-    //       pl="114px"
-    //       pr={"120px"}
-    //       py="120px"
-    //       alignItems={"center"}
-    //       sx={{ backgroundColor: "#C1D6F2" }}
-    //       spacing={5}
-    //     >
-    //       <Stack direction={"row"} alignItems={"center"} spacing={8}>
-    //         <Typography
-    //           sx={{ color: "#000", fontSize: "95.879px", fontWeight: 700 }}
-    //         >
-    //           03
-    //         </Typography>
-    //         <Stack spacing={1}>
-    //           <Typography
-    //             sx={{ color: "#000", fontSize: "38px", fontWeight: 700 }}
-    //           >
-    //             SCREEN FLOW
-    //           </Typography>
-    //           <Typography
-    //             sx={{
-    //               color: "#000",
-    //               fontSize: "18px",
-    //               fontWeight: 500,
-    //               lineHeight: "34px",
-    //             }}
-    //           >
-    //             화면 플로우
-    //           </Typography>
-    //         </Stack>
-    //       </Stack>
-    //       <Typography
-    //         sx={{
-    //           color: "#000",
-    //           fontSize: "18px",
-    //           fontWeight: 400,
-    //           lineHeight: "34px",
-    //           whiteSpace: "pre-wrap",
-    //         }}
-    //       >
-    //         핵심 문제점을 해결할 수 있는 사용자 UI를 설계하고, 와이어프레임을
-    //         제작한 뒤{"\n"}타겟층을 대상으로 한 사용성 점검과정을 거쳐 화면을
-    //         제작했습니다.
-    //       </Typography>
-    //     </Stack>
-    //     <Stack
-    //       alignItems={"center"}
-    //       maxWidth={"1880px"}
-    //       px={"20px"}
-    //       spacing={"20px"}
-    //       sx={{ backgroundColor: "#C1D6F2" }}
-    //     >
-    //       <Stack
-    //         position={"relative"}
-    //         height="1079px"
-    //         maxWidth={"1880px"}
-    //         width={"100%"}
-    //         sx={{ backgroundColor: "#3385ED", borderRadius: 2 }}
-    //       >
-    //         <Box
-    //           sx={{
-    //             width: "100%",
-    //             height: "1079px",
-    //           }}
-    //         >
-    //           test
-    //         </Box>
-    //       </Stack>
-    //       <Stack
-    //         position={"relative"}
-    //         height="1079px"
-    //         maxWidth={"1880px"}
-    //         width={"100%"}
-    //         sx={{ backgroundColor: "#ECF0F7", borderRadius: 2 }}
-    //       >
-    //         <Box
-    //           sx={{
-    //             width: "100%",
-    //             height: "1079px",
-    //           }}
-    //         >
-    //           test
-    //         </Box>
-    //       </Stack>
-    //       <Stack
-    //         position={"relative"}
-    //         height="1079px"
-    //         maxWidth={"1880px"}
-    //         width={"100%"}
-    //         sx={{ backgroundColor: "#3385ED", borderRadius: 2 }}
-    //       >
-    //         <Box
-    //           sx={{
-    //             width: "100%",
-    //             height: "1079px",
-    //           }}
-    //         >
-    //           test
-    //         </Box>
-    //       </Stack>
-    //     </Stack>
-    //     {/* 제목 */}
-    //     <Stack
-    //       direction={"row"}
-    //       justifyContent={"space-between"}
-    //       pl="114px"
-    //       pr={"120px"}
-    //       pt="226px"
-    //       pb="211px"
-    //       spacing={8}
-    //       sx={{ backgroundColor: "#C1D6F2" }}
-    //     >
-    //       <Stack spacing={1}>
-    //         <Typography
-    //           sx={{
-    //             color: "#252528",
-    //             fontSize: "38px",
-    //             fontWeight: 700,
-    //             pb: 3,
-    //           }}
-    //         >
-    //           Project infomation
-    //         </Typography>
-    //         <Typography
-    //           sx={{
-    //             color: "#1B80FF",
-    //             fontSize: "18px",
-    //             fontWeight: 700,
-    //             lineHeight: "27px",
-    //             letterSpacing: "-0.54px",
-    //           }}
-    //         >
-    //           Overview
-    //         </Typography>
-    //         <Typography
-    //           sx={{
-    //             color: "#000",
-    //             fontSize: "18px",
-    //             fontWeight: 400,
-    //             lineHeight: "32px",
-    //           }}
-    //           whiteSpace={"pre-wrap"}
-    //         >
-    //           뉴스낵은 아래 세가지로 분류되는 기존 서비스의 장점만을 합쳐 2030
-    //           디지털 네이티브 세대의 정보 발굴처 정착을 돕는 새로운 뉴스
-    //           서비스입니다.{"\n"}첫째, 사용자가 원하는 컨텐츠보다는 카테고리로만
-    //           단순 분류 된 기존의 쉬운 뉴스 서비스. 둘째, 공신력이 있고 실질적
-    //           정보를 전달하지만 리딩이 어려운{"\n"}서비스. 셋째, 빠른 정보
-    //           전달과 소통 기능이 강점이지만 정보의 신뢰도가 낮은 SNS 서비스. 본
-    //           프로젝트는 쉬운 이해가 가능하면서도, 개인에게 맞는{"\n"}균형잡힌
-    //           정보를 제공하며, 소통 기능이 결합된 서비스 입니다.
-    //         </Typography>
-    //       </Stack>
-    //       <Stack spacing={"17px"} pt="90px">
-    //         <Typography
-    //           sx={{
-    //             color: "#1B80FF",
-    //             fontSize: "18px",
-    //             fontWeight: 700,
-    //             lineHeight: "27px",
-    //             letterSpacing: "-0.54px",
-    //           }}
-    //         >
-    //           Period
-    //         </Typography>
-    //         <Typography
-    //           sx={{
-    //             color: "#000",
-    //             fontSize: "18px",
-    //             fontWeight: 400,
-    //             lineHeight: "32px",
-    //           }}
-    //           whiteSpace={"pre-wrap"}
-    //         >
-    //           2023.12.05 - 2023.03.15
-    //         </Typography>
-    //         <Typography
-    //           sx={{
-    //             color: "#1B80FF",
-    //             fontSize: "18px",
-    //             fontWeight: 700,
-    //             lineHeight: "27px",
-    //             letterSpacing: "-0.54px",
-    //           }}
-    //         >
-    //           Role
-    //         </Typography>
-    //         <Typography
-    //           sx={{
-    //             color: "#000",
-    //             fontSize: "18px",
-    //             fontWeight: 400,
-    //             lineHeight: "32px",
-    //           }}
-    //           whiteSpace={"pre-wrap"}
-    //         >
-    //           실무 프로젝트{"\n"}서비스 기획, 3D 디자인, UI 디자인
-    //         </Typography>
-    //       </Stack>
-    //     </Stack>
-    //     {/* endStack */}
-    //   </Stack>
-    // </ProjectLayout>
   );
 }
 
