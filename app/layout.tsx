@@ -1,8 +1,13 @@
+import { Metadata } from "next";
 import "../styles/globals.css";
 
-export const metadata = {
-  title: "차설 포트폴리오",
-  description: "차설 포트폴리오",
+export const metadata: Metadata = {
+  metadataBase: new URL("https://snow-web-portfolio.vercel.app"),
+  title: "CHASUL PORTFOLIO",
+  description: "DESIGN PROJECT / UX-UI / GUI / CONTENTS",
+  openGraph: {
+    images: [{ url: "/opengraph-image.png", alt: "meta-image" }],
+  },
 };
 
 export default function RootLayout({
