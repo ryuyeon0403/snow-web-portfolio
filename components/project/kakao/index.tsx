@@ -294,7 +294,7 @@ export default function Kakao() {
           </Box>
         </Stack>
       </Box>
-      {/* 03 Second Content */}
+      {/* 03 Second2 Content */}
       <Box
         className={styles.whiteBox}
         sx={{ background: "#38383E !important", mb: "20px" }}
