@@ -11,7 +11,7 @@ import number2Design from "../../../assets/image/news/number2Design.png";
 import number2Group from "../../../assets/image/news/number2Group.png";
 import number2Text from "../../../assets/image/news/number2Text.png";
 import number4Content from "../../../assets/image/news/number4Content.png";
-import styels from "../../../styles/news.module.css";
+import styles from "../../../styles/news.module.css";
 import NewsYoutube from "./NewsYoutube";
 import { NumberImages, ObjImages, number3Images } from "./data";
 
@@ -23,7 +23,7 @@ function News() {
       alignItems={"center"}
       width={"100%"}
       position={"relative"}
-      className={styels.content}
+      className={styles.content}
     >
       <Image
         src={backgroundImage}
@@ -31,7 +31,7 @@ function News() {
         placeholder="blur"
         layout="intrinsic"
       />
-      <Box className={styels.title}>
+      <Box className={styles.title}>
         <Stack direction={"row"} spacing={"50px"}>
           <Stack>
             {[
@@ -43,10 +43,10 @@ function News() {
                 key={item}
                 className={
                   index == 0
-                    ? styels.detail2
+                    ? styles.detail2
                     : index == 1
-                    ? styels.heading
-                    : styels.body4
+                    ? styles.heading
+                    : styles.body4
                 }
               >
                 {item}
@@ -60,7 +60,7 @@ function News() {
             ].map((item, index) => (
               <Typography
                 key={item}
-                className={index == 0 ? styels.detail1 : styels.detail3}
+                className={index == 0 ? styles.detail1 : styles.detail3}
                 whiteSpace={"pre-wrap"}
               >
                 {item}
@@ -74,7 +74,7 @@ function News() {
             ].map((item, index) => (
               <Typography
                 key={item}
-                className={index == 0 ? styels.detail1 : styels.detail3}
+                className={index == 0 ? styles.detail1 : styles.detail3}
                 whiteSpace={"pre-wrap"}
               >
                 {item}
@@ -84,9 +84,9 @@ function News() {
         </Stack>
       </Box>
       {/* 01 */}
-      <Box className={styels.titleContent}>
+      <Box className={styles.titleContent}>
         <Stack direction={"row"} spacing={5} alignItems={"center"}>
-          <Typography className={styels.heading1}>01</Typography>
+          <Typography className={styles.heading1}>01</Typography>
           <Stack>
             {[
               "News is not interesting",
@@ -94,7 +94,7 @@ function News() {
             ].map((item, index) => (
               <Typography
                 key={item}
-                className={index == 0 ? styels.heading3 : styels.detail3}
+                className={index == 0 ? styles.heading3 : styles.detail3}
                 whiteSpace={"pre-wrap"}
               >
                 {item}
@@ -102,7 +102,7 @@ function News() {
             ))}
           </Stack>
           <Stack pl={10}>
-            <Typography whiteSpace={"pre-wrap"} className={styels.detail1}>
+            <Typography whiteSpace={"pre-wrap"} className={styles.detail1}>
               MZ세대의 뉴스 사용 행태에 대하여 데스크 리서치를 실행한 후, 타깃
               사용자 400명을{"\n"}대상으로 설문을 진행하여 도출한 인사이트를
               바탕으로 플랫폼의 핵심 기능을 고안했습니다.
@@ -111,7 +111,7 @@ function News() {
         </Stack>
       </Box>
       {/* 01 content */}
-      <Box className={styels.whiteBox}>
+      <Box className={styles.whiteBox}>
         <Stack
           direction={"row"}
           maxWidth={"1360px"}
@@ -121,27 +121,27 @@ function News() {
           justifyContent={"space-between"}
         >
           <Stack spacing={5}>
-            <Typography className={styels.caption}>Background</Typography>
+            <Typography className={styles.caption}>Background</Typography>
             <Typography
               whiteSpace={"pre-wrap"}
-              className={styels.heading3}
+              className={styles.heading3}
               sx={{ color: "#000 !important" }}
             >
               최근 이슈에 대한 관심에 비해 양질의{"\n"}정보습득이 어려운 20대
             </Typography>
           </Stack>
           <Stack spacing={0.5} alignItems={"flex-end"}>
-            <Typography className={styels.detail4} pb={"0.2px"}>
+            <Typography className={styles.detail4} pb={"0.2px"}>
               *출처
             </Typography>
-            <Typography className={styels.detail4}>
+            <Typography className={styles.detail4}>
               한겨례 : MZ세대는 뉴스를 보지 않는 게 아니라 ‘회피’하고 있다
             </Typography>
-            <Typography className={styels.detail4}>
+            <Typography className={styles.detail4}>
               한국뉴스협회 : 요즘 누가 신문·TV로 뉴스 봅니까… 언론만 침묵하는
               불편한 진실
             </Typography>
-            <Typography className={styels.detail4}>
+            <Typography className={styles.detail4}>
               유튜브 뉴스 콘텐츠의 이용동기가 이용 만족도에 미치는 영향/김옥영,
               고려대학교
             </Typography>
@@ -156,7 +156,7 @@ function News() {
           pb={"59px"}
         >
           <Stack spacing={"12px"} width={"100%"}>
-            <Box className={styels.contentBox}>
+            <Box className={styles.contentBox}>
               <Image
                 src={NumberImages[0]}
                 alt="background"
@@ -166,7 +166,7 @@ function News() {
                 style={{ paddingLeft: "40px" }}
               />
               <Typography
-                className={styels.body4}
+                className={styles.body4}
                 sx={{
                   color: "#000 !important",
                   whiteSpace: "pre-wrap",
@@ -178,7 +178,7 @@ function News() {
                 못했습니다.
               </Typography>
               <Typography
-                className={styels.detail4}
+                className={styles.detail4}
                 sx={{
                   color: "#6B6B73 !important",
                   whiteSpace: "pre-wrap",
@@ -190,7 +190,7 @@ function News() {
                 플랫폼(네이버 20대 뉴스, 뉴닉 등)으로 이동중이에요.
               </Typography>
             </Box>
-            <Box className={styels.contentBox}>
+            <Box className={styles.contentBox}>
               <Image
                 src={NumberImages[1]}
                 alt="background"
@@ -200,7 +200,7 @@ function News() {
                 style={{ paddingLeft: "40px" }}
               />
               <Typography
-                className={styels.body4}
+                className={styles.body4}
                 sx={{
                   color: "#000 !important",
                   whiteSpace: "pre-wrap",
@@ -219,10 +219,10 @@ function News() {
                 alignItems={"center"}
               >
                 <Image src={newsIcon} alt="newIcon" placeholder="blur" />
-                <Typography className={styels.detail4}>
+                <Typography className={styles.detail4}>
                   네이버 20대 뉴스
                 </Typography>
-                <Typography className={styels.detail4}>
+                <Typography className={styles.detail4}>
                   사용자 2644만명
                 </Typography>
               </Stack>
@@ -236,7 +236,7 @@ function News() {
               </Box>
             </Box>
           </Stack>
-          <Box className={styels.contentBox}>
+          <Box className={styles.contentBox}>
             <Image
               src={NumberImages[2]}
               alt="background"
@@ -246,7 +246,7 @@ function News() {
               style={{ paddingLeft: "40px" }}
             />
             <Typography
-              className={styels.body4}
+              className={styles.body4}
               sx={{
                 color: "#000 !important",
                 whiteSpace: "pre-wrap",
@@ -261,8 +261,8 @@ function News() {
             </Typography>
             <Stack direction={"row"} pl={5} spacing={0.5} alignItems={"center"}>
               <Image src={newsIcon} alt="newIcon" placeholder="blur" />
-              <Typography className={styels.detail4}>뉴닉</Typography>
-              <Typography className={styels.detail4}>사용자 40만명</Typography>
+              <Typography className={styles.detail4}>뉴닉</Typography>
+              <Typography className={styles.detail4}>사용자 40만명</Typography>
             </Stack>
             <Stack pt={"100px"} px={5} pb={"40px"} spacing={"20px"}>
               {[
@@ -271,13 +271,13 @@ function News() {
                 "속보 소식 전달이 너무 느려요",
                 "제가 쓴 의견이 바로 올라가지 않아 답답해요",
               ].map((item, index) => (
-                <Box className={styels.chip} key={`chip-${index}`}>
-                  <Typography className={styels.chipText}>{item}</Typography>
+                <Box className={styles.chip} key={`chip-${index}`}>
+                  <Typography className={styles.chipText}>{item}</Typography>
                 </Box>
               ))}
             </Stack>
           </Box>
-          <Box className={styels.contentBox}>
+          <Box className={styles.contentBox}>
             <Image
               src={NumberImages[3]}
               alt="background"
@@ -287,7 +287,7 @@ function News() {
               style={{ paddingLeft: "40px" }}
             />
             <Typography
-              className={styels.body4}
+              className={styles.body4}
               sx={{
                 color: "#000 !important",
                 whiteSpace: "pre-wrap",
@@ -306,7 +306,7 @@ function News() {
               spacing={0.5}
               alignItems={"center"}
             >
-              <Typography className={styels.detail4}>
+              <Typography className={styles.detail4}>
                 ‘소셜 미디어를 통해 뉴스를 소비한 경험이 있다’ 응답
               </Typography>
             </Stack>
@@ -322,7 +322,7 @@ function News() {
         </Stack>
       </Box>
       <Box
-        className={styels.whiteBox}
+        className={styles.whiteBox}
         pt={"20px"}
         sx={{ background: "none !important" }}
       >
@@ -334,7 +334,7 @@ function News() {
         />
       </Box>
       <Box
-        className={styels.whiteBox}
+        className={styles.whiteBox}
         pt={"20px"}
         sx={{ background: "none !important" }}
         position={"relative"}
@@ -350,54 +350,54 @@ function News() {
           alt="obj1"
           placeholder="blur"
           layout="intrinsic"
-          className={styels.obj1}
+          className={styles.obj1}
         />
         <Image
           src={ObjImages[1]}
           alt="obj2"
           placeholder="blur"
           layout="fixed"
-          className={styels.obj2}
+          className={styles.obj2}
         />
         <Image
           src={ObjImages[2]}
           alt="obj3"
           placeholder="blur"
           layout="fixed"
-          className={styels.obj3}
+          className={styles.obj3}
         />
         <Image
           src={ObjImages[3]}
           alt="obj4"
           placeholder="blur"
           layout="fixed"
-          className={styels.obj4}
+          className={styles.obj4}
         />
         <Image
           src={ObjImages[4]}
           alt="obj5"
           placeholder="blur"
           layout="fixed"
-          className={styels.obj5}
+          className={styles.obj5}
         />
         <Image
           src={ObjImages[5]}
           alt="obj6"
           placeholder="blur"
           layout="fixed"
-          className={styels.obj6}
+          className={styles.obj6}
         />
       </Box>
       <Box
-        className={styels.whiteBox}
+        className={styles.whiteBox}
         pt={"20px"}
         sx={{ background: "none !important" }}
       >
         <Stack direction="row" spacing={"20px"} width={"100%"}>
-          <Box className={styels.leftBox} position={"relative"}>
+          <Box className={styles.leftBox} position={"relative"}>
             <Box alignSelf={"left"} maxWidth={"480px"} width={"100%"}>
-              <Box className={styels.leftBoxTitle}>
-                <Typography className={styels.body4}>Problem</Typography>
+              <Box className={styles.leftBoxTitle}>
+                <Typography className={styles.body4}>Problem</Typography>
               </Box>
             </Box>
             {[
@@ -405,17 +405,17 @@ function News() {
               "쉬운 정보를 전달할 시 정보의 정확도가\n낮으며, 공신력있는 정보의 경우 어렵습니다.",
               "정보를 접한 후 다양한 사람들의 의견을\n균형있게 볼 수 없습니다.",
             ].map((item, index) => (
-              <Box key={item} className={styels.leftBoxContent}>
-                <Typography className={styels.body2} whiteSpace={"pre-wrap"}>
+              <Box key={item} className={styles.leftBoxContent}>
+                <Typography className={styles.body2} whiteSpace={"pre-wrap"}>
                   {item}
                 </Typography>
               </Box>
             ))}
           </Box>
-          <Box className={styels.rightBox}>
+          <Box className={styles.rightBox}>
             <Box alignSelf={"left"} maxWidth={"480px"} width={"100%"}>
-              <Box className={styels.rightBoxTitle}>
-                <Typography className={styels.body4}>Solution</Typography>
+              <Box className={styles.rightBoxTitle}>
+                <Typography className={styles.body4}>Solution</Typography>
               </Box>
             </Box>
             {[
@@ -423,8 +423,8 @@ function News() {
               "뉴스의 본질을 잃지 않으며, 사전, 퀴즈\n등의 기능으로 실질적 이해를 돕습니다.",
               "이슈톡, 오픈톡, 투표, 공유기능 등을\n제공해 다양한 여론 활용을 돕습니다.",
             ].map((item, index) => (
-              <Box key={item} className={styels.rightBoxContent}>
-                <Typography className={styels.body2} whiteSpace={"pre-wrap"}>
+              <Box key={item} className={styles.rightBoxContent}>
+                <Typography className={styles.body2} whiteSpace={"pre-wrap"}>
                   {item}
                 </Typography>
               </Box>
@@ -434,15 +434,15 @@ function News() {
       </Box>
 
       {/* 02 */}
-      <Box className={styels.titleContent}>
+      <Box className={styles.titleContent}>
         <Stack direction={"row"} spacing={5} alignItems={"center"}>
-          <Typography className={styels.heading1}>02</Typography>
+          <Typography className={styles.heading1}>02</Typography>
           <Stack>
             {["Visual Solution", "문제점 해결을 위한 비주얼 솔루션"].map(
               (item, index) => (
                 <Typography
                   key={item}
-                  className={index == 0 ? styels.heading3 : styels.detail3}
+                  className={index == 0 ? styles.heading3 : styles.detail3}
                   whiteSpace={"pre-wrap"}
                 >
                   {item}
@@ -451,7 +451,7 @@ function News() {
             )}
           </Stack>
           <Stack pl={"220px"}>
-            <Typography whiteSpace={"pre-wrap"} className={styels.detail1}>
+            <Typography whiteSpace={"pre-wrap"} className={styles.detail1}>
               기존 뉴스 플랫폼에 대한 문제점을 정성적, 정량적으로 조사한 후,
               이에 대한 문제점을 해결할 수{"\n"}있는 솔루션을 도출하여 이를
               기존의 뉴스와 상반되는 비주얼 컨셉으로 풀어냈습니다.
@@ -461,7 +461,7 @@ function News() {
       </Box>
       {/* 02 Content */}
       <Box
-        className={styels.whiteBox}
+        className={styles.whiteBox}
         sx={{ background: "#171920 !important", mb: "20px" }}
       >
         <Stack
@@ -472,9 +472,9 @@ function News() {
           spacing={5}
           pb={"160px"}
         >
-          <Typography className={styels.body4}>Design system</Typography>
+          <Typography className={styles.body4}>Design system</Typography>
           <Typography
-            className={styels.detail1}
+            className={styles.detail1}
             sx={{ color: "#B6B6B6 !important", whiteSpace: "pre-wrap" }}
           >
             NotoSans 서체로부터 가독성을 더해 만들어진 Pretendard 서체 시스템을
@@ -503,7 +503,7 @@ function News() {
       </Box>
       {/* 02 second Content */}
       <Box
-        className={styels.whiteBox}
+        className={styles.whiteBox}
         sx={{ background: "#171920 !important", mb: "20px" }}
       >
         <Stack
@@ -514,9 +514,9 @@ function News() {
           spacing={"64px"}
           pb={"150px"}
         >
-          <Typography className={styels.body4}>Asset Library</Typography>
+          <Typography className={styles.body4}>Asset Library</Typography>
           <Typography
-            className={styels.detail1}
+            className={styles.detail1}
             sx={{ color: "#B6B6B6 !important", whiteSpace: "pre-wrap" }}
           >
             주 사용 대상이 선호하는 플랫폼 조사와 사용자 그룹과 비슷한
@@ -536,20 +536,20 @@ function News() {
       </Box>
       {/* 02 Content Youtube */}
       <Box
-        className={styels.whiteBox}
+        className={styles.whiteBox}
         sx={{ background: "#171920 !important" }}
       >
         <NewsYoutube />
       </Box>
       {/* 03 */}
-      <Box className={styels.titleContent}>
+      <Box className={styles.titleContent}>
         <Stack direction={"row"} spacing={5} alignItems={"center"}>
-          <Typography className={styels.heading1}>03</Typography>
+          <Typography className={styles.heading1}>03</Typography>
           <Stack>
             {["Screen Flow", "화면 플로우"].map((item, index) => (
               <Typography
                 key={item}
-                className={index == 0 ? styels.heading3 : styels.detail3}
+                className={index == 0 ? styles.heading3 : styles.detail3}
                 whiteSpace={"pre-wrap"}
               >
                 {item}
@@ -557,7 +557,7 @@ function News() {
             ))}
           </Stack>
           <Stack pl={"270px"}>
-            <Typography whiteSpace={"pre-wrap"} className={styels.detail1}>
+            <Typography whiteSpace={"pre-wrap"} className={styles.detail1}>
               핵심 문제점을 해결할 수 있는 사용자 UI를 설계하고, 와이어프레임을
               제작한 뒤{"\n"}타겟층을 대상으로 한 사용성 점검과정을 거쳐 화면을
               제작했습니다.
@@ -568,7 +568,7 @@ function News() {
       {/* 03 Content */}
       <Stack spacing={"20px"}>
         {[0, 1, 2, 3, 4].map((item) => (
-          <Box className={styels.whiteBox} key={`itemContent-${item}`}>
+          <Box className={styles.whiteBox} key={`itemContent-${item}`}>
             <Image
               src={number3Images[item]}
               alt={`itemContent-${item}`}
@@ -579,19 +579,19 @@ function News() {
         ))}
       </Stack>
       {/* FOOTER */}
-      <Box className={styels.titleContent}>
-        <Typography className={styels.heading3} pb={5}>
+      <Box className={styles.titleContent}>
+        <Typography className={styles.heading3} pb={5}>
           Project infomation
         </Typography>
         <Stack direction="row" justifyContent={"space-between"} spacing={5}>
           <Stack spacing={"20px"}>
             <Typography
-              className={styels.caption}
+              className={styles.caption}
               sx={{ color: "#1B80FF !important" }}
             >
               Overview
             </Typography>
-            <Typography className={styels.detail3} whiteSpace={"pre-wrap"}>
+            <Typography className={styles.detail3} whiteSpace={"pre-wrap"}>
               뉴스낵은 아래 세가지로 분류되는 기존 서비스의 장점만을 합쳐 2030
               디지털 네이티브 세대의 정보 발굴처 정착을 돕는 새로운 뉴스
               서비스입니다.{"\n"}첫째, 사용자가 원하는 컨텐츠보다는 카테고리로만
@@ -604,21 +604,21 @@ function News() {
           </Stack>
           <Stack spacing={"20px"}>
             <Typography
-              className={styels.caption}
+              className={styles.caption}
               sx={{ color: "#1B80FF !important" }}
             >
               Period
             </Typography>
-            <Typography className={styels.detail3}>
+            <Typography className={styles.detail3}>
               2022.12.17 - 2023.03.15
             </Typography>
             <Typography
-              className={styels.caption}
+              className={styles.caption}
               sx={{ color: "#1B80FF !important" }}
             >
               Role
             </Typography>
-            <Typography className={styels.detail3} whiteSpace={"pre-wrap"}>
+            <Typography className={styles.detail3} whiteSpace={"pre-wrap"}>
               개인 프로젝트(기여도 100%){"\n"}
               서비스 기획, 유저 인터뷰, 유저 테스트, UI 디자인
             </Typography>
