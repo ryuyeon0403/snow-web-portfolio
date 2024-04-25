@@ -15,14 +15,8 @@ export default function Home() {
   return (
     <ThemeProvider theme={theme}>
       <RecoilRoot>
-        {mobile ? (
-          <>mobile</>
-        ) : (
-          <>
-            <Main />
-            <Footer />
-          </>
-        )}
+        <Main />
+        <Footer />
       </RecoilRoot>
     </ThemeProvider>
   );
