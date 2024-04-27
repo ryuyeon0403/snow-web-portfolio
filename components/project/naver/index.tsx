@@ -1,12 +1,18 @@
-import { Box, Divider, Stack, Typography } from "@mui/material";
-import Image from "next/image";
-import styles from "../../../styles/naver.module.css";
-import backgroundImage from "../../../assets/image/naver/background.png";
-import backgroundImage2 from "../../../assets/image/naver/background2.png";
-import { naverContentImages, naverImages } from "./data";
+"use client";
+import ArrowRightCircle from "@/components/icon/ArrowRightCircle";
+import ArrowRightCircle2 from "@/components/icon/ArrowRightCircle2";
 import FemaleChip from "@/components/icon/FemaleChip";
 import MaleChip from "@/components/icon/MaleChip";
-import ArrowRightCircle from "@/components/icon/ArrowRightCircle";
+import Polygon from "@/components/icon/Polygon";
+import { Box, Divider, Stack, Typography } from "@mui/material";
+import Image from "next/image";
+import backgroundImage from "../../../assets/image/naver/background.png";
+import backgroundImage2 from "../../../assets/image/naver/background2.png";
+import backgroundImage3 from "../../../assets/image/naver/background3.png";
+import fiveContent from "../../../assets/image/naver/fiveContent.png";
+import styles from "../../../styles/naver.module.css";
+import { naverContentImages, naverImages } from "./data";
+import NaverYoutube from "../news/NaverYoutube";
 
 export default function Naver() {
   return (
@@ -353,7 +359,97 @@ export default function Naver() {
           layout="intrinsic"
         />
       </Box>
-
+      {/* 01 four content */}
+      {/* 01 five content */}
+      <Box
+        className={styles.whiteBox}
+        sx={{ mt: "20px", background: "#000 !important" }}
+      >
+        <Stack direction={"row"} spacing={"31px"}>
+          <Stack pt={"241px"} spacing={"20px"} alignItems={"flex-start"}>
+            <Typography className={styles.caption}>solution</Typography>
+            <Typography
+              className={styles.heading3}
+              sx={{ color: "#FFF !important" }}
+              whiteSpace={"pre-wrap"}
+            >
+              기획을 토대로 실제{"\n"}웹페이지를 개발했습니다.
+            </Typography>
+            <Typography className={styles.detail1_2} whiteSpace={"pre-wrap"}>
+              <span style={{ color: "#B6B6B6" }}>
+                애니메이션을 활용하여 사용자들의 관심을 끌고, 이를{"\n"}통해
+                브랜드 가치를 강조하기 위해
+              </span>
+              HTML, CSS,{"\n"}JavaScript를 활용
+              <span style={{ color: "#B6B6B6" }}>
+                하여 페이지를 구현했습니다.
+              </span>
+            </Typography>
+            <Typography className={styles.tool}>
+              [TOOL] PhP storm After Effects
+            </Typography>
+            <Stack alignItems={"center"} pt={10} pl={"17px"}>
+              <Stack alignItems={"center"} className={styles.animationBtn}>
+                <Box className={styles.clickBtn}>
+                  <Typography className={styles.clickTxt}>CLICK</Typography>
+                </Box>
+                <Box sx={{ mt: -1 }}>
+                  <Polygon />
+                </Box>
+              </Stack>
+              <Box
+                className={styles.interBox}
+                onClick={() =>
+                  window.open("https://youtu.be/IWIY13k7F68", "_blank")
+                }
+              >
+                <Typography className={styles.interTxt} pl={"22px"}>
+                  인터랙티브 웹 확인하기
+                </Typography>
+                <Box pr={"14px"} display={"flex"} alignItems={"center"}>
+                  <ArrowRightCircle2 />
+                </Box>
+              </Box>
+            </Stack>
+          </Stack>
+          <Box position={"relative"}>
+            <Box maxWidth={"915px"}>
+              <Image
+                src={backgroundImage3}
+                alt="fiveBg"
+                layout="intrinsic"
+                placeholder="blur"
+              />
+            </Box>
+            <Box
+              sx={{
+                position: "absolute",
+                left: "50%",
+                top: "50%",
+                transform: "translate(-50%, -50%)",
+                width: "110%",
+                maxWidth: "947px",
+              }}
+            >
+              <Box>
+                <Image
+                  src={fiveContent}
+                  alt="fiveContent"
+                  layout="intrinsic"
+                  placeholder="blur"
+                />
+              </Box>
+            </Box>
+          </Box>
+        </Stack>
+      </Box>
+      {/* 02 Content Youtube */}
+      <Box
+        className={styles.whiteBox}
+        sx={{ background: "#C7D1E3 !important", mt: "20px" }}
+      >
+        <NaverYoutube />
+      </Box>
       {/* 02 */}
       <Box className={styles.titleContent}>
         <Stack direction={"row"} spacing={5} alignItems={"center"}>
