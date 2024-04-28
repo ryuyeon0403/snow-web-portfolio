@@ -13,6 +13,10 @@ import thirdContent2 from "../../../assets/image/nhr/thirdContent2.png";
 import thirdContent3 from "../../../assets/image/nhr/thirdContent3.png";
 import thirdContent4 from "../../../assets/image/nhr/thirdContent4.png";
 
+import box1 from "../../../assets/image/nhr/box1.png";
+import box2 from "../../../assets/image/nhr/box2.png";
+import box3 from "../../../assets/image/nhr/box3.png";
+
 import { StaticImageData } from "next/image";
 
 export const nhrImages: StaticImageData[] = [
@@ -35,3 +39,5 @@ export const nhrThirdContentImages: StaticImageData[] = [
   thirdContent3,
   thirdContent4,
 ];
+
+export const nhrBoxImages: StaticImageData[] = [box1, box2, box3];

@@ -1,8 +1,17 @@
-import { Box, Stack, Typography } from "@mui/material";
+import { Box, Grid, Stack, Typography } from "@mui/material";
 import styles from "../../../styles/nhr.module.css";
 import backgroundImage from "../../../assets/image/nhr/background.png";
+import backgroundImage2 from "../../../assets/image/nhr/background2.png";
 import Image from "next/image";
-import { nhrContentImages, nhrImages, nhrThirdContentImages } from "./data";
+import {
+  nhrBoxImages,
+  nhrContentImages,
+  nhrImages,
+  nhrThirdContentImages,
+} from "./data";
+import colorContent from "../../../assets/image/nhr/colorContent.png";
+import textContent from "../../../assets/image/nhr/textContent.png";
+import footerContent from "../../../assets/image/nhr/footerContent.png";
 
 export default function NHR() {
   return (
@@ -59,12 +68,13 @@ export default function NHR() {
           <Stack spacing={2}>
             {[
               "TOOL & PERIOD",
-              "기업측에는 핵심 인재 확보의 시작인 채용 행사부터 스마트한 관리가, 핵심 인재측에는 효율적이고 직관적인 참여 방법과 정보관리 기능이 필요했습니다.\n이에 대한 솔루션으로 ‘커리어톡’ 서비스가 탄생하게 되었습니다. 대학내일 ES 자회사 NHR Communications에서\n프리랜서로 재직하며 진행하였으며, 본 내용은 라이브 내용을 기반으로 제작 및 작성하여 보안상의 이슈가 없음을 알립니다..",
+              "기업측에는 핵심 인재 확보의 시작인 채용 행사부터 스마트한 관리가, 핵심 인재측에는 효율적이고 직관적인 참여 방법과 정보관리 기능이 필요했습니다. 이에 대한 솔루션으로 ‘커리어톡’ 서비스가 탄생하게 되었습니다. 대학내일 ES 자회사 NHR Communications에서 프리랜서로 재직하며 진행하였으며, 본 내용은 라이브 내용을 기반으로 제작 및 작성하여 보안상의 이슈가 없음을 알립니다..",
             ].map((item, index) => (
               <Typography
                 key={item}
                 className={index == 0 ? styles.detail1 : styles.detail3}
                 whiteSpace={"pre-wrap"}
+                maxWidth={"760px"}
               >
                 {item}
               </Typography>
@@ -203,7 +213,54 @@ export default function NHR() {
           </Stack>
         </Stack>
       </Box>
-
+      {/* 01 content */}
+      <Box
+        className={styles.whiteBox}
+        sx={{ mt: "20px" }}
+        position={"relative"}
+        overflow={"hidden"}
+      >
+        <Stack direction={"row"} width={"100%"}>
+          <Stack
+            pt={10}
+            pr={10}
+            pl={"280px"}
+            width={"100%"}
+            alignItems={"flex-start"}
+            spacing={"76px"}
+          >
+            <Typography
+              className={styles.caption}
+              sx={{ color: "#000 !important" }}
+            >
+              Concept
+            </Typography>
+            <Box maxWidth={"760px"} minWidth={"400px"}>
+              <Image
+                src={colorContent}
+                alt="colorContent"
+                layout="intrinsic"
+                placeholder="blur"
+              />
+            </Box>
+            <Box maxWidth={"760px"} minWidth={"400px"}>
+              <Image
+                src={textContent}
+                alt="textContent"
+                layout="intrinsic"
+                placeholder="blur"
+              />
+            </Box>
+          </Stack>
+          <Image
+            src={backgroundImage2}
+            alt="bg2"
+            placeholder="blur"
+            layout="intrinsic"
+            width={760}
+          />
+        </Stack>
+      </Box>
       {/* 02 */}
       <Box className={styles.titleContent}>
         <Stack direction={"row"} spacing={5} alignItems={"center"}>
@@ -232,6 +289,47 @@ export default function NHR() {
               관점에 입각한 디자인 산출물을 제작했습니다. 메인 아트웍 이미지
             </Typography>
           </Stack>
+        </Stack>
+      </Box>
+      {/* 02 1 content */}
+      <Box sx={{ background: "none !important" }}>
+        <Stack direction={"row"} spacing={"20px"} maxHeight={"1042px"}>
+          <Stack maxWidth={"931px"} spacing={"20px"}>
+            <Box
+              sx={{
+                borderRadius: "12px",
+                background: "#0F5F7D",
+                height: "100%",
+                display: "flex",
+                alignItems: "center",
+              }}
+            >
+              <Box>
+                <Image
+                  src={nhrBoxImages[0]}
+                  alt="nhrbox1"
+                  placeholder="blur"
+                  layout="intrinsic"
+                />
+              </Box>
+            </Box>
+            <Box>
+              <Image
+                src={nhrBoxImages[1]}
+                alt="nhrbox2"
+                placeholder="blur"
+                layout="intrinsic"
+              />
+            </Box>
+          </Stack>
+          <Box maxWidth={"910px"}>
+            <Image
+              src={nhrBoxImages[2]}
+              alt="nhrbox3"
+              placeholder="blur"
+              layout="intrinsic"
+            />
+          </Box>
         </Stack>
       </Box>
 
@@ -279,6 +377,53 @@ export default function NHR() {
         ))}
       </Stack>
       {/* 03 last content */}
+      <Box className={styles.whiteBox} sx={{ background: "#000 !important" }}>
+        <Stack alignItems={"center"} pt={"116px"} pb={10}>
+          {/* TODO */}
+          <Typography
+            className={styles.caption}
+            sx={{ color: "#959FAC !important" }}
+          >
+            Achievement
+          </Typography>
+          <Typography
+            className={styles.heading3}
+            maxWidth={"914px"}
+            sx={{ color: "#FFF !important", pt: "16px" }}
+            textAlign={"center"}
+          >
+            본 프로젝트는 현재 10만명 이상의 이용자가 가입하였으며,{" "}
+            <span style={{ color: "#73DBFF" }}>
+              사용문의가 10건 미만으로 감소된 성과를 달성했습니다.
+            </span>
+          </Typography>
+          <Typography
+            maxWidth={"1060px"}
+            className={styles.detail1}
+            sx={{ color: "#B6B6B6 !important", pt: "20px", pb: "82px" }}
+            textAlign={"center"}
+          >
+            라이브 이후 1주일 경과, 약 1만명의 소비자가 커리어톡에 유입되었으며,{" "}
+            <span style={{ color: "#73DBFF" }}>
+              행사 이후 집계 결과 플랫폼 사용 문의관련 CS가 대폭 감소한 것으로
+              확인되었습니다.
+            </span>{" "}
+            온라인, 오프라인 행사의 경우, 핵심인재들의{" "}
+            <span style={{ color: "#73DBFF" }}>
+              커리어톡 사용이 핵심인재들의 정보 입력 시간으로 귀결되어 채용
+              상담의 효율성이 높아졌습니다.
+            </span>
+          </Typography>
+          <Box maxWidth={"1178px"}>
+            <Image
+              src={footerContent}
+              alt="footerContent"
+              placeholder="blur"
+              layout="intrinsic"
+            />
+          </Box>
+        </Stack>
+      </Box>
 
       {/* FOOTER */}
       <Box className={styles.titleContent}>
