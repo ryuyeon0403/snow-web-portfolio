@@ -10,6 +10,11 @@ import secondContent6 from "../../../assets/image/benz/2content6.png";
 import secondContent7 from "../../../assets/image/benz/2content7.png";
 import secondContent8 from "../../../assets/image/benz/2content8.png";
 
+import subContent1 from "../../../assets/image/benz/subContent1.png";
+import subContent2 from "../../../assets/image/benz/subContent2.png";
+import subContent3 from "../../../assets/image/benz/subContent3.png";
+import subContent4 from "../../../assets/image/benz/subContent4.png";
+
 import { StaticImageData } from "next/image";
 
 export const benzImages: StaticImageData[] = [content1, content2];
@@ -23,4 +28,11 @@ export const benzSecondContentImages: StaticImageData[] = [
   secondContent6,
   secondContent7,
   secondContent8,
+];
+
+export const benzSubContentImages: StaticImageData[] = [
+  subContent1,
+  subContent2,
+  subContent3,
+  subContent4,
 ];
