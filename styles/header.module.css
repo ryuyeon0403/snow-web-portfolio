@@ -1,0 +1,25 @@
+.body2 {
+  color: var(--p1-black50, rgba(0, 0, 0, 0.5));
+  text-align: center;
+
+  /* Body 2 */
+  font-family: Pretendard;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 28px;
+  letter-spacing: -0.72px;
+}
+
+.body2_1 {
+  color: var(--black, #000);
+  text-align: center;
+
+  /* Body 2 */
+  font-family: Pretendard;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 28px; /* 33.6px */
+  letter-spacing: -0.72px;
+}

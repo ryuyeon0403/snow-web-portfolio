@@ -365,7 +365,7 @@ export default function Naver() {
         className={styles.whiteBox}
         sx={{ mt: "20px", background: "#000 !important" }}
       >
-        <Stack direction={"row"} spacing={"31px"}>
+        <Stack direction={"row"} spacing={"80px"}>
           <Stack pt={"241px"} spacing={"20px"} alignItems={"flex-start"}>
             <Typography className={styles.caption}>solution</Typography>
             <Typography
@@ -424,14 +424,13 @@ export default function Naver() {
             <Box
               sx={{
                 position: "absolute",
-                left: "50%",
-                top: "50%",
-                transform: "translate(-50%, -50%)",
-                width: "110%",
-                maxWidth: "947px",
+                left: "5%",
+                top: "40%",
+                transform: "translate(-17%, -40%)",
+                width: "100%",
               }}
             >
-              <Box>
+              <Box width={"1142px"}>
                 <Image
                   src={fiveContent}
                   alt="fiveContent"
@@ -500,11 +499,11 @@ export default function Naver() {
           <Stack spacing={"20px"} alignItems={"flex-start"}>
             <Typography
               className={styles.caption}
-              sx={{ color: "#1B80FF !important" }}
+              sx={{ color: "#489999 !important" }}
             >
               프로젝트 오버뷰
             </Typography>
-            <Typography className={styles.detail3} whiteSpace={"pre-wrap"}>
+            <Typography className={styles.detail1} whiteSpace={"pre-wrap"}>
               불편한 PC뷰에 대한 인터뷰를 바탕으로 네이버 플러스 멤버십의
               프로모션 사이트를 제작 했습니다. 높은 범용성을{"\n"}가진 서비스의
               다채로운 이미지에 초점을 맞추어 ‘네이버 플러스가 이용되는 도시
@@ -516,11 +515,11 @@ export default function Naver() {
             <Stack spacing={"20px"} alignItems={"flex-start"}>
               <Typography
                 className={styles.caption}
-                sx={{ color: "#1B80FF !important" }}
+                sx={{ color: "#489999 !important" }}
               >
                 Role
               </Typography>
-              <Typography className={styles.detail3} whiteSpace={"pre-wrap"}>
+              <Typography className={styles.detail1} whiteSpace={"pre-wrap"}>
                 개인 프로젝트(기여도 100%){"\n"}
                 서비스 기획, UI 그래픽 작업,{"\n"}HTML/CSS
               </Typography>
@@ -528,11 +527,11 @@ export default function Naver() {
             <Stack spacing={"20px"} alignItems={"flex-start"}>
               <Typography
                 className={styles.caption}
-                sx={{ color: "#1B80FF !important" }}
+                sx={{ color: "#489999 !important" }}
               >
                 프로젝트 요청 기간 & 기여도
               </Typography>
-              <Typography className={styles.detail3}>
+              <Typography className={styles.detail1}>
                 2022.09.01 - 2022.11.10
               </Typography>
             </Stack>

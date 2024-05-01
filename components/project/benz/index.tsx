@@ -83,18 +83,17 @@ export default function BENZ() {
         <Stack direction={"row"} spacing={5} alignItems={"center"}>
           <Typography className={styles.heading1}>01</Typography>
           <Stack>
-            {[
-              "Problem Define",
-              "PC View 기장 큰 문제점은, PC 뷰에서의 사용성 저하",
-            ].map((item, index) => (
-              <Typography
-                key={item}
-                className={index == 0 ? styles.heading3 : styles.detail1_1}
-                whiteSpace={"nowrap"}
-              >
-                {item}
-              </Typography>
-            ))}
+            {["Problem Define", "사용자들의 니즈를 고려하지 않은 정보구조"].map(
+              (item, index) => (
+                <Typography
+                  key={item}
+                  className={index == 0 ? styles.heading3 : styles.detail1_1}
+                  whiteSpace={"nowrap"}
+                >
+                  {item}
+                </Typography>
+              )
+            )}
           </Stack>
           <Stack pl={10}>
             <Typography
@@ -129,12 +128,13 @@ export default function BENZ() {
         <Stack direction={"row"} spacing={5} alignItems={"center"}>
           <Typography className={styles.heading1}>02</Typography>
           <Stack>
-            {["Problem Define", "기장 큰 문제점은, 번거로운 사용절차"].map(
+            {["UI PAGE", "사용자 니즈를 충족하는 정보위계"].map(
               (item, index) => (
                 <Typography
                   key={item}
                   className={index == 0 ? styles.heading3 : styles.detail1_1}
                   whiteSpace={"nowrap"}
+                  width={"380px"}
                 >
                   {item}
                 </Typography>
@@ -147,10 +147,10 @@ export default function BENZ() {
               className={styles.detail1_1}
               maxWidth={"700px"}
             >
-              UT 결과에 따르면 사용자들은 원하는 행사를 찾는 과정에서 어려움을
-              겪었으며 상담카드 작성과 정보관리에 대한 어려움을 경험하였습니다.
-              이에 따라 행사 찾기를 용이하게 도와주는 기능과 정보관리 용이성을
-              높히는 플로우가 필요하다는 사용자 니즈를 도출했습니다.
+              UT를 기반으로 원스크롤 구조의 홈페이지를 제작했습니다. 사용자들이
+              원하는 기능 순으로 정보 위계를 나누어, 페이지 탐색 편의성을
+              개선했습니다. 제품 탐색이 구매로 이어질 수 있도록 실제 제품을
+              탐색하는 것과 같은 커스터마이징 기능을 제안했습니다.
             </Typography>
           </Stack>
         </Stack>
@@ -222,7 +222,7 @@ export default function BENZ() {
                 style={{
                   width: "434px",
                   height: "auto",
-                  paddingTop: "640px",
+                  marginTop: "640px",
                 }}
               />
             </Box>

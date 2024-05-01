@@ -1,5 +1,5 @@
 import circle1 from "../../../assets/image/nhr/circle1.png";
-import circle2 from "../../../assets/image/nhr/circle3.png";
+import circle2 from "../../../assets/image/nhr/circle2.png";
 import circle3 from "../../../assets/image/nhr/circle3.png";
 import circle4 from "../../../assets/image/nhr/circle4.png";
 

@@ -1,3 +1,4 @@
+"use client";
 import { Box, Grid, Stack, Typography } from "@mui/material";
 import styles from "../../../styles/nhr.module.css";
 import backgroundImage from "../../../assets/image/nhr/background.png";
@@ -112,7 +113,7 @@ export default function NHR() {
       </Box>
       {/* 01 content */}
       <Box className={styles.whiteBox}>
-        <Stack pt={"100px"}>
+        <Stack pt={"100px"} alignItems={"center"}>
           <Typography className={styles.caption}>Main Task 01</Typography>
           <Typography
             className={styles.heading3}
