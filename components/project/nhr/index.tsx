@@ -221,46 +221,12 @@ export default function NHR() {
         position={"relative"}
         overflow={"hidden"}
       >
-        <Stack direction={"row"} width={"100%"}>
-          <Stack
-            pt={10}
-            pr={10}
-            pl={"280px"}
-            width={"100%"}
-            alignItems={"flex-start"}
-            spacing={"76px"}
-          >
-            <Typography
-              className={styles.caption}
-              sx={{ color: "#000 !important" }}
-            >
-              Concept
-            </Typography>
-            <Box maxWidth={"760px"} minWidth={"400px"}>
-              <Image
-                src={colorContent}
-                alt="colorContent"
-                layout="intrinsic"
-                placeholder="blur"
-              />
-            </Box>
-            <Box maxWidth={"760px"} minWidth={"400px"}>
-              <Image
-                src={textContent}
-                alt="textContent"
-                layout="intrinsic"
-                placeholder="blur"
-              />
-            </Box>
-          </Stack>
-          <Image
-            src={backgroundImage2}
-            alt="bg2"
-            placeholder="blur"
-            layout="intrinsic"
-            width={760}
-          />
-        </Stack>
+        <Image
+          src={backgroundImage2}
+          alt="bg2"
+          placeholder="blur"
+          layout="intrinsic"
+        />
       </Box>
       {/* 02 */}
       <Box className={styles.titleContent}>
