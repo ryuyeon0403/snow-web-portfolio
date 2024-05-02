@@ -31,7 +31,7 @@ export default function Main() {
           height={60}
         />
       </Box>
-      <Box maxWidth={"1920px"}>
+      <Box>
         <Image
           src={backgroundImage}
           alt="background"

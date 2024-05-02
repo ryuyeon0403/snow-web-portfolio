@@ -31,50 +31,31 @@ export default function Naver() {
         layout="intrinsic"
       />
       <Box className={styles.title}>
-        <Stack direction={"row"} spacing={"50px"}>
+        <Stack direction={"row"} justifyContent={"space-between"}>
           <Stack>
-            {[
-              "PERSONAL PROJECT",
-              "네이버 플러스 멤버십 WEB",
-              "쉬운 뉴스 리딩을 위한 새로운 뉴스 지식 플랫폼",
-            ].map((item, index) => (
+            {["PERSONAL PROJECT", "네이버 플러스 멤버십"].map((item, index) => (
               <Typography
                 key={item}
-                className={
-                  index == 0
-                    ? styles.detail2
-                    : index == 1
-                    ? styles.heading2
-                    : styles.body4
-                }
+                className={index == 0 ? styles.detail2 : styles.heading2}
               >
                 {item}
               </Typography>
             ))}
+            <Typography className={styles.body4}>
+              <span style={{ color: "#263B74" }}>멤버십의 다양한 혜택을</span>{" "}
+              더욱 생생하게 전달합니다.
+            </Typography>
           </Stack>
           <Stack spacing={2}>
             {[
-              "TOOL & PERIOD",
-              "C4D / Aftereffects\n2023.03 - 2023.06\nContribution 100%",
+              "BACKGROUND & OVERVIEW",
+              "네이버 플러스 멤버십은 소비자 유입에 중요한 역할을 하는 핵심 서비스로, 네이버 쇼핑 및 커머스 플랫폼에서 활발히 활동하고 있습니다. 그러나, 멤버십의 PC 버전은 모바일 화면을 그대로 확장한 형태로 제공되어, 더 나은 사용자 경험을 위한 개선이 필요하다고 생각했습니다. 이에 브랜드 아이덴티티를 강력하게 반영하고 PC 화면에 적합한 프로모션 사이트를 제작하였습니다.",
             ].map((item, index) => (
               <Typography
                 key={item}
                 className={index == 0 ? styles.detail1 : styles.detail3}
                 whiteSpace={"pre-wrap"}
-              >
-                {item}
-              </Typography>
-            ))}
-          </Stack>
-          <Stack spacing={2}>
-            {[
-              "TOOL & PERIOD",
-              "스마트폰 사용에 익숙한 MZ세대의 낮은 문해력 문제가 이슈화되면서 MZ세대는 양질의 정보를 얻으려는 노력을 하지 않는다는 내용의\n기사를 쉽게 찾아볼 수 있게 되었습니다. 그러나 리서치 결과, 이들은 실질적 정보에 관심이 많지만 이를 찾아 여러 플랫폼을 헤매고 있었\n습니다. 본 프로젝트는 이러한 니즈를 채우고, 개인에게 맞는 균형잡힌 정보를 제공하며, 소통 기능이 결합된 서비스 입니다.",
-            ].map((item, index) => (
-              <Typography
-                key={item}
-                className={index == 0 ? styles.detail1 : styles.detail3}
-                whiteSpace={"pre-wrap"}
+                maxWidth={"760px"}
               >
                 {item}
               </Typography>

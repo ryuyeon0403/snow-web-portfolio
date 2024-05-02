@@ -159,7 +159,11 @@ export default function BENZ() {
       <Stack spacing={"20px"}>
         {[0, 1, 2, 3, 4, 5, 6, 7].map((item) =>
           item == 6 ? (
-            <Box className={styles.rowBox} key={`itemContent-${item}`}>
+            <Box
+              className={styles.rowBox}
+              key={`itemContent-${item}`}
+              sx={{ background: "#000 !important" }}
+            >
               <Stack pt={"299px"} spacing={"1300px"}>
                 <Stack direction={"row"} spacing={"70px"}>
                   <Image

@@ -31,26 +31,24 @@ export default function NHR() {
         layout="intrinsic"
       />
       <Box className={styles.title}>
-        <Stack direction={"row"} spacing={"50px"}>
+        <Stack
+          direction={"row"}
+          spacing={"50px"}
+          justifyContent={"space-between"}
+        >
           <Stack>
-            {[
-              "TEAM PROJECT",
-              "커리어톡 프로젝트",
-              "인재와 기업의 스마트한 정보관리가 시작됩니다.",
-            ].map((item, index) => (
+            {["TEAM PROJECT", "커리어톡 프로젝트"].map((item, index) => (
               <Typography
                 key={item}
-                className={
-                  index == 0
-                    ? styles.detail2
-                    : index == 1
-                    ? styles.heading2
-                    : styles.body4
-                }
+                className={index == 0 ? styles.detail2 : styles.heading2}
               >
                 {item}
               </Typography>
             ))}
+            <Typography className={styles.body4}>
+              기업의 <span style={{ color: "#00B1CC" }}>스마트한 정보관리</span>
+              가 시작됩니다.
+            </Typography>
           </Stack>
           <Stack spacing={2}>
             {[
@@ -68,7 +66,7 @@ export default function NHR() {
           </Stack>
           <Stack spacing={2}>
             {[
-              "TOOL & PERIOD",
+              "BACKGROUND & OVERVIEW",
               "기업측에는 핵심 인재 확보의 시작인 채용 행사부터 스마트한 관리가, 핵심 인재측에는 효율적이고 직관적인 참여 방법과 정보관리 기능이 필요했습니다. 이에 대한 솔루션으로 ‘커리어톡’ 서비스가 탄생하게 되었습니다. 대학내일 ES 자회사 NHR Communications에서 프리랜서로 재직하며 진행하였으며, 본 내용은 라이브 내용을 기반으로 제작 및 작성하여 보안상의 이슈가 없음을 알립니다..",
             ].map((item, index) => (
               <Typography
@@ -344,7 +342,10 @@ export default function NHR() {
         ))}
       </Stack>
       {/* 03 last content */}
-      <Box className={styles.whiteBox} sx={{ background: "#000 !important" }}>
+      <Box
+        className={styles.whiteBox}
+        sx={{ background: "#000 !important", mt: "20px" }}
+      >
         <Stack alignItems={"center"} pt={"116px"} pb={10}>
           {/* TODO */}
           <Typography

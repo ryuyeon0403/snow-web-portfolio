@@ -6,7 +6,7 @@ import { RecoilRoot } from "recoil";
 
 const theme = createTheme({
   typography: {
-    fontFamily: ["Pretendard"].join(","),
+    fontFamily: ["Pretendard", "Gotham-Bold"].join(","),
   },
 });
 
