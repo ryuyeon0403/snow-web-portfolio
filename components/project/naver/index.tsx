@@ -435,7 +435,7 @@ export default function Naver() {
         <Stack direction={"row"} spacing={5} alignItems={"center"}>
           <Typography className={styles.heading1}>02</Typography>
           <Stack>
-            {["Page design", "직관적인 화면 제작을 통한 디자인 솔루션"].map(
+            {["Page UI", "직관적인 화면 제작을 통한 디자인 솔루션"].map(
               (item, index) => (
                 <Typography
                   key={item}
