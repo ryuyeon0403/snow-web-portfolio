@@ -24,18 +24,21 @@ const Header = () => {
       <Stack
         direction={"row"}
         justifyContent={"space-between"}
+        alignItems={"center"}
         width={"100%"}
         maxWidth={"1360px"}
-        py={2}
+        py={{ xs: 1.5, md: 2 }}
+        px={{ xs: "20px", md: "40px", lg: "0px" }}
       >
-        <Typography className={styles.body2}>CHASUL PORTFOLIO</Typography>
+        <Typography className={styles.body2} sx={{ fontSize: { xs: "16px", md: "24px" } }}>CHASUL PORTFOLIO</Typography>
         <Stack
           direction={"row"}
           justifyContent={"space-between"}
+          alignItems={"center"}
           sx={{ cursor: "pointer" }}
           onClick={() => router.push("/")}
         >
-          <Typography className={styles.body2_1} width={"121px"}>
+          <Typography className={styles.body2_1} sx={{ fontSize: { xs: "16px", md: "24px" }, width: { xs: "auto", md: "121px" }, mr: { xs: 1, md: 0 } }}>
             PROJECT
           </Typography>
           <Image src={GroupSvg} alt="group" />

@@ -33,7 +33,7 @@ export default function Kakao() {
         layout="intrinsic"
       />
       <Box className={styles.title}>
-        <Stack direction={"row"} spacing={"50px"}>
+        <Stack direction={{ xs: "column", md: "row" }} spacing={{ xs: "16px", md: "50px" }}>
           <Stack>
             {[
               "TEAM PROJECT",
@@ -86,7 +86,7 @@ export default function Kakao() {
       </Box>
       {/* 01 */}
       <Box className={styles.titleContent}>
-        <Stack direction={"row"} spacing={5} alignItems={"center"}>
+        <Stack direction={{ xs: "column", md: "row" }} spacing={{ xs: "12px", md: 5 }} alignItems={{ xs: "flex-start", md: "center" }}>
           <Typography className={styles.heading1}>01</Typography>
           <Stack>
             {["AI CONTENT PROJECT", "2200만명의 유저가 이용한 카톡설명서"].map(
@@ -101,7 +101,7 @@ export default function Kakao() {
               )
             )}
           </Stack>
-          <Stack pl={10}>
+          <Stack pl={{ xs: 0, md: 10 }}>
             <Typography whiteSpace={"pre-wrap"} className={styles.detail1}>
               카카오톡의 AI 기능 UI 페이지 제작과 콘텐츠 제작을 담당했습니다.
               150만 유저가 사용한 카톡 AI기능{"\n"}의 다양한 사용 형태를
@@ -183,7 +183,7 @@ export default function Kakao() {
       </Box>
       {/* 02 */}
       <Box className={styles.titleContent}>
-        <Stack direction={"row"} spacing={5} alignItems={"center"}>
+        <Stack direction={{ xs: "column", md: "row" }} spacing={{ xs: "12px", md: 5 }} alignItems={{ xs: "flex-start", md: "center" }}>
           <Typography className={styles.heading1}>02</Typography>
           <Stack>
             {[
@@ -199,7 +199,7 @@ export default function Kakao() {
               </Typography>
             ))}
           </Stack>
-          <Stack pl={10}>
+          <Stack pl={{ xs: 0, md: 10 }}>
             <Typography className={styles.detail1}>
               카카오에서 진행되고 있는 프로젝트와 서비스 중 연말을 유용하게 보낼
               수 있는 컨텐츠를 모아 발행 했습니다. UI 제작 및 콘텐츠 제작을
@@ -252,7 +252,7 @@ export default function Kakao() {
       </Box>
       {/* 03 */}
       <Box className={styles.titleContent}>
-        <Stack direction={"row"} spacing={5} alignItems={"center"}>
+        <Stack direction={{ xs: "column", md: "row" }} spacing={{ xs: "12px", md: 5 }} alignItems={{ xs: "flex-start", md: "center" }}>
           <Typography className={styles.heading1}>03</Typography>
           <Stack>
             {["3D GRAPHIC ASSET", "카카오톡 3D 에셋 제작"].map(
@@ -267,7 +267,7 @@ export default function Kakao() {
               )
             )}
           </Stack>
-          <Stack pl={10}>
+          <Stack pl={{ xs: 0, md: 10 }}>
             <Typography className={styles.detail1}>
               기업의 다양한 콘텐츠에 활용 가능한 3D 에셋 제작을 의뢰받아 필요에
               따라 다양한 방식으로 활용하도록 상황에 맞는 표정의 이모지를
@@ -337,7 +337,7 @@ export default function Kakao() {
         <Typography className={styles.heading3} pb={5}>
           Project infomation
         </Typography>
-        <Stack direction="row" justifyContent={"space-between"} spacing={5}>
+        <Stack direction={{ xs: "column", md: "row" }} justifyContent={"space-between"} spacing={5}>
           <Stack spacing={"20px"}>
             <Typography
               className={styles.caption}

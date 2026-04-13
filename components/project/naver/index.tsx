@@ -31,7 +31,7 @@ export default function Naver() {
         layout="intrinsic"
       />
       <Box className={styles.title}>
-        <Stack direction={"row"} justifyContent={"space-between"}>
+        <Stack direction={{ xs: "column", md: "row" }} justifyContent={"space-between"} gap={{ xs: "16px", md: 0 }}>
           <Stack>
             {["PERSONAL PROJECT", "네이버 플러스 멤버십"].map((item, index) => (
               <Typography
@@ -65,7 +65,7 @@ export default function Naver() {
       </Box>
       {/* 01 */}
       <Box className={styles.titleContent}>
-        <Stack direction={"row"} spacing={5} alignItems={"center"}>
+        <Stack direction={{ xs: "column", md: "row" }} spacing={{ xs: "12px", md: 5 }} alignItems={{ xs: "flex-start", md: "center" }}>
           <Typography className={styles.heading1}>01</Typography>
           <Stack>
             {["Problem Define", "PC View Usability"].map((item, index) => (
@@ -78,7 +78,7 @@ export default function Naver() {
               </Typography>
             ))}
           </Stack>
-          <Stack pl={10}>
+          <Stack pl={{ xs: 0, md: 10 }}>
             <Typography whiteSpace={"pre-wrap"} className={styles.detail1}>
               네이버플러스 이용자 50명을 대상으로 설문조사를 진행한 결과
               이용자들은 PC뷰에서의 사용성 저하에{"\n"}대한 아쉬움을 표하고
@@ -432,7 +432,7 @@ export default function Naver() {
       </Box>
       {/* 02 */}
       <Box className={styles.titleContent}>
-        <Stack direction={"row"} spacing={5} alignItems={"center"}>
+        <Stack direction={{ xs: "column", md: "row" }} spacing={{ xs: "12px", md: 5 }} alignItems={{ xs: "flex-start", md: "center" }}>
           <Typography className={styles.heading1}>02</Typography>
           <Stack>
             {["Page UI", "직관적인 화면 제작을 통한 디자인 솔루션"].map(
@@ -447,7 +447,7 @@ export default function Naver() {
               )
             )}
           </Stack>
-          <Stack pl={10}>
+          <Stack pl={{ xs: 0, md: 10 }}>
             <Typography whiteSpace={"pre-wrap"} className={styles.detail1}>
               문제점 해결을 위하여 브랜드 아이덴티티를 녹여내는 일러스트를
               제작한 뒤 백터 그래픽화 하였습니다. 페이지 구현을 통하여 사용
@@ -476,7 +476,7 @@ export default function Naver() {
         <Typography className={styles.heading3} pb={5}>
           Project infomation
         </Typography>
-        <Stack direction="row" justifyContent={"space-between"} spacing={5}>
+        <Stack direction={{ xs: "column", md: "row" }} justifyContent={"space-between"} spacing={5}>
           <Stack spacing={"20px"} alignItems={"flex-start"}>
             <Typography
               className={styles.caption}

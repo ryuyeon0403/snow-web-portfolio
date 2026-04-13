@@ -447,3 +447,93 @@
   line-height: 140%; /* 21.715px */
   letter-spacing: -0.465px;
 }
+
+@media (max-width: 768px) {
+  .title {
+    top: 70px;
+    padding: 0 20px;
+  }
+
+  .titleContent {
+    padding-top: 100px;
+    padding-bottom: 80px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .heading1 {
+    font-size: 44px;
+  }
+
+  .heading2 {
+    font-size: 24px;
+  }
+
+  .heading3 {
+    font-size: 22px;
+  }
+
+  .heading {
+    font-size: 24px;
+  }
+
+  .body2 {
+    font-size: 16px;
+  }
+
+  .body4 {
+    font-size: 15px;
+  }
+
+  .detail1 {
+    font-size: 14px;
+  }
+
+  .detail1_1 {
+    font-size: 14px;
+  }
+
+  .detail2 {
+    font-size: 13px;
+  }
+
+  .detail3 {
+    font-size: 13px;
+  }
+
+  .whiteBox {
+    border-radius: 10px;
+  }
+
+  .rowBox {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    gap: 24px;
+  }
+
+  .leftBox {
+    height: auto;
+    min-height: 300px;
+    padding: 32px 20px;
+  }
+
+  .rightBox {
+    height: auto;
+    min-height: 300px;
+    padding: 32px 20px;
+  }
+
+  .leftBoxContent {
+    max-width: 100%;
+    height: auto;
+    min-height: 80px;
+  }
+
+  .rightBoxContent {
+    max-width: 100%;
+    height: auto;
+    min-height: 80px;
+  }
+}

@@ -32,7 +32,7 @@ function News() {
         layout="intrinsic"
       />
       <Box className={styles.title}>
-        <Stack direction={"row"} spacing={"50px"}>
+        <Stack direction={{ xs: "column", md: "row" }} spacing={{ xs: "16px", md: "50px" }}>
           <Stack>
             {[
               "PERSONAL PROJECT",
@@ -85,7 +85,7 @@ function News() {
       </Box>
       {/* 01 */}
       <Box className={styles.titleContent}>
-        <Stack direction={"row"} spacing={5} alignItems={"center"}>
+        <Stack direction={{ xs: "column", md: "row" }} spacing={{ xs: "12px", md: 5 }} alignItems={{ xs: "flex-start", md: "center" }}>
           <Typography className={styles.heading1}>01</Typography>
           <Stack>
             {[
@@ -101,7 +101,7 @@ function News() {
               </Typography>
             ))}
           </Stack>
-          <Stack pl={10}>
+          <Stack pl={{ xs: 0, md: 10 }}>
             <Typography whiteSpace={"pre-wrap"} className={styles.detail1}>
               MZ세대의 뉴스 사용 행태에 대하여 데스크 리서치를 실행한 후, 타깃
               사용자 400명을{"\n"}대상으로 설문을 진행하여 도출한 인사이트를
@@ -435,7 +435,7 @@ function News() {
 
       {/* 02 */}
       <Box className={styles.titleContent}>
-        <Stack direction={"row"} spacing={5} alignItems={"center"}>
+        <Stack direction={{ xs: "column", md: "row" }} spacing={{ xs: "12px", md: 5 }} alignItems={{ xs: "flex-start", md: "center" }}>
           <Typography className={styles.heading1}>02</Typography>
           <Stack>
             {["Visual Solution", "문제점 해결을 위한 비주얼 솔루션"].map(
@@ -543,7 +543,7 @@ function News() {
       </Box>
       {/* 03 */}
       <Box className={styles.titleContent}>
-        <Stack direction={"row"} spacing={5} alignItems={"center"}>
+        <Stack direction={{ xs: "column", md: "row" }} spacing={{ xs: "12px", md: 5 }} alignItems={{ xs: "flex-start", md: "center" }}>
           <Typography className={styles.heading1}>03</Typography>
           <Stack>
             {["Screen Flow", "화면 플로우"].map((item, index) => (
@@ -583,7 +583,7 @@ function News() {
         <Typography className={styles.heading3} pb={5}>
           Project infomation
         </Typography>
-        <Stack direction="row" justifyContent={"space-between"} spacing={5}>
+        <Stack direction={{ xs: "column", md: "row" }} justifyContent={"space-between"} spacing={5}>
           <Stack spacing={"20px"}>
             <Typography
               className={styles.caption}

@@ -32,7 +32,7 @@ const ProjectLayout = ({
         maxWidth={"1920px"}
         width={"100%"}
         // justifyContent="space-between"
-        sx={{ ...contentSx }}
+        sx={{ px: { xs: "16px", md: "32px", lg: "0px" }, ...contentSx }}
       >
         {children}
       </Stack>

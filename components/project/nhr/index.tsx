@@ -32,8 +32,8 @@ export default function NHR() {
       />
       <Box className={styles.title}>
         <Stack
-          direction={"row"}
-          spacing={"50px"}
+          direction={{ xs: "column", md: "row" }}
+          spacing={{ xs: "16px", md: "50px" }}
           justifyContent={"space-between"}
         >
           <Stack>
@@ -83,7 +83,7 @@ export default function NHR() {
       </Box>
       {/* 01 */}
       <Box className={styles.titleContent}>
-        <Stack direction={"row"} spacing={5} alignItems={"center"}>
+        <Stack direction={{ xs: "column", md: "row" }} spacing={{ xs: "12px", md: 5 }} alignItems={{ xs: "flex-start", md: "center" }}>
           <Typography className={styles.heading1}>01</Typography>
           <Stack>
             {["Project Role", "Main Role in Career Talk"].map((item, index) => (
@@ -96,7 +96,7 @@ export default function NHR() {
               </Typography>
             ))}
           </Stack>
-          <Stack pl={10}>
+          <Stack pl={{ xs: 0, md: 10 }}>
             <Typography
               whiteSpace={"pre-wrap"}
               className={styles.detail1_1}
@@ -228,7 +228,7 @@ export default function NHR() {
       </Box>
       {/* 02 */}
       <Box className={styles.titleContent}>
-        <Stack direction={"row"} spacing={5} alignItems={"center"}>
+        <Stack direction={{ xs: "column", md: "row" }} spacing={{ xs: "12px", md: 5 }} alignItems={{ xs: "flex-start", md: "center" }}>
           <Typography className={styles.heading1}>02</Typography>
           <Stack>
             {["BX / Graphic Design", "Package, PC, Mobile design"].map(
@@ -243,7 +243,7 @@ export default function NHR() {
               )
             )}
           </Stack>
-          <Stack pl={10}>
+          <Stack pl={{ xs: 0, md: 10 }}>
             <Typography
               whiteSpace={"pre-wrap"}
               className={styles.detail1_1}
@@ -300,7 +300,7 @@ export default function NHR() {
 
       {/* 03 */}
       <Box className={styles.titleContent}>
-        <Stack direction={"row"} spacing={5} alignItems={"center"}>
+        <Stack direction={{ xs: "column", md: "row" }} spacing={{ xs: "12px", md: 5 }} alignItems={{ xs: "flex-start", md: "center" }}>
           <Typography className={styles.heading1}>03</Typography>
           <Stack>
             {["Mobile Design", "Package, PC, Mobile design"].map(
@@ -315,7 +315,7 @@ export default function NHR() {
               )
             )}
           </Stack>
-          <Stack pl={10}>
+          <Stack pl={{ xs: 0, md: 10 }}>
             <Typography
               whiteSpace={"pre-wrap"}
               className={styles.detail1_1}
@@ -398,7 +398,7 @@ export default function NHR() {
         <Typography className={styles.heading3} pb={5}>
           Project infomation
         </Typography>
-        <Stack direction="row" justifyContent={"space-between"} spacing={5}>
+        <Stack direction={{ xs: "column", md: "row" }} justifyContent={"space-between"} spacing={5}>
           <Stack spacing={"20px"} alignItems={"flex-start"}>
             <Typography className={styles.detail1}>프로젝트 오버뷰</Typography>
             <Typography

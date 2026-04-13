@@ -25,7 +25,7 @@ export default function BENZ() {
         layout="intrinsic"
       />
       <Box className={styles.title}>
-        <Stack direction={"row"} spacing={"50px"}>
+        <Stack direction={{ xs: "column", md: "row" }} spacing={{ xs: "16px", md: "50px" }}>
           <Stack>
             {[
               "PERSONAL PROJECT",
@@ -80,7 +80,7 @@ export default function BENZ() {
       </Box>
       {/* 01 */}
       <Box className={styles.titleContent}>
-        <Stack direction={"row"} spacing={5} alignItems={"center"}>
+        <Stack direction={{ xs: "column", md: "row" }} spacing={{ xs: "12px", md: 5 }} alignItems={{ xs: "flex-start", md: "center" }}>
           <Typography className={styles.heading1}>01</Typography>
           <Stack>
             {["Problem Define", "사용자들의 니즈를 고려하지 않은 정보구조"].map(
@@ -88,14 +88,14 @@ export default function BENZ() {
                 <Typography
                   key={item}
                   className={index == 0 ? styles.heading3 : styles.detail1_1}
-                  whiteSpace={"nowrap"}
+                  sx={{ whiteSpace: { xs: "normal", md: "nowrap" } }}
                 >
                   {item}
                 </Typography>
               )
             )}
           </Stack>
-          <Stack pl={10}>
+          <Stack pl={{ xs: 0, md: 10 }}>
             <Typography
               whiteSpace={"pre-wrap"}
               className={styles.detail1_1}
@@ -125,7 +125,7 @@ export default function BENZ() {
 
       {/* 02 */}
       <Box className={styles.titleContent}>
-        <Stack direction={"row"} spacing={5} alignItems={"center"}>
+        <Stack direction={{ xs: "column", md: "row" }} spacing={{ xs: "12px", md: 5 }} alignItems={{ xs: "flex-start", md: "center" }}>
           <Typography className={styles.heading1}>02</Typography>
           <Stack>
             {["UI PAGE", "사용자 니즈를 충족하는 정보위계"].map(
@@ -133,15 +133,14 @@ export default function BENZ() {
                 <Typography
                   key={item}
                   className={index == 0 ? styles.heading3 : styles.detail1_1}
-                  whiteSpace={"nowrap"}
-                  width={"380px"}
+                  sx={{ whiteSpace: { xs: "normal", md: "nowrap" }, width: { xs: "auto", md: "380px" } }}
                 >
                   {item}
                 </Typography>
               )
             )}
           </Stack>
-          <Stack pl={10}>
+          <Stack pl={{ xs: 0, md: 10 }}>
             <Typography
               whiteSpace={"pre-wrap"}
               className={styles.detail1_1}
@@ -248,7 +247,7 @@ export default function BENZ() {
         <Typography className={styles.heading3} pb={5}>
           Project infomation
         </Typography>
-        <Stack direction="row" justifyContent={"space-between"} spacing={5}>
+        <Stack direction={{ xs: "column", md: "row" }} justifyContent={"space-between"} spacing={5}>
           <Stack spacing={"20px"} alignItems={"flex-start"}>
             <Typography className={styles.detail1}>프로젝트 오버뷰</Typography>
             <Typography
@@ -264,7 +263,7 @@ export default function BENZ() {
               이미지를 반영한 리디자인 시안을 제작했습니다.
             </Typography>
           </Stack>
-          <Stack spacing={12} direction={"row"}>
+          <Stack spacing={{ xs: 3, md: 12 }} direction={"row"}>
             <Stack spacing={"20px"}>
               <Typography className={styles.detail1}>Role</Typography>
               <Typography
