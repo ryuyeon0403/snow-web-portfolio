@@ -7,7 +7,7 @@
   box-sizing: border-box;
 }
 
-img:not([width]) {
+img {
   max-width: 100%;
   height: auto;
 }

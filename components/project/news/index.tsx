@@ -163,8 +163,8 @@ function News() {
         >
           {/* 카드 1 */}
           <Box className={styles.contentBox}>
-            <Box sx={{ px: "20px", pt: "20px", pb: "4px", lineHeight: 0 }}>
-              <Image src={NumberImages[0]} alt="num1" width={20} height={20} />
+            <Box sx={{ px: "20px", pt: "20px", pb: "4px", lineHeight: 0, display: "flex" }}>
+              <Image src={NumberImages[0]} alt="num1" width={20} height={20} style={{ width: "20px", height: "20px", flex: "none" }} />
             </Box>
             <Typography className={styles.body4} sx={{ color: "#000 !important", py: "12px", px: "20px" }}>
               새로운 뉴스 플랫폼이 등장했으나 사용자는 정보 정착지를 찾지 못했습니다.
@@ -175,15 +175,15 @@ function News() {
           </Box>
           {/* 카드 2 */}
           <Box className={styles.contentBox}>
-            <Box sx={{ px: "20px", pt: "20px", pb: "4px", lineHeight: 0 }}>
-              <Image src={NumberImages[1]} alt="num2" width={20} height={20} />
+            <Box sx={{ px: "20px", pt: "20px", pb: "4px", lineHeight: 0, display: "flex" }}>
+              <Image src={NumberImages[1]} alt="num2" width={20} height={20} style={{ width: "20px", height: "20px", flex: "none" }} />
             </Box>
             <Typography className={styles.body4} sx={{ color: "#000 !important", py: "12px", px: "20px" }}>
               20대 전용 뉴스 플랫폼의 경우,{" "}
               <span style={{ color: "#1B80FF" }}>난이도가 어렵다는</span> 의견이 다수였습니다.
             </Typography>
             <Stack direction={"row"} px={"20px"} spacing={0.5} alignItems={"center"} flexWrap={"wrap"}>
-              <Image src={newsIcon} alt="newIcon" placeholder="blur" width={17} height={20} />
+              <Image src={newsIcon} alt="newIcon" placeholder="blur" width={17} height={20} style={{ width: "17px", height: "20px", flex: "none" }} />
               <Typography className={styles.detail4}>네이버 20대 뉴스</Typography>
               <Typography className={styles.detail4}>사용자 2644만명</Typography>
             </Stack>
@@ -193,15 +193,15 @@ function News() {
           </Box>
           {/* 카드 3 */}
           <Box className={styles.contentBox}>
-            <Box sx={{ px: "20px", pt: "20px", pb: "4px", lineHeight: 0 }}>
-              <Image src={NumberImages[2]} alt="num3" width={20} height={20} />
+            <Box sx={{ px: "20px", pt: "20px", pb: "4px", lineHeight: 0, display: "flex" }}>
+              <Image src={NumberImages[2]} alt="num3" width={20} height={20} style={{ width: "20px", height: "20px", flex: "none" }} />
             </Box>
             <Typography className={styles.body4} sx={{ color: "#000 !important", py: "12px", px: "20px" }}>
               쉬운 뉴스 앱의 경우,{" "}
               <span style={{ color: "#1B80FF" }}>정보 업데이트가 느리다는 사용자 보이스가 확인되었습니다.</span>
             </Typography>
             <Stack direction={"row"} px={"20px"} spacing={0.5} alignItems={"center"} flexWrap={"wrap"}>
-              <Image src={newsIcon} alt="newIcon" placeholder="blur" width={17} height={20} />
+              <Image src={newsIcon} alt="newIcon" placeholder="blur" width={17} height={20} style={{ width: "17px", height: "20px", flex: "none" }} />
               <Typography className={styles.detail4}>뉴닉</Typography>
               <Typography className={styles.detail4}>사용자 40만명</Typography>
             </Stack>
@@ -220,8 +220,8 @@ function News() {
           </Box>
           {/* 카드 4 */}
           <Box className={styles.contentBox}>
-            <Box sx={{ px: "20px", pt: "20px", pb: "4px", lineHeight: 0 }}>
-              <Image src={NumberImages[3]} alt="num4" width={20} height={20} />
+            <Box sx={{ px: "20px", pt: "20px", pb: "4px", lineHeight: 0, display: "flex" }}>
+              <Image src={NumberImages[3]} alt="num4" width={20} height={20} style={{ width: "20px", height: "20px", flex: "none" }} />
             </Box>
             <Typography className={styles.body4} sx={{ color: "#000 !important", py: "12px", px: "20px" }}>
               결국 <span style={{ color: "#1B80FF" }}>SNS로 뉴스를 확인</span>하는 MZ세대.{" "}
