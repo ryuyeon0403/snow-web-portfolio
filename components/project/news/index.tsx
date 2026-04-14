@@ -153,80 +153,64 @@ function News() {
         </Stack>
 
         {/* 카드 4개 */}
-        <Box
-          sx={{
-            maxWidth: "1360px",
-            width: "100%",
-            px: { xs: "20px", md: 0 },
-            pb: { xs: "40px", md: "59px" },
-            display: "grid",
-            gridTemplateColumns: { xs: "1fr 1fr", md: "1fr 1fr 1fr 1fr" },
-            gridTemplateRows: { xs: "auto auto", md: "1fr" },
-            gap: "12px",
-          }}
+        <Stack
+          direction={{ xs: "column", md: "row" }}
+          maxWidth={"1360px"}
+          width={"100%"}
+          px={{ xs: "20px", md: 0 }}
+          pb={{ xs: "40px", md: "59px" }}
+          spacing={"12px"}
         >
           {/* 카드 1 */}
-          <Box className={styles.contentBox} sx={{ gridColumn: { xs: "1", md: "auto" } }}>
-            <Box sx={{ px: "16px", pt: "16px", pb: "4px" }}>
-              <Image src={NumberImages[0]} alt="num1" placeholder="blur" width={20} height={20} />
+          <Box className={styles.contentBox}>
+            <Box sx={{ px: "20px", pt: "20px", pb: "4px", lineHeight: 0 }}>
+              <img src={NumberImages[0].src} alt="num1" style={{ width: "20px", height: "20px" }} />
             </Box>
-            <Typography
-              className={styles.body4}
-              sx={{ color: "#000 !important", py: "12px", px: "16px" }}
-            >
+            <Typography className={styles.body4} sx={{ color: "#000 !important", py: "12px", px: "20px" }}>
               새로운 뉴스 플랫폼이 등장했으나 사용자는 정보 정착지를 찾지 못했습니다.
             </Typography>
-            <Typography
-              className={styles.detail4}
-              sx={{ color: "#6B6B73 !important", pb: "20px", px: "16px" }}
-            >
+            <Typography className={styles.detail4} sx={{ color: "#6B6B73 !important", pb: "20px", px: "20px" }}>
               젊은층 뉴스 이용자들이 레거시 미디어를 떠나 새로운 뉴스 플랫폼으로 이동중이에요.
             </Typography>
           </Box>
           {/* 카드 2 */}
-          <Box className={styles.contentBox} sx={{ gridColumn: { xs: "2", md: "auto" } }}>
-            <Box sx={{ px: "16px", pt: "16px", pb: "4px" }}>
-              <Image src={NumberImages[1]} alt="num2" placeholder="blur" width={20} height={20} />
+          <Box className={styles.contentBox}>
+            <Box sx={{ px: "20px", pt: "20px", pb: "4px", lineHeight: 0 }}>
+              <img src={NumberImages[1].src} alt="num2" style={{ width: "20px", height: "20px" }} />
             </Box>
-            <Typography
-              className={styles.body4}
-              sx={{ color: "#000 !important", py: "12px", px: "16px" }}
-            >
+            <Typography className={styles.body4} sx={{ color: "#000 !important", py: "12px", px: "20px" }}>
               20대 전용 뉴스 플랫폼의 경우,{" "}
               <span style={{ color: "#1B80FF" }}>난이도가 어렵다는</span> 의견이 다수였습니다.
             </Typography>
-            <Stack direction={"row"} px={"16px"} spacing={0.5} alignItems={"center"} flexWrap={"wrap"}>
+            <Stack direction={"row"} px={"20px"} spacing={0.5} alignItems={"center"} flexWrap={"wrap"}>
               <Image src={newsIcon} alt="newIcon" placeholder="blur" />
               <Typography className={styles.detail4}>네이버 20대 뉴스</Typography>
-              <Typography className={styles.detail4}>2644만명</Typography>
+              <Typography className={styles.detail4}>사용자 2644만명</Typography>
             </Stack>
-            <Box px={"16px"} pb={"16px"} pt={"10px"}>
+            <Box px={"20px"} pb={"20px"} pt={"12px"}>
               <Image src={number2Content} alt="number2Content" placeholder="blur" layout="responsive" />
             </Box>
           </Box>
           {/* 카드 3 */}
-          <Box className={styles.contentBox} sx={{ gridColumn: { xs: "1", md: "auto" } }}>
-            <Box sx={{ px: "16px", pt: "16px", pb: "4px" }}>
-              <Image src={NumberImages[2]} alt="num3" placeholder="blur" width={20} height={20} />
+          <Box className={styles.contentBox}>
+            <Box sx={{ px: "20px", pt: "20px", pb: "4px", lineHeight: 0 }}>
+              <img src={NumberImages[2].src} alt="num3" style={{ width: "20px", height: "20px" }} />
             </Box>
-            <Typography
-              className={styles.body4}
-              sx={{ color: "#000 !important", py: "12px", px: "16px" }}
-            >
+            <Typography className={styles.body4} sx={{ color: "#000 !important", py: "12px", px: "20px" }}>
               쉬운 뉴스 앱의 경우,{" "}
               <span style={{ color: "#1B80FF" }}>정보 업데이트가 느리다는 사용자 보이스가 확인되었습니다.</span>
             </Typography>
-            <Stack direction={"row"} px={"16px"} spacing={0.5} alignItems={"center"} flexWrap={"wrap"}>
+            <Stack direction={"row"} px={"20px"} spacing={0.5} alignItems={"center"} flexWrap={"wrap"}>
               <Image src={newsIcon} alt="newIcon" placeholder="blur" />
               <Typography className={styles.detail4}>뉴닉</Typography>
-              <Typography className={styles.detail4}>40만명</Typography>
+              <Typography className={styles.detail4}>사용자 40만명</Typography>
             </Stack>
-            <Stack pt={"16px"} px={"16px"} pb={"16px"} spacing={"8px"}>
+            <Stack pt={"40px"} px={"20px"} pb={"40px"} spacing={"12px"}>
               {[
-                "정보의 기준이 모호해요",
-                "타인의 의견확인 불가",
-                "속보 전달이 느려요",
-                "의견이 바로 안올라가요",
+                "제공되는 정보의 기준이 모호해요",
+                "타인의 의견확인이 불가능한 커뮤니티",
+                "속보 소식 전달이 너무 느려요",
+                "제가 쓴 의견이 바로 올라가지 않아 답답해요",
               ].map((item, index) => (
                 <Box className={styles.chip} key={`chip-${index}`}>
                   <Typography className={styles.chipText}>{item}</Typography>
@@ -235,24 +219,24 @@ function News() {
             </Stack>
           </Box>
           {/* 카드 4 */}
-          <Box className={styles.contentBox} sx={{ gridColumn: { xs: "2", md: "auto" } }}>
-            <Box sx={{ px: "16px", pt: "16px", pb: "4px" }}>
-              <Image src={NumberImages[3]} alt="num4" placeholder="blur" width={20} height={20} />
+          <Box className={styles.contentBox}>
+            <Box sx={{ px: "20px", pt: "20px", pb: "4px", lineHeight: 0 }}>
+              <img src={NumberImages[3].src} alt="num4" style={{ width: "20px", height: "20px" }} />
             </Box>
-            <Typography
-              className={styles.body4}
-              sx={{ color: "#000 !important", py: "12px", px: "16px" }}
-            >
-              결국 <span style={{ color: "#1B80FF" }}>SNS로 뉴스를 확인</span>하는 MZ세대. 그러나 이는 정보가 정확하지 않습니다.
+            <Typography className={styles.body4} sx={{ color: "#000 !important", py: "12px", px: "20px" }}>
+              결국 <span style={{ color: "#1B80FF" }}>SNS로 뉴스를 확인</span>하는 MZ세대.{" "}
+              그러나 이는 정보가 정확하지 않습니다.
             </Typography>
-            <Typography className={styles.detail4} sx={{ px: "16px", pb: "8px" }}>
-              '소셜 미디어로 뉴스 소비 경험' 응답
-            </Typography>
-            <Box px={"16px"} pb={"16px"}>
+            <Stack direction={"row"} px={"20px"} pt={2} spacing={0.5} alignItems={"center"}>
+              <Typography className={styles.detail4}>
+                '소셜 미디어를 통해 뉴스를 소비한 경험이 있다' 응답
+              </Typography>
+            </Stack>
+            <Box pt={4} px={"20px"} pb={"20px"}>
               <Image src={number4Content} alt="number4Content" placeholder="blur" layout="responsive" />
             </Box>
           </Box>
-        </Box>
+        </Stack>
       </Box>
 
       <Box className={styles.whiteBox} pt={"20px"} sx={{ background: "none !important" }}>
