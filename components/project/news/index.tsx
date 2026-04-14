@@ -164,7 +164,7 @@ function News() {
           {/* 카드 1 */}
           <Box className={styles.contentBox}>
             <Box sx={{ px: "20px", pt: "20px", pb: "4px", lineHeight: 0 }}>
-              <img src={NumberImages[0].src} alt="num1" style={{ width: "20px", height: "20px" }} />
+              <Image src={NumberImages[0]} alt="num1" width={20} height={20} />
             </Box>
             <Typography className={styles.body4} sx={{ color: "#000 !important", py: "12px", px: "20px" }}>
               새로운 뉴스 플랫폼이 등장했으나 사용자는 정보 정착지를 찾지 못했습니다.
@@ -176,7 +176,7 @@ function News() {
           {/* 카드 2 */}
           <Box className={styles.contentBox}>
             <Box sx={{ px: "20px", pt: "20px", pb: "4px", lineHeight: 0 }}>
-              <img src={NumberImages[1].src} alt="num2" style={{ width: "20px", height: "20px" }} />
+              <Image src={NumberImages[1]} alt="num2" width={20} height={20} />
             </Box>
             <Typography className={styles.body4} sx={{ color: "#000 !important", py: "12px", px: "20px" }}>
               20대 전용 뉴스 플랫폼의 경우,{" "}
@@ -194,7 +194,7 @@ function News() {
           {/* 카드 3 */}
           <Box className={styles.contentBox}>
             <Box sx={{ px: "20px", pt: "20px", pb: "4px", lineHeight: 0 }}>
-              <img src={NumberImages[2].src} alt="num3" style={{ width: "20px", height: "20px" }} />
+              <Image src={NumberImages[2]} alt="num3" width={20} height={20} />
             </Box>
             <Typography className={styles.body4} sx={{ color: "#000 !important", py: "12px", px: "20px" }}>
               쉬운 뉴스 앱의 경우,{" "}
@@ -221,7 +221,7 @@ function News() {
           {/* 카드 4 */}
           <Box className={styles.contentBox}>
             <Box sx={{ px: "20px", pt: "20px", pb: "4px", lineHeight: 0 }}>
-              <img src={NumberImages[3].src} alt="num4" style={{ width: "20px", height: "20px" }} />
+              <Image src={NumberImages[3]} alt="num4" width={20} height={20} />
             </Box>
             <Typography className={styles.body4} sx={{ color: "#000 !important", py: "12px", px: "20px" }}>
               결국 <span style={{ color: "#1B80FF" }}>SNS로 뉴스를 확인</span>하는 MZ세대.{" "}
