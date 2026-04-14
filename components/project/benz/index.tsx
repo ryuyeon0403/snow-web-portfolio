@@ -27,6 +27,7 @@ export default function BENZ() {
           width={0}
           height={0}
           sizes="100vw"
+          priority
         />
       </Box>
       <Box className={styles.title}>

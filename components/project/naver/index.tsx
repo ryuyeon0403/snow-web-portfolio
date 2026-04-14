@@ -31,6 +31,7 @@ export default function Naver() {
           placeholder="blur"
           layout="responsive"
           style={{ width: "100%", height: "auto" }}
+          priority
         />
       </Box>
       <Box className={styles.title}>

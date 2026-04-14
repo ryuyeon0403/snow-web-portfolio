@@ -29,6 +29,7 @@ export default function Main() {
           placeholder="blur"
           layout="responsive"
           style={{ width: "100%", height: "auto" }}
+          priority
         />
       </Box>
       <Box className={styles.title}>
@@ -36,6 +37,7 @@ export default function Main() {
           src={title}
           alt="title"
           placeholder="blur"
+          priority
           width={520}
           height={60}
           style={{ width: "clamp(160px, 35vw, 520px)", height: "auto" }}

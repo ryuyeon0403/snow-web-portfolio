@@ -1,10 +1,11 @@
 import Header from "@/components/Header";
+import { Box } from "@mui/material";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <>
       <Header />
-      {children}
+      <Box sx={{ pt: { xs: "52px", md: "60px" } }}>{children}</Box>
     </>
   );
 }
