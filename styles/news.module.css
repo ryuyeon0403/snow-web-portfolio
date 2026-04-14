@@ -429,8 +429,7 @@
 
   /* 모든 이미지 반응형 보장 */
   .content img {
-    max-width: 100% !important;
-    width: 100% !important;
-    height: auto !important;
+    max-width: 100%;
+    height: auto;
   }
 }
