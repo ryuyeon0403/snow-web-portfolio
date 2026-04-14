@@ -1,10 +1,14 @@
 .title {
-  position: absolute;
-  top: clamp(80px, 10vw, 140px);
-  left: 50%;
-  transform: translateX(-50%);
-  max-width: 1640px;
   width: 100%;
+  max-width: 1640px;
+  padding: 60px 20px 0;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .title {
+    padding: 36px 20px 0;
+  }
 }
 
 .subDesc {

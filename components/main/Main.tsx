@@ -22,22 +22,23 @@ export default function Main() {
       width={"100%"}
       position={"relative"}
     >
-      <Box className={styles.title} sx={{ px: { xs: "20px", md: "40px", lg: "0px" } }}>
+      <Box sx={{ width: "100%", lineHeight: 0 }}>
+        <Image
+          src={backgroundImage}
+          alt="background"
+          placeholder="blur"
+          layout="responsive"
+          style={{ width: "100%", height: "auto" }}
+        />
+      </Box>
+      <Box className={styles.title}>
         <Image
           src={title}
           alt="title"
           placeholder="blur"
           width={520}
           height={60}
-          style={{ width: "clamp(200px, 40vw, 520px)", height: "auto" }}
-        />
-      </Box>
-      <Box>
-        <Image
-          src={backgroundImage}
-          alt="background"
-          placeholder="blur"
-          layout="intrinsic"
+          style={{ width: "clamp(160px, 35vw, 520px)", height: "auto" }}
         />
       </Box>
       <MainLayout sx={{ px: "0px" }}>

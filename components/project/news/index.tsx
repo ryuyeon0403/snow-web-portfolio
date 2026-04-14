@@ -25,12 +25,15 @@ function News() {
       position={"relative"}
       className={styles.content}
     >
-      <Image
-        src={backgroundImage}
-        alt="background"
-        placeholder="blur"
-        layout="intrinsic"
-      />
+      <Box sx={{ width: "100%", lineHeight: 0 }}>
+        <Image
+          src={backgroundImage}
+          alt="background"
+          placeholder="blur"
+          layout="responsive"
+          style={{ width: "100%", height: "auto" }}
+        />
+      </Box>
       <Box className={styles.title}>
         <Stack direction={{ xs: "column", md: "row" }} spacing={{ xs: "16px", md: "50px" }}>
           <Stack>
@@ -231,7 +234,7 @@ function News() {
                   src={number2Content}
                   alt="number2Content"
                   placeholder="blur"
-                  layout="intrinsic"
+                  layout="responsive"
                 />
               </Box>
             </Box>
@@ -315,7 +318,7 @@ function News() {
                 src={number4Content}
                 alt="number4Content"
                 placeholder="blur"
-                layout="intrinsic"
+                layout="responsive"
               />
             </Box>
           </Box>
@@ -330,7 +333,7 @@ function News() {
           src={newSnackBg}
           alt="newSnackBg"
           placeholder="blur"
-          layout="intrinsic"
+          layout="responsive"
         />
       </Box>
       <Box
@@ -343,13 +346,13 @@ function News() {
           src={newPlayBg}
           alt="newPlayBg"
           placeholder="blur"
-          layout="intrinsic"
+          layout="responsive"
         />
         <Image
           src={ObjImages[0]}
           alt="obj1"
           placeholder="blur"
-          layout="intrinsic"
+          layout="responsive"
           className={styles.obj1}
         />
         <Image
@@ -487,7 +490,7 @@ function News() {
             <Image
               src={number2Design}
               alt="number2Design"
-              layout="intrinsic"
+              layout="responsive"
               placeholder="blur"
             />
           </Box>
@@ -495,7 +498,7 @@ function News() {
             <Image
               src={number2Text}
               alt="number2Text"
-              layout="intrinsic"
+              layout="responsive"
               placeholder="blur"
             />
           </Box>
@@ -529,7 +532,7 @@ function News() {
           <Image
             src={number2Group}
             alt="number2Group"
-            layout="intrinsic"
+            layout="responsive"
             placeholder="blur"
           />
         </Box>
@@ -573,7 +576,7 @@ function News() {
               src={number3Images[item]}
               alt={`itemContent-${item}`}
               placeholder="blur"
-              layout="intrinsic"
+              layout="responsive"
             />
           </Box>
         ))}

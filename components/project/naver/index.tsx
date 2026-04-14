@@ -24,12 +24,15 @@ export default function Naver() {
       position={"relative"}
       className={styles.content}
     >
-      <Image
-        src={backgroundImage}
-        alt="background"
-        placeholder="blur"
-        layout="intrinsic"
-      />
+      <Box sx={{ width: "100%", lineHeight: 0 }}>
+        <Image
+          src={backgroundImage}
+          alt="background"
+          placeholder="blur"
+          layout="responsive"
+          style={{ width: "100%", height: "auto" }}
+        />
+      </Box>
       <Box className={styles.title}>
         <Stack direction={{ xs: "column", md: "row" }} justifyContent={"space-between"} gap={{ xs: "16px", md: 0 }}>
           <Stack>
@@ -103,7 +106,7 @@ export default function Naver() {
                 src={naverImages[0]}
                 alt="number1Content"
                 placeholder="blur"
-                layout="intrinsic"
+                layout="responsive"
               />
             </Box>
             <Box maxWidth={"420px"}>
@@ -111,7 +114,7 @@ export default function Naver() {
                 src={naverImages[0]}
                 alt="number1Content"
                 placeholder="blur"
-                layout="intrinsic"
+                layout="responsive"
               />
             </Box>
             <Typography
@@ -337,7 +340,7 @@ export default function Naver() {
           src={backgroundImage2}
           alt="background2"
           placeholder="blur"
-          layout="intrinsic"
+          layout="responsive"
         />
       </Box>
       {/* 01 four content */}
@@ -398,7 +401,7 @@ export default function Naver() {
               <Image
                 src={backgroundImage3}
                 alt="fiveBg"
-                layout="intrinsic"
+                layout="responsive"
                 placeholder="blur"
               />
             </Box>
@@ -415,7 +418,7 @@ export default function Naver() {
                 <Image
                   src={fiveContent}
                   alt="fiveContent"
-                  layout="intrinsic"
+                  layout="responsive"
                   placeholder="blur"
                 />
               </Box>
@@ -467,7 +470,7 @@ export default function Naver() {
             src={naverContentImages[index]}
             alt={`number2Content${index}`}
             placeholder="blur"
-            layout="intrinsic"
+            layout="responsive"
           />
         </Box>
       ))}

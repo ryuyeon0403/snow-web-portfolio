@@ -24,12 +24,15 @@ export default function NHR() {
       position={"relative"}
       className={styles.content}
     >
-      <Image
-        src={backgroundImage}
-        alt="background"
-        placeholder="blur"
-        layout="intrinsic"
-      />
+      <Box sx={{ width: "100%", lineHeight: 0 }}>
+        <Image
+          src={backgroundImage}
+          alt="background"
+          placeholder="blur"
+          layout="responsive"
+          style={{ width: "100%", height: "auto" }}
+        />
+      </Box>
       <Box className={styles.title}>
         <Stack
           direction={{ xs: "column", md: "row" }}
@@ -151,7 +154,7 @@ export default function NHR() {
                   src={image}
                   alt={`image-${index}`}
                   placeholder="blur"
-                  layout="intrinsic"
+                  layout="responsive"
                 />
               </Box>
             ))}
@@ -205,7 +208,7 @@ export default function NHR() {
                   src={image}
                   alt={`image-${index}`}
                   placeholder="blur"
-                  layout="intrinsic"
+                  layout="responsive"
                 />
               </Box>
             ))}
@@ -223,7 +226,7 @@ export default function NHR() {
           src={backgroundImage2}
           alt="bg2"
           placeholder="blur"
-          layout="intrinsic"
+          layout="responsive"
         />
       </Box>
       {/* 02 */}
@@ -274,7 +277,7 @@ export default function NHR() {
                   src={nhrBoxImages[0]}
                   alt="nhrbox1"
                   placeholder="blur"
-                  layout="intrinsic"
+                  layout="responsive"
                 />
               </Box>
             </Box>
@@ -283,7 +286,7 @@ export default function NHR() {
                 src={nhrBoxImages[1]}
                 alt="nhrbox2"
                 placeholder="blur"
-                layout="intrinsic"
+                layout="responsive"
               />
             </Box>
           </Stack>
@@ -292,7 +295,7 @@ export default function NHR() {
               src={nhrBoxImages[2]}
               alt="nhrbox3"
               placeholder="blur"
-              layout="intrinsic"
+              layout="responsive"
             />
           </Box>
         </Stack>
@@ -336,7 +339,7 @@ export default function NHR() {
               src={nhrThirdContentImages[item]}
               alt={`itemContent-${item}`}
               placeholder="blur"
-              layout="intrinsic"
+              layout="responsive"
             />
           </Box>
         ))}
@@ -387,7 +390,7 @@ export default function NHR() {
               src={footerContent}
               alt="footerContent"
               placeholder="blur"
-              layout="intrinsic"
+              layout="responsive"
             />
           </Box>
         </Stack>

@@ -18,12 +18,17 @@ export default function BENZ() {
       position={"relative"}
       className={styles.content}
     >
-      <Image
-        src={backgroundImage}
-        alt="background"
-        placeholder="blur"
-        layout="intrinsic"
-      />
+      <Box sx={{ width: "100%", display: "flex", justifyContent: "center" }}>
+        <Image
+          src={backgroundImage}
+          alt="background"
+          placeholder="blur"
+          style={{ width: "100%", height: "auto", maxWidth: "100%" }}
+          width={0}
+          height={0}
+          sizes="100vw"
+        />
+      </Box>
       <Box className={styles.title}>
         <Stack direction={{ xs: "column", md: "row" }} spacing={{ xs: "16px", md: "50px" }}>
           <Stack>
@@ -117,7 +122,7 @@ export default function BENZ() {
               src={benzImages[item]}
               alt={`itemContent-${item}`}
               placeholder="blur"
-              layout="intrinsic"
+              layout="responsive"
             />
           </Box>
         ))}
@@ -169,7 +174,7 @@ export default function BENZ() {
                     src={benzSubContentImages[2]}
                     alt="benzSub1"
                     placeholder="blur"
-                    layout="intrinsic"
+                    layout="responsive"
                     style={{
                       width: "73px",
                       height: "auto",
@@ -190,7 +195,7 @@ export default function BENZ() {
                     src={benzSubContentImages[3]}
                     alt="benzSub1"
                     placeholder="blur"
-                    layout="intrinsic"
+                    layout="responsive"
                     style={{
                       width: "73px",
                       height: "auto",
@@ -211,7 +216,7 @@ export default function BENZ() {
                 src={benzSubContentImages[0]}
                 alt="benzSub1"
                 placeholder="blur"
-                layout="intrinsic"
+                layout="responsive"
                 style={{
                   width: "440px",
                   height: "auto",
@@ -221,7 +226,7 @@ export default function BENZ() {
                 src={benzSubContentImages[1]}
                 alt="benzSub1"
                 placeholder="blur"
-                layout="intrinsic"
+                layout="responsive"
                 style={{
                   width: "434px",
                   height: "auto",
@@ -235,7 +240,7 @@ export default function BENZ() {
                 src={benzSecondContentImages[item]}
                 alt={`itemContentbg-${item}`}
                 placeholder="blur"
-                layout="intrinsic"
+                layout="responsive"
               />
             </Box>
           )

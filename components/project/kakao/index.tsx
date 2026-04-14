@@ -26,12 +26,15 @@ export default function Kakao() {
       position={"relative"}
       className={styles.content}
     >
-      <Image
-        src={backgroundImage}
-        alt="background"
-        placeholder="blur"
-        layout="intrinsic"
-      />
+      <Box sx={{ width: "100%", lineHeight: 0 }}>
+        <Image
+          src={backgroundImage}
+          alt="background"
+          placeholder="blur"
+          layout="responsive"
+          style={{ width: "100%", height: "auto" }}
+        />
+      </Box>
       <Box className={styles.title}>
         <Stack direction={{ xs: "column", md: "row" }} spacing={{ xs: "16px", md: "50px" }}>
           <Stack>
@@ -121,7 +124,7 @@ export default function Kakao() {
             src={number1Content}
             alt="number1Content"
             placeholder="blur"
-            layout="intrinsic"
+            layout="responsive"
           />
         </Box>
       </Box>
@@ -153,7 +156,7 @@ export default function Kakao() {
           src={number2Content}
           alt="number2Content"
           placeholder="blur"
-          layout="intrinsic"
+          layout="responsive"
         />
       </Box>
       {/* 01 Third Content */}
@@ -175,7 +178,7 @@ export default function Kakao() {
                 src={item}
                 alt={`card${index}`}
                 placeholder="blur"
-                layout="intrinsic"
+                layout="responsive"
               />
             </Box>
           ))}
@@ -231,7 +234,7 @@ export default function Kakao() {
                   src={SlideImages[item]}
                   alt={`slideCard${item}`}
                   placeholder="blur"
-                  layout="intrinsic"
+                  layout="responsive"
                 />
               </Box>
             ))}
@@ -247,7 +250,7 @@ export default function Kakao() {
           src={backgroundImage2}
           alt="backgroundImage2"
           placeholder="blur"
-          layout="intrinsic"
+          layout="responsive"
         />
       </Box>
       {/* 03 */}
@@ -284,12 +287,12 @@ export default function Kakao() {
         <Stack direction="row" spacing={"13px"} width={"100%"}>
           <Box className={styles.leftBox} position={"relative"}>
             <Box maxWidth={"418px"} px={10}>
-              <Image src={leftCard} alt="leftCard" layout="intrinsic" />
+              <Image src={leftCard} alt="leftCard" layout="responsive" />
             </Box>
           </Box>
           <Box className={styles.rightBox}>
             <Box maxWidth={"432px"} px={10}>
-              <Image src={rightCard} alt="rightCard" layout="intrinsic" />
+              <Image src={rightCard} alt="rightCard" layout="responsive" />
             </Box>
           </Box>
         </Stack>
@@ -300,7 +303,7 @@ export default function Kakao() {
         sx={{ background: "#38383E !important", mb: "20px" }}
       >
         <Box maxWidth={"1424px"} py={"116px"} px={10}>
-          <Image src={imgGroup} alt="imgGroup" layout="intrinsic" />
+          <Image src={imgGroup} alt="imgGroup" layout="responsive" />
         </Box>
       </Box>
       {/* 03 Third Content */}
@@ -313,10 +316,10 @@ export default function Kakao() {
       >
         <Stack direction="row" spacing={"20px"} width={"100%"}>
           <Box maxWidth={"930px"}>
-            <Image src={leftCard2} alt="leftCard2" layout="intrinsic" />
+            <Image src={leftCard2} alt="leftCard2" layout="responsive" />
           </Box>
           <Box maxWidth={"930px"}>
-            <Image src={rightCard2} alt="rightCard2" layout="intrinsic" />
+            <Image src={rightCard2} alt="rightCard2" layout="responsive" />
           </Box>
         </Stack>
       </Box>
@@ -329,7 +332,7 @@ export default function Kakao() {
         }}
       >
         <Box maxWidth={"1507px"} py={"63px"}>
-          <Image src={imgGroup2} alt="imgGroup2" layout="intrinsic" />
+          <Image src={imgGroup2} alt="imgGroup2" layout="responsive" />
         </Box>
       </Box>
       {/* FOOTER */}
