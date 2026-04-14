@@ -540,8 +540,45 @@
 
   /* 모든 이미지 반응형 보장 */
   .content img {
-    max-width: 100% !important;
-    width: 100% !important;
-    height: auto !important;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .box0 {
+    height: auto;
+    min-height: 64px;
+    padding: 12px 0;
+  }
+
+  .box2 {
+    height: auto;
+    min-height: 64px;
+    padding: 12px 16px;
+    max-width: 100%;
+  }
+
+  .box2Text {
+    font-size: 13px;
+  }
+
+  .box0Text {
+    font-size: 16px;
+    padding-right: 12px;
+  }
+
+  .contentBox {
+    height: auto;
+    max-width: 100%;
+  }
+
+  .body1 {
+    font-size: 16px;
+    padding-top: 20px !important;
+    padding-bottom: 16px !important;
+  }
+
+  .interBox {
+    width: 100%;
+    max-width: 243px;
   }
 }

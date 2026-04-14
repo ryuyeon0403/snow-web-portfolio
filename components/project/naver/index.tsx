@@ -104,7 +104,7 @@ export default function Naver() {
           px={{ xs: "16px", md: 0 }}
         >
           <Stack spacing={"20px"} alignItems={"center"}>
-            <Box maxWidth={"420px"}>
+            <Box sx={{ maxWidth: { xs: "100%", md: "420px" }, width: "100%" }}>
               <Image
                 src={naverImages[0]}
                 alt="number1Content"
@@ -112,7 +112,7 @@ export default function Naver() {
                 layout="responsive"
               />
             </Box>
-            <Box maxWidth={"420px"}>
+            <Box sx={{ display: { xs: "none", md: "block" }, maxWidth: "420px", width: "100%" }}>
               <Image
                 src={naverImages[0]}
                 alt="number1Content"
@@ -137,18 +137,17 @@ export default function Naver() {
             </Typography>
             <Stack
               direction={"row"}
-              pt={"33px"}
+              pt={{ xs: "20px", md: "33px" }}
               alignItems={"flex-start"}
-              spacing={"23px"}
+              spacing={"16px"}
               pb={3}
             >
-              <Box className={styles.box} mt={"3px"}>
+              <Box className={styles.box} mt={"3px"} sx={{ flexShrink: 0 }}>
                 <Typography className={styles.boxText}>Q1</Typography>
               </Box>
               <Typography
                 className={styles.body4}
-                sx={{ color: "#FFFFFF !important" }}
-                whiteSpace={"pre-wrap"}
+                sx={{ color: "#FFFFFF !important", whiteSpace: { xs: "normal", md: "pre-wrap" } }}
               >
                 네이버 플러스 멤버십의 PC뷰를 보고 든 느낌 혹은{"\n"}생각 중
                 가장 가까운 항목은 무엇인가요?
@@ -156,8 +155,8 @@ export default function Naver() {
             </Stack>
             <Box className={styles.box0} width={"100%"}>
               <Box className={styles.box2} width={"100%"}>
-                <Stack direction={"row"} alignItems={"center"} spacing={3}>
-                  <FemaleChip />
+                <Stack direction={"row"} alignItems={"center"} spacing={{ xs: 1, md: 3 }}>
+                  <Box sx={{ flexShrink: 0 }}><FemaleChip /></Box>
                   <Typography className={styles.box2Text}>
                     다양한 정보가 작은 면적에 보여 답답한 인상을 줍니다.
                   </Typography>
@@ -165,15 +164,15 @@ export default function Naver() {
               </Box>
               <Typography
                 className={styles.box0Text}
-                sx={{ textAlign: "right", width: "100%", pr: 3 }}
+                sx={{ textAlign: "right", width: "100%", pr: { xs: 1, md: 3 }, flexShrink: 0 }}
               >
                 43%
               </Typography>
             </Box>
-            <Box className={styles.box0} width={"100%"} mt={"23px"}>
+            <Box className={styles.box0} width={"100%"} mt={"16px"}>
               <Box className={styles.box2} width={"100%"}>
-                <Stack direction={"row"} alignItems={"center"} spacing={3}>
-                  <MaleChip />
+                <Stack direction={"row"} alignItems={"center"} spacing={{ xs: 1, md: 3 }}>
+                  <Box sx={{ flexShrink: 0 }}><MaleChip /></Box>
                   <Typography className={styles.box2Text}>
                     글로 된 내용이 많아 정보를 읽는데 부담을 느낍니다.
                   </Typography>
@@ -181,25 +180,23 @@ export default function Naver() {
               </Box>
               <Typography
                 className={styles.box0Text}
-                sx={{ textAlign: "right", width: "100%", pr: 3 }}
+                sx={{ textAlign: "right", width: "100%", pr: { xs: 1, md: 3 }, flexShrink: 0 }}
               >
                 30%
               </Typography>
             </Box>
-            <Typography className={styles.detail1_1} pt={"41px"}>
-              <span style={{ color: "#6EB6B8", paddingRight: "3px" }}>
-                대상
-              </span>{" "}
-              멤버십 페이지 확인 경험이 있는 20-40대 150명
-              <span style={{ color: "#6EB6B8", paddingLeft: "24px" }}>
-                기간
-              </span>{" "}
-              약 2주간 진행
-              <span style={{ color: "#6EB6B8", paddingLeft: "24px" }}>
-                플랫폼
-              </span>{" "}
-              구글폼
-            </Typography>
+            <Stack pt={{ xs: "24px", md: "41px" }} spacing={"4px"}>
+              <Typography className={styles.detail1_1}>
+                <span style={{ color: "#6EB6B8" }}>대상</span>{" "}
+                멤버십 페이지 확인 경험이 있는 20-40대 150명
+              </Typography>
+              <Typography className={styles.detail1_1}>
+                <span style={{ color: "#6EB6B8" }}>기간</span>{" "}
+                약 2주간 진행{"  "}
+                <span style={{ color: "#6EB6B8" }}>플랫폼</span>{" "}
+                구글폼
+              </Typography>
+            </Stack>
           </Stack>
         </Stack>
       </Box>
@@ -218,8 +215,7 @@ export default function Naver() {
           </Typography>
           <Typography
             className={styles.detail1}
-            sx={{ color: "#FFFFFF !important", opacity: 0.7 }}
-            whiteSpace={"pre-wrap"}
+            sx={{ color: "#FFFFFF !important", opacity: 0.7, whiteSpace: { xs: "normal", md: "pre-wrap" } }}
             textAlign={"center"}
           >
             멤버십 가입으로 연결이 되는 PC 웹 페이지는 모바일 환경에 국한되는
@@ -264,8 +260,8 @@ export default function Naver() {
               </Typography>
               <Typography
                 className={styles.detail1}
-                whiteSpace={"pre-wrap"}
-                pb={"52px"}
+                sx={{ whiteSpace: { xs: "normal", md: "pre-wrap" } }}
+                pb={{ xs: "24px", md: "52px" }}
               >
                 모바일에 맞는 좁은 면적의 UI로 인해 PC뷰 내의 메뉴 바와{"\n"}
                 바디 영역 내에서 원하는정보를 빠르게 찾을 수 없습니다.
@@ -279,8 +275,8 @@ export default function Naver() {
               </Typography>
               <Typography
                 className={styles.detail1}
-                whiteSpace={"pre-wrap"}
-                pb={"52px"}
+                sx={{ whiteSpace: { xs: "normal", md: "pre-wrap" } }}
+                pb={{ xs: "24px", md: "52px" }}
               >
                 PC뷰 개선에 대한 의견 수집 결과, 정보 인지 뿐 아니라 탄탄한
                 {"\n"}
@@ -310,8 +306,8 @@ export default function Naver() {
               </Typography>
               <Typography
                 className={styles.detail1}
-                whiteSpace={"pre-wrap"}
-                pb={"52px"}
+                sx={{ whiteSpace: { xs: "normal", md: "pre-wrap" } }}
+                pb={{ xs: "24px", md: "52px" }}
               >
                 PC뷰에서 구현할 수 있는 와이드한 화면을 구성하며, 혜택 정보를
                 한번에 확인할 수 있는 메뉴탭을 구현합니다.
@@ -325,8 +321,8 @@ export default function Naver() {
               </Typography>
               <Typography
                 className={styles.detail1}
-                whiteSpace={"pre-wrap"}
-                pb={"52px"}
+                sx={{ whiteSpace: { xs: "normal", md: "pre-wrap" } }}
+                pb={{ xs: "24px", md: "52px" }}
               >
                 브랜드의 컨셉과 가치를 적극적으로 반영하면서도, 사용자들이 쉽게
                 접근하고 이해할 수 있는 직관적인 디자인을 제공합니다.
@@ -497,7 +493,7 @@ export default function Naver() {
               디자인을 기획했습니다.
             </Typography>
           </Stack>
-          <Stack spacing={"51px"} direction={"row"}>
+          <Stack spacing={{ xs: "24px", md: "51px" }} direction={{ xs: "column", md: "row" }}>
             <Stack spacing={"20px"} alignItems={"flex-start"}>
               <Typography
                 className={styles.caption}
