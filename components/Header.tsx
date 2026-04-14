@@ -30,7 +30,7 @@ const Header = () => {
         py={{ xs: 1.5, md: 2 }}
         px={{ xs: "20px", md: "40px", lg: "0px" }}
       >
-        <Typography className={styles.body2} sx={{ fontSize: { xs: "16px", md: "24px" } }}>CHASUL PORTFOLIO</Typography>
+        <Typography className={styles.body2} sx={{ fontSize: { xs: "13px", md: "24px" }, letterSpacing: { xs: "-0.3px", md: "-0.72px" } }}>CHASUL PORTFOLIO</Typography>
         <Stack
           direction={"row"}
           justifyContent={"space-between"}
@@ -38,7 +38,7 @@ const Header = () => {
           sx={{ cursor: "pointer" }}
           onClick={() => router.push("/")}
         >
-          <Typography className={styles.body2_1} sx={{ fontSize: { xs: "16px", md: "24px" }, width: { xs: "auto", md: "121px" }, mr: { xs: 1, md: 0 } }}>
+          <Typography className={styles.body2_1} sx={{ fontSize: { xs: "13px", md: "24px" }, letterSpacing: { xs: "-0.3px", md: "-0.72px" }, width: { xs: "auto", md: "121px" }, mr: { xs: 0.5, md: 0 } }}>
             PROJECT
           </Typography>
           <Image src={GroupSvg} alt="group" />

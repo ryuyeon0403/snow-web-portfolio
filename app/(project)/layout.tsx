@@ -5,7 +5,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <>
       <Header />
-      <Box sx={{ pt: { xs: "52px", md: "60px" } }}>{children}</Box>
+      <Box sx={{ pt: { xs: "44px", md: "60px" } }}>{children}</Box>
     </>
   );
 }
