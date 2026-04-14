@@ -198,7 +198,7 @@ export default function Kakao() {
               <Typography
                 key={item}
                 className={index == 0 ? styles.heading3 : styles.detail3}
-                whiteSpace={"nowrap"}
+                sx={{ whiteSpace: { xs: "normal", md: "nowrap" } }}
               >
                 {item}
               </Typography>
@@ -265,7 +265,7 @@ export default function Kakao() {
                 <Typography
                   key={item}
                   className={index == 0 ? styles.heading3 : styles.detail3}
-                  whiteSpace={"nowrap"}
+                  sx={{ whiteSpace: { xs: "normal", md: "nowrap" } }}
                 >
                   {item}
                 </Typography>
@@ -330,7 +330,7 @@ export default function Kakao() {
           mb: "20px",
         }}
       >
-        <Box maxWidth={"1507px"} py={"63px"}>
+        <Box maxWidth={"1507px"} py={{ xs: "40px", md: "63px" }} px={{ xs: "20px", md: 0 }} width={"100%"}>
           <Image src={imgGroup2} alt="imgGroup2" layout="responsive" />
         </Box>
       </Box>
@@ -354,7 +354,7 @@ export default function Kakao() {
               관점에 입각해 카카오의 온드미디어 콘텐츠를 기획, 생산했습니다.
             </Typography>
           </Stack>
-          <Stack spacing={5} direction={"row"}>
+          <Stack spacing={5} direction={{ xs: "column", md: "row" }}>
             <Stack spacing={"20px"}>
               <Typography
                 className={styles.caption}

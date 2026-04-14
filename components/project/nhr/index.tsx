@@ -94,7 +94,7 @@ export default function NHR() {
               <Typography
                 key={item}
                 className={index == 0 ? styles.heading3 : styles.detail1_1}
-                whiteSpace={"nowrap"}
+                sx={{ whiteSpace: { xs: "normal", md: "nowrap" } }}
               >
                 {item}
               </Typography>
@@ -237,7 +237,7 @@ export default function NHR() {
                 <Typography
                   key={item}
                   className={index == 0 ? styles.heading3 : styles.detail1_1}
-                  whiteSpace={"nowrap"}
+                  sx={{ whiteSpace: { xs: "normal", md: "nowrap" } }}
                 >
                   {item}
                 </Typography>
@@ -310,7 +310,7 @@ export default function NHR() {
                 <Typography
                   key={item}
                   className={index == 0 ? styles.heading3 : styles.detail1_1}
-                  whiteSpace={"nowrap"}
+                  sx={{ whiteSpace: { xs: "normal", md: "nowrap" } }}
                 >
                   {item}
                 </Typography>
@@ -331,7 +331,7 @@ export default function NHR() {
         </Stack>
       </Box>
       {/* 03 bg Content */}
-      <Stack spacing={"20px"}>
+      <Stack spacing={"20px"} width={"100%"}>
         {[0, 1, 2, 3].map((item) => (
           <Box className={styles.whiteBox} key={`itemContent-${item}`}>
             <Image
@@ -348,7 +348,7 @@ export default function NHR() {
         className={styles.whiteBox}
         sx={{ background: "#000 !important", mt: "20px" }}
       >
-        <Stack alignItems={"center"} pt={"116px"} pb={10}>
+        <Stack alignItems={"center"} pt={{ xs: "40px", md: "116px" }} pb={{ xs: 5, md: 10 }} px={{ xs: "20px", md: 0 }}>
           {/* TODO */}
           <Typography
             className={styles.caption}
@@ -359,7 +359,7 @@ export default function NHR() {
           <Typography
             className={styles.heading3}
             maxWidth={"914px"}
-            sx={{ color: "#FFF !important", pt: "16px" }}
+            sx={{ color: "#FFF !important", pt: "16px", whiteSpace: { xs: "normal", md: "pre-wrap" } }}
             textAlign={"center"}
           >
             본 프로젝트는 현재 10만명 이상의 이용자가 가입하였으며,{" "}
@@ -370,7 +370,7 @@ export default function NHR() {
           <Typography
             maxWidth={"1060px"}
             className={styles.detail1}
-            sx={{ color: "#B6B6B6 !important", pt: "20px", pb: "82px" }}
+            sx={{ color: "#B6B6B6 !important", pt: "20px", pb: { xs: "40px", md: "82px" } }}
             textAlign={"center"}
           >
             라이브 이후 1주일 경과, 약 1만명의 소비자가 커리어톡에 유입되었으며,{" "}
@@ -384,7 +384,7 @@ export default function NHR() {
               상담의 효율성이 높아졌습니다.
             </span>
           </Typography>
-          <Box maxWidth={"1178px"}>
+          <Box maxWidth={"1178px"} width={"100%"}>
             <Image
               src={footerContent}
               alt="footerContent"
@@ -415,7 +415,7 @@ export default function NHR() {
               되었습니다.
             </Typography>
           </Stack>
-          <Stack spacing={12} direction={"row"}>
+          <Stack spacing={{ xs: 3, md: 12 }} direction={{ xs: "column", md: "row" }}>
             <Stack spacing={"20px"}>
               <Typography className={styles.detail1}>업무 요청 기업</Typography>
               <Typography

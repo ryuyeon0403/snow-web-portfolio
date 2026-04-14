@@ -116,7 +116,7 @@ export default function BENZ() {
         </Stack>
       </Box>
       {/* 01 bg Content */}
-      <Stack spacing={"20px"}>
+      <Stack spacing={"20px"} width={"100%"}>
         {[0, 1].map((item) => (
           <Box className={styles.whiteBox} key={`itemContent-${item}`}>
             <Image
@@ -161,7 +161,7 @@ export default function BENZ() {
         </Stack>
       </Box>
       {/* 02 bg Content */}
-      <Stack spacing={"20px"}>
+      <Stack spacing={"20px"} width={"100%"}>
         {[0, 1, 2, 3, 4, 5, 6, 7].map((item) =>
           item == 6 ? (
             <Box
@@ -272,7 +272,7 @@ export default function BENZ() {
               이미지를 반영한 리디자인 시안을 제작했습니다.
             </Typography>
           </Stack>
-          <Stack spacing={{ xs: 3, md: 12 }} direction={"row"}>
+          <Stack spacing={{ xs: 3, md: 12 }} direction={{ xs: "column", md: "row" }}>
             <Stack spacing={"20px"}>
               <Typography className={styles.detail1}>Role</Typography>
               <Typography
