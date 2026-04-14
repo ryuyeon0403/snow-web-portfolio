@@ -156,7 +156,6 @@
   background: var(--all-white, #fff);
   box-shadow: 0px 0px 8.701px 0px rgba(210, 210, 210, 0.2);
   width: 100%;
-  padding-top: 40px;
 }
 
 .chip {
