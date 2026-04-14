@@ -41,7 +41,7 @@ const Header = () => {
           <Typography className={styles.body2_1} sx={{ fontSize: { xs: "13px", md: "24px" }, letterSpacing: { xs: "-0.3px", md: "-0.72px" }, width: { xs: "auto", md: "121px" }, mr: { xs: 0.5, md: 0 } }}>
             PROJECT
           </Typography>
-          <Image src={GroupSvg} alt="group" />
+          <Image src={GroupSvg} alt="group" width={24} height={24} />
         </Stack>
       </Stack>
     </Stack>

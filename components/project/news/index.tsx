@@ -183,7 +183,7 @@ function News() {
               <span style={{ color: "#1B80FF" }}>난이도가 어렵다는</span> 의견이 다수였습니다.
             </Typography>
             <Stack direction={"row"} px={"20px"} spacing={0.5} alignItems={"center"} flexWrap={"wrap"}>
-              <Image src={newsIcon} alt="newIcon" placeholder="blur" />
+              <Image src={newsIcon} alt="newIcon" placeholder="blur" width={17} height={20} />
               <Typography className={styles.detail4}>네이버 20대 뉴스</Typography>
               <Typography className={styles.detail4}>사용자 2644만명</Typography>
             </Stack>
@@ -201,7 +201,7 @@ function News() {
               <span style={{ color: "#1B80FF" }}>정보 업데이트가 느리다는 사용자 보이스가 확인되었습니다.</span>
             </Typography>
             <Stack direction={"row"} px={"20px"} spacing={0.5} alignItems={"center"} flexWrap={"wrap"}>
-              <Image src={newsIcon} alt="newIcon" placeholder="blur" />
+              <Image src={newsIcon} alt="newIcon" placeholder="blur" width={17} height={20} />
               <Typography className={styles.detail4}>뉴닉</Typography>
               <Typography className={styles.detail4}>사용자 40만명</Typography>
             </Stack>
