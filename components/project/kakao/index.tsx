@@ -119,7 +119,7 @@ export default function Kakao() {
         className={styles.whiteBox}
         sx={{ background: "#171920 !important", mb: "20px" }}
       >
-        <Box maxWidth={"975px"} py={"120px"}>
+        <Box sx={{ maxWidth: "975px", py: { xs: "40px", md: "120px" }, px: { xs: "20px", md: 0 }, width: "100%" }}>
           <Image
             src={number1Content}
             alt="number1Content"
@@ -166,14 +166,15 @@ export default function Kakao() {
         position={"relative"}
       >
         <Stack
-          direction={"row"}
+          direction={{ xs: "column", md: "row" }}
           maxWidth={"1360px"}
           width={"100%"}
+          px={{ xs: "20px", md: 0 }}
           spacing={"20px"}
-          py={"112px"}
+          py={{ xs: "40px", md: "112px" }}
         >
           {CardImages.map((item, index) => (
-            <Box key={index} maxWidth={"321px"}>
+            <Box key={index} sx={{ maxWidth: { xs: "100%", md: "321px" }, width: "100%" }}>
               <Image
                 src={item}
                 alt={`card${index}`}
@@ -284,14 +285,14 @@ export default function Kakao() {
         className={styles.whiteBox}
         sx={{ background: "none !important", mb: "20px" }}
       >
-        <Stack direction="row" spacing={"13px"} width={"100%"}>
+        <Stack direction={{ xs: "column", md: "row" }} spacing={"13px"} width={"100%"}>
           <Box className={styles.leftBox} position={"relative"}>
-            <Box maxWidth={"418px"} px={10}>
+            <Box sx={{ maxWidth: { xs: "100%", md: "418px" }, width: "100%", px: { xs: "24px", md: 10 } }}>
               <Image src={leftCard} alt="leftCard" layout="responsive" />
             </Box>
           </Box>
           <Box className={styles.rightBox}>
-            <Box maxWidth={"432px"} px={10}>
+            <Box sx={{ maxWidth: { xs: "100%", md: "432px" }, width: "100%", px: { xs: "24px", md: 10 } }}>
               <Image src={rightCard} alt="rightCard" layout="responsive" />
             </Box>
           </Box>
@@ -302,23 +303,20 @@ export default function Kakao() {
         className={styles.whiteBox}
         sx={{ background: "#38383E !important", mb: "20px" }}
       >
-        <Box maxWidth={"1424px"} py={"116px"} px={10}>
+        <Box sx={{ maxWidth: "1424px", py: { xs: "40px", md: "116px" }, px: { xs: "20px", md: 10 }, width: "100%" }}>
           <Image src={imgGroup} alt="imgGroup" layout="responsive" />
         </Box>
       </Box>
       {/* 03 Third Content */}
       <Box
         className={styles.whiteBox}
-        sx={{
-          background: "none !important",
-          mb: "20px",
-        }}
+        sx={{ background: "none !important", mb: "20px" }}
       >
-        <Stack direction="row" spacing={"20px"} width={"100%"}>
-          <Box maxWidth={"930px"}>
+        <Stack direction={{ xs: "column", md: "row" }} spacing={"20px"} width={"100%"}>
+          <Box sx={{ maxWidth: { xs: "100%", md: "930px" }, width: "100%" }}>
             <Image src={leftCard2} alt="leftCard2" layout="responsive" />
           </Box>
-          <Box maxWidth={"930px"}>
+          <Box sx={{ maxWidth: { xs: "100%", md: "930px" }, width: "100%" }}>
             <Image src={rightCard2} alt="rightCard2" layout="responsive" />
           </Box>
         </Stack>

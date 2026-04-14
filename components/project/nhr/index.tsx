@@ -114,14 +114,13 @@ export default function NHR() {
       </Box>
       {/* 01 content */}
       <Box className={styles.whiteBox}>
-        <Stack pt={"100px"} alignItems={"center"}>
+        <Stack pt={{ xs: "40px", md: "100px" }} alignItems={"center"} px={{ xs: "16px", md: 0 }}>
           <Typography className={styles.caption}>Main Task 01</Typography>
           <Typography
             className={styles.heading3}
             maxWidth={"750px"}
-            height={"100px"}
             textAlign={"center"}
-            whiteSpace={"pre-wrap"}
+            sx={{ whiteSpace: { xs: "normal", md: "pre-wrap" } }}
             pb={"20px"}
           >
             소비자 페이지의 타겟층인 20대에 맞추어{"\n"}긍정적이고 활기찬
@@ -131,8 +130,7 @@ export default function NHR() {
             className={styles.detail2}
             maxWidth={"640px"}
             textAlign={"center"}
-            whiteSpace={"pre-wrap"}
-            height={"60px"}
+            sx={{ whiteSpace: { xs: "normal", md: "pre-wrap" } }}
             pb={"21px"}
           >
             커리어톡 소비자 서비스 프로덕트 디자인 (Mobile/Web 반응형) , 아이콘
@@ -144,12 +142,13 @@ export default function NHR() {
           </Typography>
           <Stack
             direction={"row"}
-            spacing={"9px"}
-            alignItems={"center"}
+            flexWrap={"wrap"}
+            gap={"9px"}
+            justifyContent={"center"}
             pb={10}
           >
             {nhrImages.map((image, index) => (
-              <Box maxWidth={"180px"} key={`circle-${index}`}>
+              <Box sx={{ width: { xs: "calc(33% - 6px)", md: "180px" } }} key={`circle-${index}`}>
                 <Image
                   src={image}
                   alt={`image-${index}`}
@@ -170,14 +169,13 @@ export default function NHR() {
             "linear-gradient(180deg, #ECF4F7 0%, #C7F0FF 100%) !important",
         }}
       >
-        <Stack pt={"100px"}>
+        <Stack pt={{ xs: "40px", md: "100px" }} px={{ xs: "16px", md: 0 }}>
           <Typography className={styles.caption}>Main Task 02</Typography>
           <Typography
             className={styles.heading3}
             maxWidth={"664px"}
-            height={"100px"}
             textAlign={"center"}
-            whiteSpace={"pre-wrap"}
+            sx={{ whiteSpace: { xs: "normal", md: "pre-wrap" } }}
             pb={"14px"}
           >
             클라이언트사의 요청과 타겟 조사를 토대로{"\n"}직관적인 UX를
@@ -187,10 +185,8 @@ export default function NHR() {
             className={styles.detail2}
             maxWidth={"640px"}
             textAlign={"center"}
-            whiteSpace={"pre-wrap"}
-            height={"44px"}
+            sx={{ whiteSpace: { xs: "normal", md: "pre-wrap" }, color: "#0F5F7D !important" }}
             pb={"42px"}
-            sx={{ color: "#0F5F7D !important" }}
           >
             직관적인 행사 찾기와 정보 작성 테스크를 통한 채용 이벤트 참여 UX를
             {"\n"}
@@ -198,12 +194,13 @@ export default function NHR() {
           </Typography>
           <Stack
             direction={"row"}
-            spacing={"9px"}
-            alignItems={"center"}
+            flexWrap={"wrap"}
+            gap={"9px"}
+            justifyContent={"center"}
             pb={10}
           >
             {nhrContentImages.map((image, index) => (
-              <Box maxWidth={"180px"} key={`circle-${index}`}>
+              <Box sx={{ width: { xs: "calc(33% - 6px)", md: "180px" } }} key={`circle-${index}`}>
                 <Image
                   src={image}
                   alt={`image-${index}`}
@@ -260,19 +257,20 @@ export default function NHR() {
         </Stack>
       </Box>
       {/* 02 1 content */}
-      <Box sx={{ background: "none !important" }}>
-        <Stack direction={"row"} spacing={"20px"} maxHeight={"1042px"}>
-          <Stack maxWidth={"931px"} spacing={"20px"}>
+      <Box sx={{ background: "none !important", width: "100%", px: { xs: "16px", md: 0 } }}>
+        <Stack direction={{ xs: "column", md: "row" }} spacing={"20px"}>
+          <Stack sx={{ maxWidth: { xs: "100%", md: "931px" }, width: "100%" }} spacing={"20px"}>
             <Box
               sx={{
                 borderRadius: "12px",
                 background: "#0F5F7D",
-                height: "100%",
                 display: "flex",
                 alignItems: "center",
+                justifyContent: "center",
+                p: { xs: "24px", md: 0 },
               }}
             >
-              <Box>
+              <Box sx={{ width: "100%" }}>
                 <Image
                   src={nhrBoxImages[0]}
                   alt="nhrbox1"
@@ -290,7 +288,7 @@ export default function NHR() {
               />
             </Box>
           </Stack>
-          <Box maxWidth={"910px"}>
+          <Box sx={{ maxWidth: { xs: "100%", md: "910px" }, width: "100%" }}>
             <Image
               src={nhrBoxImages[2]}
               alt="nhrbox3"

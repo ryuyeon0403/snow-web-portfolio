@@ -166,73 +166,76 @@ export default function BENZ() {
             <Box
               className={styles.rowBox}
               key={`itemContent-${item}`}
-              sx={{ background: "#000 !important" }}
+              sx={{ background: "#000 !important", overflow: "hidden" }}
             >
-              <Stack pt={"299px"} spacing={"1300px"}>
-                <Stack direction={"row"} spacing={"70px"}>
-                  <Image
-                    src={benzSubContentImages[2]}
-                    alt="benzSub1"
-                    placeholder="blur"
-                    layout="responsive"
-                    style={{
-                      width: "73px",
-                      height: "auto",
-                    }}
-                  />
-                  <Stack>
-                    <Typography className={styles.caption}>
-                      detail page : S-CLass
-                    </Typography>
-                    <Typography className={styles.detail2} width={"243px"}>
-                      브랜드와 연계되는 모델에 대한 설명과 다양한 차량 이미지를
-                      확인할 수 있습니다.
-                    </Typography>
+              <Stack
+                direction={{ xs: "column", md: "row" }}
+                spacing={{ xs: "40px", md: 0 }}
+                sx={{ position: "relative", py: { xs: "40px", md: 0 } }}
+              >
+                <Stack
+                  spacing={{ xs: "32px", md: "1300px" }}
+                  pt={{ xs: 0, md: "299px" }}
+                  sx={{ zIndex: 1 }}
+                >
+                  <Stack direction={"row"} spacing={"24px"} alignItems={"flex-start"}>
+                    <Box sx={{ width: "73px", flexShrink: 0 }}>
+                      <Image
+                        src={benzSubContentImages[2]}
+                        alt="benzSub1"
+                        placeholder="blur"
+                        layout="responsive"
+                      />
+                    </Box>
+                    <Stack>
+                      <Typography className={styles.caption}>
+                        detail page : S-CLass
+                      </Typography>
+                      <Typography className={styles.detail2} maxWidth={"243px"}>
+                        브랜드와 연계되는 모델에 대한 설명과 다양한 차량 이미지를
+                        확인할 수 있습니다.
+                      </Typography>
+                    </Stack>
+                  </Stack>
+                  <Stack direction={"row"} spacing={"24px"} alignItems={"flex-start"}>
+                    <Box sx={{ width: "73px", flexShrink: 0 }}>
+                      <Image
+                        src={benzSubContentImages[3]}
+                        alt="benzSub1"
+                        placeholder="blur"
+                        layout="responsive"
+                      />
+                    </Box>
+                    <Stack>
+                      <Typography className={styles.caption}>
+                        detail page : Detail
+                      </Typography>
+                      <Typography className={styles.detail2} maxWidth={"273px"}>
+                        차량에 사용된 부품, 기능적 설명, 주행 영상을 확인하여 차량
+                        구매에 필요한 정보를 수집가능합니다.
+                      </Typography>
+                    </Stack>
                   </Stack>
                 </Stack>
-                <Stack direction={"row"} spacing={"70px"}>
-                  <Image
-                    src={benzSubContentImages[3]}
-                    alt="benzSub1"
-                    placeholder="blur"
-                    layout="responsive"
-                    style={{
-                      width: "73px",
-                      height: "auto",
-                    }}
-                  />
-                  <Stack>
-                    <Typography className={styles.caption}>
-                      detail page : Detail
-                    </Typography>
-                    <Typography className={styles.detail2} width={"273px"}>
-                      차량에 사용된 부품, 기능적 설명, 주행 영상을 확인하여 차량
-                      구매에 필요한 정보를 수집가능합니다.
-                    </Typography>
-                  </Stack>
+                <Stack direction={{ xs: "column", md: "row" }} spacing={"20px"} sx={{ flex: 1 }}>
+                  <Box sx={{ maxWidth: { xs: "100%", md: "440px" }, width: "100%" }}>
+                    <Image
+                      src={benzSubContentImages[0]}
+                      alt="benzSub1"
+                      placeholder="blur"
+                      layout="responsive"
+                    />
+                  </Box>
+                  <Box sx={{ maxWidth: { xs: "100%", md: "434px" }, width: "100%" }}>
+                    <Image
+                      src={benzSubContentImages[1]}
+                      alt="benzSub1"
+                      placeholder="blur"
+                      layout="responsive"
+                    />
+                  </Box>
                 </Stack>
               </Stack>
-              <Image
-                src={benzSubContentImages[0]}
-                alt="benzSub1"
-                placeholder="blur"
-                layout="responsive"
-                style={{
-                  width: "440px",
-                  height: "auto",
-                }}
-              />
-              <Image
-                src={benzSubContentImages[1]}
-                alt="benzSub1"
-                placeholder="blur"
-                layout="responsive"
-                style={{
-                  width: "434px",
-                  height: "auto",
-                  marginTop: "640px",
-                }}
-              />
             </Box>
           ) : (
             <Box className={styles.whiteBox} key={`itemContent-${item}`}>

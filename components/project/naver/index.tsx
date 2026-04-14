@@ -94,11 +94,13 @@ export default function Naver() {
       {/* 01 content */}
       <Box className={styles.whiteBox}>
         <Stack
-          direction={"row"}
-          py="207px"
+          direction={{ xs: "column", md: "row" }}
+          py={{ xs: "40px", md: "207px" }}
           maxWidth={"1350px"}
           justifyContent={"space-between"}
           width={"100%"}
+          spacing={{ xs: "32px", md: 0 }}
+          px={{ xs: "16px", md: 0 }}
         >
           <Stack spacing={"20px"} alignItems={"center"}>
             <Box maxWidth={"420px"}>
@@ -124,11 +126,10 @@ export default function Naver() {
               기존 네이버 멤버십 PC 뷰
             </Typography>
           </Stack>
-          <Stack maxWidth={"660px"} width={"100%"}>
+          <Stack maxWidth={{ xs: "100%", md: "660px" }} width={"100%"}>
             <Typography
               className={styles.heading3}
-              sx={{ color: "#FFF !important" }}
-              whiteSpace={"pre-wrap"}
+              sx={{ color: "#FFF !important", whiteSpace: { xs: "normal", md: "pre-wrap" } }}
             >
               기존의 페이지에서 문제가 되었던{"\n"}비확장형 PC뷰를 개선하고자
               했습니다.
@@ -206,7 +207,7 @@ export default function Naver() {
         className={styles.whiteBox}
         sx={{ mt: "20px", background: "#0F1A25 !important" }}
       >
-        <Stack alignItems={"center"} pt={"123px"} pb={"83px"}>
+        <Stack alignItems={"center"} pt={{ xs: "40px", md: "123px" }} pb={{ xs: "40px", md: "83px" }} px={{ xs: "16px", md: 0 }}>
           <Typography className={styles.caption}>Insight & Solution</Typography>
           <Typography
             className={styles.heading3}
@@ -226,15 +227,17 @@ export default function Naver() {
           </Typography>
         </Stack>
         <Stack
-          direction={"row"}
+          direction={{ xs: "column", md: "row" }}
           spacing={5}
           justifyContent={"center"}
           width={"100%"}
           position={"relative"}
-          pb={"122px"}
+          pb={{ xs: "40px", md: "122px" }}
+          px={{ xs: "16px", md: 0 }}
         >
           <Box
             sx={{
+              display: { xs: "none", md: "block" },
               position: "absolute",
               left: "51%",
               top: "50.5%",
@@ -251,7 +254,7 @@ export default function Naver() {
                 사용자 의견기반 인사이트
               </Typography>
             </Box>
-            <Stack pt={"45px"} px={10}>
+            <Stack pt={{ xs: "24px", md: "45px" }} px={{ xs: 3, md: 10 }}>
               <Typography
                 className={styles.body2}
                 sx={{ color: "#489999 !important", pb: 1 }}
@@ -297,7 +300,7 @@ export default function Naver() {
                 문제점 해결방안
               </Typography>
             </Box>
-            <Stack pt={"45px"} px={10}>
+            <Stack pt={{ xs: "24px", md: "45px" }} px={{ xs: 3, md: 10 }}>
               <Typography
                 className={styles.body2}
                 sx={{ color: "#489999 !important", pb: 1 }}
@@ -349,17 +352,16 @@ export default function Naver() {
         className={styles.whiteBox}
         sx={{ mt: "20px", background: "#000 !important" }}
       >
-        <Stack direction={"row"} spacing={"80px"}>
-          <Stack pt={"241px"} spacing={"20px"} alignItems={"flex-start"}>
+        <Stack direction={{ xs: "column", md: "row" }} spacing={{ xs: "40px", md: "80px" }} px={{ xs: "16px", md: 0 }}>
+          <Stack pt={{ xs: "40px", md: "241px" }} spacing={"20px"} alignItems={"flex-start"}>
             <Typography className={styles.caption}>solution</Typography>
             <Typography
               className={styles.heading3}
-              sx={{ color: "#FFF !important" }}
-              whiteSpace={"pre-wrap"}
+              sx={{ color: "#FFF !important", whiteSpace: { xs: "normal", md: "pre-wrap" } }}
             >
               기획을 토대로 실제{"\n"}웹페이지를 개발했습니다.
             </Typography>
-            <Typography className={styles.detail1_2} whiteSpace={"pre-wrap"}>
+            <Typography className={styles.detail1_2} sx={{ whiteSpace: { xs: "normal", md: "pre-wrap" } }}>
               <span style={{ color: "#B6B6B6" }}>
                 애니메이션을 활용하여 사용자들의 관심을 끌고, 이를{"\n"}통해
                 브랜드 가치를 강조하기 위해
@@ -372,7 +374,7 @@ export default function Naver() {
             <Typography className={styles.tool}>
               [TOOL] PhP storm After Effects
             </Typography>
-            <Stack alignItems={"center"} pt={10} pl={"17px"}>
+            <Stack alignItems={"center"} pt={{ xs: 4, md: 10 }} pl={"17px"}>
               <Stack alignItems={"center"} className={styles.animationBtn}>
                 <Box className={styles.clickBtn}>
                   <Typography className={styles.clickTxt}>CLICK</Typography>
@@ -396,17 +398,16 @@ export default function Naver() {
               </Box>
             </Stack>
           </Stack>
-          <Box position={"relative"}>
-            <Box maxWidth={"915px"}>
-              <Image
-                src={backgroundImage3}
-                alt="fiveBg"
-                layout="responsive"
-                placeholder="blur"
-              />
-            </Box>
+          <Box sx={{ maxWidth: { xs: "100%", md: "915px" }, width: "100%", position: "relative" }}>
+            <Image
+              src={backgroundImage3}
+              alt="fiveBg"
+              layout="responsive"
+              placeholder="blur"
+            />
             <Box
               sx={{
+                display: { xs: "none", md: "block" },
                 position: "absolute",
                 left: "5%",
                 top: "40%",
